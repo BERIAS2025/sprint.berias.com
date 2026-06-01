@@ -1,0 +1,14 @@
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# macOS
+.DS_Store
+
+# IDEs
+.idea/
+.vscode/
+
+# API Configuration (falls manuell gepflegt)
+# api/config.php (Auskommentiert, da wir es aktuell mit Platzhaltern tracken wollen)

@@ -1,0 +1,1961 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speditions-Prozesskarte & KI-Bereitschaft | BERIAS</title>
+  <meta name="description" content="Sehen Sie genau, wo Ihr Speditionsunternehmen Zeit und Geld verliert. Interaktive Prozesskarte mit Automatisierungsmöglichkeiten und kostenlosen KI-Readiness-Check.">
+  <link rel="icon" href="../../images/BEwithoutBackground.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@400;600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/cookie-consent.css?v=3">
+  <link rel="canonical" href="https://sprint.berias.com/de/assessment-ai/">
+  <link rel="alternate" hreflang="en" href="https://sprint.berias.com/assessment-ai/">
+  <link rel="alternate" hreflang="de" href="https://sprint.berias.com/de/assessment-ai/">
+  <link rel="alternate" hreflang="x-default" href="https://sprint.berias.com/assessment-ai/">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NQZV9VC9');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta property="og:title" content="Speditions-Prozesskarte & KI-Bereitschaft | BERIAS">
+  <meta property="og:description" content="Sehen Sie genau, wo Ihr Speditionsunternehmen Zeit und Geld verliert. Interaktive Prozesskarte mit Automatisierungsmöglichkeiten und kostenlosen KI-Readiness-Check.">
+  <meta property="og:url" content="https://sprint.berias.com/de/assessment-ai/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BERIAS Sprint">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WP20X6DZPQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WP20X6DZPQ');
+  </script>
+
+  <!-- Google Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17546137265"></script>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '680859374507051');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=680859374507051&ev=PageView&noscript=1" /></noscript>
+
+  <style>
+    :root {
+      --navy: #0F304C;
+      --lime: #A2C614;
+      --text-dark: #1f2937;
+      --text-light: #6b7280;
+      --border-light: #E5E7EB;
+      --bg-light: #f9fafb;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Public Sans', sans-serif;
+      color: var(--text-dark);
+      background: #fff;
+    }
+
+    /* Lead Gate Styles */
+    #lead-gate {
+      min-height: 100vh;
+      background: #f9fafb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 9999;
+      overflow-y: auto;
+    }
+
+    .gate-container {
+      max-width: 960px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      margin: auto;
+      padding: 60px 0;
+    }
+
+    .gate-left {
+      color: var(--navy);
+    }
+
+    .gate-left img {
+      height: 48px;
+      object-fit: contain;
+      margin-bottom: 32px;
+    }
+
+    .gate-left h1 {
+      font-family: 'Ysabeau Office', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: var(--navy);
+    }
+
+    .gate-left h1 span {
+      color: var(--lime);
+    }
+
+    .gate-left p {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+
+    .gate-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .gate-bullets li {
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .gate-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--lime);
+    }
+
+    .gate-card {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 4px 24px rgba(15, 48, 76, 0.1);
+      border: 1px solid var(--border-light);
+    }
+
+    .gate-card h2 {
+      font-family: 'Ysabeau Office', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .gate-card .subtitle {
+      font-size: 0.875rem;
+      color: #9ca3af;
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 6px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid var(--border-light);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-family: 'Public Sans', sans-serif;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus {
+      border-color: var(--navy);
+    }
+
+    .consent-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      font-size: 0.8rem;
+      color: #6b7280;
+      line-height: 1.5;
+    }
+
+    .consent-row input[type="checkbox"] {
+      margin-top: 3px;
+      flex-shrink: 0;
+      accent-color: var(--lime);
+      cursor: pointer;
+    }
+
+    .consent-row a {
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .consent-row a:hover {
+      text-decoration: underline;
+    }
+
+    #gate-submit {
+      width: 100%;
+      background: var(--lime);
+      color: var(--navy);
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: 'Public Sans', sans-serif;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    #gate-submit:hover {
+      background: #8FB011;
+      transform: translateY(-2px);
+    }
+
+    #gate-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .gate-privacy {
+      font-size: 0.75rem;
+      color: #9ca3af;
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    #gate-error {
+      color: #dc2626;
+      font-size: 0.875rem;
+      margin-bottom: 12px;
+      display: none;
+    }
+
+    .gate-back {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: var(--text-light);
+      text-decoration: none;
+    }
+
+    .gate-back:hover {
+      color: var(--navy);
+    }
+
+    @media (max-width: 768px) {
+      .gate-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 40px 0;
+      }
+
+      .gate-left img {
+        height: 36px;
+      }
+
+      .gate-card {
+        padding: 32px 24px;
+      }
+    }
+
+    /* Main Content */
+    #main-content {
+      display: none;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--navy);
+      box-shadow: 0 2px 8px rgba(15, 48, 76, 0.15);
+    }
+
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      height: 68px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar .logo img {
+      height: 40px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: color 0.2s;
+    }
+
+    .nav-menu a:hover {
+      color: #fff;
+    }
+
+    .btn-primary-small {
+      background: var(--lime);
+      color: var(--navy) !important;
+      font-weight: 700 !important;
+      padding: 8px 18px !important;
+      border-radius: 6px !important;
+      transition: background 0.2s;
+    }
+
+    .btn-primary-small:hover {
+      background: #8FB011;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-size: 0.85rem;
+    }
+
+    .lang-switch a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .lang-switch a.active {
+      color: var(--lime);
+      font-weight: 700;
+    }
+
+    .lang-switch a:hover {
+      color: #fff;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(10px, 10px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        padding: 20px;
+        gap: 4px;
+        z-index: 999;
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-right {
+        gap: 8px;
+      }
+
+      .nav-right .btn-primary-small {
+        display: none;
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 80px 24px;
+      background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+      text-align: center;
+    }
+
+    .hero .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--lime);
+      margin-bottom: 12px;
+    }
+
+    .hero h1 {
+      font-family: 'Ysabeau Office', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: var(--text-dark);
+    }
+
+    .hero h1 span {
+      color: var(--lime);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--lime);
+      color: var(--navy);
+      padding: 14px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: #8FB011;
+      transform: translateY(-2px);
+    }
+
+    /* Stats Bar */
+    .stats {
+      padding: 60px 24px;
+      background: var(--navy);
+      color: white;
+    }
+
+    .stats .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: 'Ysabeau Office', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: var(--lime);
+      margin-bottom: 12px;
+    }
+
+    .stat-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* Process Section */
+    .process-section {
+      padding: 80px 24px;
+    }
+
+    .process-section .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header h2 {
+      font-family: 'Ysabeau Office', sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: var(--text-dark);
+    }
+
+    .section-header p {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Process Flow */
+    .process-flow {
+      position: relative;
+      margin-bottom: 80px;
+    }
+
+    .process-flow::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--border-light);
+    }
+
+    .step {
+      margin-bottom: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .step.right {
+      direction: rtl;
+    }
+
+    .step.right > * {
+      direction: ltr;
+    }
+
+    .step-content {
+      padding: 30px;
+      background: var(--bg-light);
+      border-radius: 12px;
+      border-left: 5px solid #d1d5db;
+    }
+
+    .step-content.manual {
+      border-left-color: #8B7355;
+    }
+
+    .step-content.hybrid {
+      border-left-color: #7C3AED;
+    }
+
+    .step-content.automation {
+      border-left-color: var(--lime);
+    }
+
+    .step-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+
+    .tag-manual {
+      background: #F3E8D1;
+      color: #8B7355;
+    }
+
+    .tag-hybrid {
+      background: #EDE9FE;
+      color: #7C3AED;
+    }
+
+    .tag-automation {
+      background: #E6F4D9;
+      color: #16A34A;
+    }
+
+    .step-title {
+      font-family: 'Ysabeau Office', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text-dark);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .step-title::before {
+      content: '▼ ';
+      display: inline-block;
+      margin-right: 8px;
+      transition: transform 0.3s;
+      color: var(--lime);
+    }
+
+    .step-title.collapsed::before {
+      transform: rotate(-90deg);
+    }
+
+    .step-detail {
+      display: none;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .step-detail h4 {
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .step-detail p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .automation-panel {
+      background: white;
+      padding: 16px;
+      border-radius: 8px;
+      border-left: 3px solid var(--lime);
+      margin-top: 16px;
+    }
+
+    .automation-panel h5 {
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+      font-size: 0.85rem;
+    }
+
+    .tool-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tool-badge {
+      background: #F0FDF4;
+      color: #16A34A;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .process-flow::before {
+        display: none;
+      }
+
+      .step {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .step.right {
+        direction: ltr;
+      }
+    }
+
+    /* SIPOC Table */
+    .sipoc-section {
+      padding: 60px 24px;
+      background: var(--bg-light);
+    }
+
+    .sipoc-section .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .sipoc-section .section-label {
+      display: inline-block;
+    }
+
+    .sipoc-section h2 {
+      font-family: 'Ysabeau Office', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 32px;
+      margin-top: 12px;
+      color: var(--text-dark);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    table th {
+      background: var(--navy);
+      color: white;
+      padding: 16px;
+      text-align: left;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border-light);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Tools Section */
+    .tools-section {
+      padding: 80px 24px;
+    }
+
+    .tools-section .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .tools-intro {
+      max-width: 700px;
+      margin-bottom: 48px;
+    }
+
+    .tools-intro p {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-top: 12px;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .tool-card {
+      background: white;
+      border: 1.5px solid var(--border-light);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .tool-card:hover {
+      border-color: var(--lime);
+      box-shadow: 0 8px 24px rgba(162, 198, 20, 0.15);
+      transform: translateY(-4px);
+    }
+
+    .tool-name {
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .tool-category {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 12px;
+    }
+
+    .tool-price {
+      font-size: 0.85rem;
+      color: var(--lime);
+      font-weight: 700;
+    }
+
+    /* Assessment Section */
+    .assessment-section {
+      padding: 80px 24px;
+      background: var(--bg-light);
+    }
+
+    .assessment-section .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .assessment-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .assessment-header h2 {
+      font-family: 'Ysabeau Office', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      margin-top: 12px;
+      color: var(--text-dark);
+    }
+
+    .assessment-header p {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    .assessment-card {
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .assessment-card-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .assessment-card-header h3 {
+      font-family: 'Ysabeau Office', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+
+    .assessment-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    .progress-wrapper {
+      margin-bottom: 32px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 6px;
+      background: var(--border-light);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+
+    #progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--lime) 0%, #7EC021 100%);
+      border-radius: 3px;
+      transition: width 0.3s;
+      width: 0%;
+    }
+
+    #score-display {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      font-weight: 600;
+    }
+
+    .question {
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .question:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .question-text {
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    .options {
+      display: flex;
+      gap: 12px;
+    }
+
+    .option-btn {
+      flex: 1;
+      padding: 12px 16px;
+      border: 1.5px solid var(--border-light);
+      background: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s;
+      color: var(--text-dark);
+    }
+
+    .option-btn:hover {
+      border-color: var(--lime);
+      background: #F0FDF4;
+    }
+
+    .option-btn.selected-yes {
+      background: #16A34A;
+      color: white;
+      border-color: #16A34A;
+    }
+
+    .option-btn.selected-no {
+      background: #EF4444;
+      color: white;
+      border-color: #EF4444;
+    }
+
+    #result-box {
+      display: none;
+      margin-top: 32px;
+      padding: 24px;
+      border-radius: 8px;
+      border-left: 5px solid var(--lime);
+      background: #F0FDF4;
+      color: #16A34A;
+      line-height: 1.6;
+    }
+
+    #result-box.ready {
+      background: #F0FDF4;
+      color: #16A34A;
+      border-left-color: #16A34A;
+    }
+
+    #result-box.caution {
+      background: #FEF3C7;
+      color: #92400E;
+      border-left-color: #F59E0B;
+    }
+
+    #result-box.not-ready {
+      background: #FEE2E2;
+      color: #991B1B;
+      border-left-color: #EF4444;
+    }
+
+    #result-box strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    .assessment-footer {
+      text-align: center;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .assessment-footer .score-summary {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      margin-bottom: 16px;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 80px 24px;
+      background: linear-gradient(135deg, var(--navy) 0%, #1a4a72 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .cta-section .container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cta-section h2 {
+      font-family: 'Ysabeau Office', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .cta-section h2 span {
+      color: var(--lime);
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 32px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .btn-primary.light {
+      background: var(--lime);
+      color: var(--navy);
+    }
+
+    /* Chatbot window size constraint */
+    .bcw-win {
+      max-height: calc(100vh - 110px) !important;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy);
+      color: white;
+      padding: 60px 24px 32px;
+    }
+
+    footer .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-brand img {
+      height: 40px;
+      object-fit: contain;
+      margin-bottom: 12px;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--lime);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.6);
+      gap: 24px;
+    }
+
+    .footer-bottom .lang-switch {
+      gap: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQZV9VC9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <!-- Lead Gate -->
+  <div id="lead-gate">
+    <div class="gate-container">
+      <div class="gate-left">
+        <img src="../../images/LogoBERIASohneHintergrund.png" alt="BERIAS">
+        <h1>Ihr Speditionsunternehmen verliert Zeit und Geld. <span>Finden Sie heraus, wo.</span></h1>
+        <p>Geben Sie Ihre Daten ein, um auf die interaktive Prozesskarte und den kostenlosen KI-Bereitschaftscheck zuzugreifen – kein Spam, versprochen.</p>
+        <ul class="gate-bullets">
+          <li>Interaktive 7-Schritt-Prozesskarte</li>
+          <li>Kostenloser KI- &amp; Automatisierungs-Bereitschaftscheck</li>
+          <li>Empfehlungen für Markt-Tools</li>
+        </ul>
+        <a href="https://sprint.berias.com" class="gate-back">Zurück zu sprint.berias.com</a>
+      </div>
+      <div class="gate-card">
+        <h2>Kostenloser Zugang</h2>
+        <p class="subtitle">Erstellen Sie Ihr Profil, um zu beginnen.</p>
+        <form id="gate-form" style="display: none;">
+          <div id="gate-error"></div>
+          <div class="form-group">
+            <label for="gate-name">Vollständiger Name</label>
+            <input type="text" id="gate-name" required>
+          </div>
+          <div class="form-group">
+            <label for="gate-email">Geschäftliche E-Mail</label>
+            <input type="email" id="gate-email" required>
+          </div>
+          <div class="consent-row">
+            <input type="checkbox" id="gate-consent">
+            <label for="gate-consent" style="margin: 0; font-weight: normal;">Ich stimme zu, dass BERIAS mich kontaktiert, um meine Ergebnisse und Beratungsleistungen zu besprechen. Ich kann mich jederzeit abmelden. <a href="https://sprint.berias.com/de/datenschutz.html" target="_blank">Datenschutzerklärung</a></label>
+          </div>
+          <button type="submit" id="gate-submit">Zum kostenlosen Tool →</button>
+          <div class="gate-privacy">Ihre Daten sind sicher und werden nicht an Dritte weitergegeben.</div>
+        </form>
+        <div id="gate-loading" style="text-align: center; color: #6b7280; display: none;">
+          <p>Verarbeitung...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div id="main-content">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <a href="https://sprint.berias.com/de/">
+            <img src="../../images/LogoBERIASohneHintergrund.png" alt="BERIAS">
+          </a>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#process">Prozesskarte</a></li>
+          <li><a href="#tools">Tools</a></li>
+          <li><a href="#assessment">KI-Check</a></li>
+        </ul>
+        <div class="nav-right">
+          <a href="https://sprint.berias.com/de/#cta" class="btn-primary-small">Kostenloses Audit</a>
+          <div class="lang-switch">
+            <a href="/assessment-ai/">EN</a><span>|</span><a href="/de/assessment-ai/" class="active">DE</a>
+          </div>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <span class="section-label">BERIAS Prozessintelligenz</span>
+        <h1>Ihr Speditionsunternehmen hat <span>Prozesslücken.</span><br>Hier sind sie genau.</h1>
+        <p>Eine interaktive Karte des Speditions-Workflows, wo manuelle Arbeit Sie am meisten kostet und welche Tools die Lücken heute schließen können.</p>
+        <a href="#assessment" class="btn-primary">Zum kostenlosen KI-Readiness-Check</a>
+      </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats">
+      <div class="container">
+        <div class="stat-item">
+          <div class="stat-number">68%</div>
+          <div class="stat-text">der Spediteure erlebten im vergangenen Jahr finanzielle Engpässe durch manuelle Back-Office-Prozesse</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">73%</div>
+          <div class="stat-text">der Frachteinkaufsteams sind 2025 noch auf manuelle Prozesse angewiesen</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">10-21</div>
+          <div class="stat-text">Tage kann ein fehlendes POD eine Rechnung verzögern und Ihr Working Capital binden</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">$165K</div>
+          <div class="stat-text">jährliche Arbeitskosteneinsparungen durch automatisierte Tracking-Koordination (3 freigestellte FTEs)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section" id="process">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Der Workflow</span>
+          <h2>Der Speditions-Prozess: Schritt für Schritt</h2>
+          <p>Klicken Sie auf einen Schritt, um Schwachstellen zu erkunden und zu sehen, welche Automatisierungstools die manuelle Arbeit eliminieren können. Die rechte Spalte zeigt, was ein Bot bereits im Hintergrund erledigen kann, während Ihr Agent telefoniert.</p>
+        </div>
+
+        <div class="process-flow">
+          <!-- Step 1: Prospecting -->
+          <div class="step">
+            <div class="step-content manual">
+              <span class="step-tag tag-manual">Manual</span>
+              <h3 class="step-title collapsed">Prospecting</h3>
+              <div class="step-detail">
+                <h4>Pain:</h4>
+                <p>Kaltakquise ist zeitaufwendig und hat eine niedrige Konversionsrate. Es gibt kein systematisches Follow-up, und vielversprechende Leads fallen durchs Raster.</p>
+                <h4>Fix:</h4>
+                <p>Eine CRM-basierte Warm-Outreach-Sequenz (HubSpot + Apollo.io) kann Follow-up-E-Mails und LinkedIn-Kontakte automatisieren, sodass Agenten erst zum Telefon greifen, wenn ein Interessent bereits Interesse gezeigt hat.</p>
+              </div>
+            </div>
+            <div></div>
+          </div>
+
+          <!-- Step 2: Shipper Application -->
+          <div class="step right">
+            <div></div>
+            <div class="step-content manual">
+              <span class="step-tag tag-manual">Manual</span>
+              <h3 class="step-title collapsed">Shipper Application</h3>
+              <div class="step-detail">
+                <h4>Pain:</h4>
+                <p>Mehrseiten-Bewerbungen, manuelle KYC-Prüfungen und handschriftliche Unterschriften verlangsamen den Prozess. Dokumente werden verloren, E-Mails gehen unter.</p>
+                <h4>Fix:</h4>
+                <p>Digitale On-Boarding-Plattformen (Ferratum, Airbase) mit elektronischen Unterschriften, KYC-API-Integration und automatischen Benachrichtigungen beschleunigen On-Boarding um 70 %.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Load Booking -->
+          <div class="step">
+            <div class="step-content hybrid">
+              <span class="step-tag tag-hybrid">Hybrid</span>
+              <h3 class="step-title collapsed">Load Booking</h3>
+              <div class="step-detail">
+                <h4>Pain:</h4>
+                <p>Telefonanrufe und E-Mails gehen rund um die Uhr ein. Geladepläne werden manuell aktualisiert. Fehler entstehen durch Duplikate und veraltete Daten. Agenten sind die ganze Zeit beschäftigt.</p>
+                <h4>Fix:</h4>
+                <p>Ein Booking-Portal mit integrierter Angebotslogik (Convoy, Echo, Aftab) reduziert Telefonate um 30 %, ermöglicht Echtzeit-Synchronisierung und capture Pickup/Delivery-Fenster sofort.</p>
+                <div class="automation-panel">
+                  <h5>What a Bot Can Do While Your Agent is on a Call:</h5>
+                  <ul class="tool-list">
+                    <li class="tool-badge">Extract load details from incoming email</li>
+                    <li class="tool-badge">Look up shipper profile in CRM</li>
+                    <li class="tool-badge">Check carrier availability in TMS</li>
+                    <li class="tool-badge">Generate rate estimate</li>
+                    <li class="tool-badge">Log load in system</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div></div>
+          </div>
+
+          <!-- Step 4: Carrier Sourcing -->
+          <div class="step right">
+            <div></div>
+            <div class="step-content hybrid">
+              <span class="step-tag tag-hybrid">Hybrid</span>
+              <h3 class="step-title collapsed">Carrier Sourcing</h3>
+              <div class="step-detail">
+                <h4>Pain:</h4>
+                <p>Agents sprechen mit 6-8 Carriern, um eine Ausführung zu finden. Zurückrufe werden verpasst. Preisverhandlungen sind chaotisch. Einige Carrier erhalten niemals ein Angebot, weil die Nachricht verloren ging.</p>
+                <h4>Fix:</h4>
+                <p>Carrier-Sourcing-Plattformen (Echo, Loadsmart, Aft) mit automatischer Broadcast und Gebot-Vereinigung reduzieren Anrufvolumen um 40 % und schließen die Falle in 2 Stunden ab statt 4.</p>
+                <div class="automation-panel">
+                  <h5>What a Bot Can Do While Your Agent is on a Call:</h5>
+                  <ul class="tool-list">
+                    <li class="tool-badge">Broadcast load to carrier network</li>
+                    <li class="tool-badge">Filter bids by price & reliability</li>
+                    <li class="tool-badge">Check cargo insurance requirements</li>
+                    <li class="tool-badge">Validate carrier documents & credentials</li>
+                    <li class="tool-badge">Alert agent to best match</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 5: Tracking & POD Capture -->
+          <div class="step">
+            <div class="step-content automation">
+              <span class="step-tag tag-automation">Automation</span>
+              <h3 class="step-title collapsed">Tracking & POD Capture</h3>
+              <div class="step-detail">
+                <h4>Pain:</h4>
+                <p>Tracking ist manuell. Drivers vergessen, Fotos hochzuladen. Follow-Up-Anrufe kosten $20+ pro Load. Fehlende PODs verzögern Rechnungen um 10-21 Tage.</p>
+                <h4>Fix:</h4>
+                <p>Automated Tracking & Proof-of-Delivery Platforms (Samsara, Geotab, Fourkites) mit SMS/App-Prompts und Fotografieregeln capture bis zu 95 % der PODs ohne Agent-Eingriff.</p>
+                <div class="automation-panel">
+                  <h5>What a Bot Can Do (Fully Automated):</h5>
+                  <ul class="tool-list">
+                    <li class="tool-badge">GPS-triggered tracking updates</li>
+                    <li class="tool-badge">Automatic photo upload requests via SMS</li>
+                    <li class="tool-badge">Proof-of-delivery validation</li>
+                    <li class="tool-badge">Customer notification sent automatically</li>
+                    <li class="tool-badge">Invoice generated, ready to bill</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div></div>
+          </div>
+
+          <!-- Step 6: Invoicing & Collections -->
+          <div class="step right">
+            <div></div>
+            <div class="step-content automation">
+              <span class="step-tag tag-automation">Automation</span>
+              <h3 class="step-title collapsed">Invoicing & Collections</h3>
+              <div class="step-detail">
+                <h4>Pain:</h4>
+                <p>Rechnungen werden manuell nach POD erstellt. Dispute-Anrufe kommen herein, sobald eine Rechnung versendet wird. Der DSO beträgt 45+ Tage. Eine Rechnung von $3,500 pro Abrechnung kostet $50-100 zu bearbeiten.</p>
+                <h4>Fix:</h4>
+                <p>Automatisierte Rechnungs- und Zahlungsplattformen (Bill.com, Stripe) mit Meilenstein-Trigger und automatischen Erinnerungen können DSO auf 18-25 Tage reduzieren und Abwicklungskosten um 75 % senken.</p>
+                <div class="automation-panel">
+                  <h5>What a Bot Can Do (Fully Automated):</h5>
+                  <ul class="tool-list">
+                    <li class="tool-badge">Pull data from POD system</li>
+                    <li class="tool-badge">Generate invoice with signature</li>
+                    <li class="tool-badge">Send via EDI/email/portal</li>
+                    <li class="tool-badge">Track delivery & open</li>
+                    <li class="tool-badge">Send payment reminders</li>
+                    <li class="tool-badge">Post payments to AR when received</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 7: Carrier Payment & Settlement -->
+          <div class="step">
+            <div class="step-content automation">
+              <span class="step-tag tag-automation">Automation</span>
+              <h3 class="step-title collapsed">Carrier Payment & Settlement</h3>
+              <div class="step-detail">
+                <h4>Pain:</h4>
+                <p>Carrier-Rechnungen kommen in verschiedenen Formaten an. Reconciliation ist chaotisch. Zahlungen erfolgen zu spät, wodurch Beziehungen belastet werden. Disputes werden manuell beigelegt.</p>
+                <h4>Fix:</h4>
+                <p>Automatisierte Carriers-Rechnungs- und Zahlungsplattformen (Platinum, TMS-integriert) können Reconciliation automatisieren, Zahlungen beschleunigen und Dispute-Zeiten um 90 % reduzieren.</p>
+                <div class="automation-panel">
+                  <h5>What a Bot Can Do (Fully Automated):</h5>
+                  <ul class="tool-list">
+                    <li class="tool-badge">Receive & parse carrier invoices</li>
+                    <li class="tool-badge">Match to load data in TMS</li>
+                    <li class="tool-badge">Flag mismatches for review</li>
+                    <li class="tool-badge">Process payment by carrier preference</li>
+                    <li class="tool-badge">Update GL & reconcile</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIPOC Section -->
+    <section class="sipoc-section" id="sipoc">
+      <div class="container">
+        <span class="section-label">SIPOC-Framework</span>
+        <h2>Der Buchungsprozess: SIPOC-Überblick</h2>
+        <p style="font-size: 1.05rem; color: var(--text-light); line-height: 1.6; max-width: 700px; margin-bottom: 32px;">Das SIPOC-Diagramm bildet den vollständigen Buchungs-Workflow auf einen Blick ab. Nutzen Sie es als Ausgangspunkt für Ihre Prozessdokumentation.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Suppliers</th>
+              <th>Inputs</th>
+              <th>Process</th>
+              <th>Outputs</th>
+              <th>Customers</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Shippers, Freight Platforms, Brokers</td>
+              <td>Load details, Rate requests, Carrier availability</td>
+              <td>Quote → Negotiate → Dispatch → Track → Invoice</td>
+              <td>Confirmed shipment, Invoice, Tracking number</td>
+              <td>Shippers, Carriers, Finance</td>
+            </tr>
+            <tr>
+              <td>Carriers, Dispatch boards</td>
+              <td>Shipper demand, Load specs, Carrier capacity</td>
+              <td>Load matching, Price negotiation, Assignment</td>
+              <td>Assigned carrier, Confirmed pickup/delivery</td>
+              <td>Operations, Shippers, Carriers</td>
+            </tr>
+            <tr>
+              <td>POD systems, Tracking devices</td>
+              <td>GPS data, Photo uploads, Manual confirmations</td>
+              <td>Real-time tracking, POD validation, Status updates</td>
+              <td>Delivery confirmation, Signed POD, Revenue recognition trigger</td>
+              <td>Shippers, Finance, Carriers</td>
+            </tr>
+            <tr>
+              <td>AR system, Payment gateways</td>
+              <td>Shipment data, Load rates, POD proof</td>
+              <td>Invoice generation, Payment collection, Reconciliation</td>
+              <td>Invoice, Payment confirmation, GL posting</td>
+              <td>Shippers, Finance, Controllers</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools-section" id="tools">
+      <div class="container">
+        <div class="tools-intro">
+          <span class="section-label">Markt-Tools</span>
+          <h2 style="font-family: 'Ysabeau Office', sans-serif; font-size: 2rem; font-weight: 800; margin-bottom: 12px; color: var(--text-dark);">Die Tools, die die Lücken heute schließen</h2>
+          <p>Dies sind die Plattformen, die Spediteure 2026 aktiv einsetzen, um die oben beschriebenen manuellen Schritte zu automatisieren. Keine erfordert eine vollständige TMS-Ablösung.</p>
+        </div>
+        <div class="tools-grid">
+          <!-- CRM Tools -->
+          <div class="tool-card">
+            <div class="tool-category">CRM & Outreach</div>
+            <div class="tool-name">HubSpot</div>
+            <div class="tool-price">$45–$3,200/mo</div>
+          </div>
+          <div class="tool-card">
+            <div class="tool-category">CRM & Outreach</div>
+            <div class="tool-name">Apollo.io</div>
+            <div class="tool-price">$49–$499/mo</div>
+          </div>
+          <div class="tool-card">
+            <div class="tool-category">CRM & Outreach</div>
+            <div class="tool-name">Salesforce</div>
+            <div class="tool-price">$165–$330/mo</div>
+          </div>
+
+          <!-- Booking & Portal -->
+          <div class="tool-card">
+            <div class="tool-category">Booking Platform</div>
+            <div class="tool-name">Convoy</div>
+            <div class="tool-price">Custom pricing</div>
+          </div>
+          <div class="tool-card">
+            <div class="tool-category">Booking Platform</div>
+            <div class="tool-name">Echo</div>
+            <div class="tool-price">Custom pricing</div>
+          </div>
+          <div class="tool-card">
+            <div class="tool-category">Booking Platform</div>
+            <div class="tool-name">Aftab</div>
+            <div class="tool-price">Custom pricing</div>
+          </div>
+
+          <!-- Carrier Sourcing -->
+          <div class="tool-card">
+            <div class="tool-category">Carrier Sourcing</div>
+            <div class="tool-name">Loadsmart</div>
+            <div class="tool-price">Custom pricing</div>
+          </div>
+          <div class="tool-card">
+            <div class="tool-category">Carrier Sourcing</div>
+            <div class="tool-name">Fourkites Sourcing</div>
+            <div class="tool-price">Custom pricing</div>
+          </div>
+
+          <!-- Tracking & POD -->
+          <div class="tool-card">
+            <div class="tool-category">Tracking & POD</div>
+            <div class="tool-name">Samsara</div>
+            <div class="tool-price">Custom pricing</div>
+          </div>
+          <div class="tool-card">
+            <div class="tool-category">Tracking & POD</div>
+            <div class="tool-name">Geotab</div>
+            <div class="tool-price">From $1,200/year</div>
+          </div>
+          <div class="tool-card">
+            <div class="tool-category">Tracking & POD</div>
+            <div class="tool-name">Fourkites</div>
+            <div class="tool-price">Custom pricing</div>
+          </div>
+
+          <!-- Invoicing & AR -->
+          <div class="tool-card">
+            <div class="tool-category">Invoicing & AR</div>
+            <div class="tool-name">Bill.com</div>
+            <div class="tool-price">$15–$160/mo</div>
+          </div>
+          <div class="tool-card">
+            <div class="tool-category">Invoicing & AR</div>
+            <div class="tool-name">Stripe</div>
+            <div class="tool-price">2.2% + $0.30 per transaction</div>
+          </div>
+          <div class="tool-card">
+            <div class="tool-category">Invoicing & AR</div>
+            <div class="tool-name">FreshBooks</div>
+            <div class="tool-price">$15–$55/mo</div>
+          </div>
+
+          <!-- TMS Integration -->
+          <div class="tool-card">
+            <div class="tool-category">TMS & Integration</div>
+            <div class="tool-name">Platinum TMS</div>
+            <div class="tool-price">Custom pricing</div>
+          </div>
+          <div class="tool-card">
+            <div class="tool-category">TMS & Integration</div>
+            <div class="tool-name">Descartes TMS</div>
+            <div class="tool-price">Custom pricing</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Assessment Section -->
+    <section class="assessment-section" id="assessment">
+      <div class="container">
+        <div class="assessment-header">
+          <span class="section-label">Kostenlose Selbsteinschätzung</span>
+          <h2>Sind Sie bereit für Automatisierung?</h2>
+          <p>Beantworten Sie fünf Fragen zu Ihrem aktuellen Betrieb. Wir sagen Ihnen genau, wo Sie stehen und was Sie zuerst beheben müssen.</p>
+        </div>
+
+        <div class="assessment-card">
+          <div class="assessment-card-header">
+            <h3>KI- & Automatisierungs-Readiness-Check</h3>
+            <p class="assessment-subtitle">5 Fragen. Ca. 2 Minuten.</p>
+          </div>
+
+          <div class="progress-wrapper">
+            <div class="progress-bar">
+              <div id="progress-bar"></div>
+            </div>
+            <div id="score-display">Ergebnis: 0 / 5</div>
+          </div>
+
+          <form id="assessment-form">
+            <!-- Q1 -->
+            <div class="question">
+              <p class="question-text">1. Haben Sie dokumentierte, standardisierte SOPs für Ihre Kernprozesse (Ladungsplanung, Carrier-Auswahl, POD-Erfassung)?</p>
+              <div class="options">
+                <button type="button" class="option-btn" data-question="q1" data-value="yes">Ja, wir haben schriftliche SOPs</button>
+                <button type="button" class="option-btn" data-question="q1" data-value="no">Nein, jeder Mitarbeiter macht es anders</button>
+              </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="question">
+              <p class="question-text">2. Sind Ihre TMS-Daten sauber und aktuell, oder verlassen Sie sich auf Tabellen und Notizen?</p>
+              <div class="options">
+                <button type="button" class="option-btn" data-question="q2" data-value="yes">Unser TMS ist unsere einzige Datenquelle</button>
+                <button type="button" class="option-btn" data-question="q2" data-value="no">Wir nutzen Excel und E-Mail-Threads</button>
+              </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="question">
+              <p class="question-text">3. Wissen Sie genau, wie viele Stunden pro Woche Ihr Team für manuelle Check-Calls aufwendet?</p>
+              <div class="options">
+                <button type="button" class="option-btn" data-question="q3" data-value="yes">Ja, wir messen diese Kennzahl</button>
+                <button type="button" class="option-btn" data-question="q3" data-value="no">Nein, wir haben keine Transparenz darüber</button>
+              </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="question">
+              <p class="question-text">4. Kennen Sie Ihr aktuelles Days Sales Outstanding (DSO) und Ihren Order-to-Cash-Zyklus?</p>
+              <div class="options">
+                <button type="button" class="option-btn" data-question="q4" data-value="yes">Ja, wir beobachten diese KPIs</button>
+                <button type="button" class="option-btn" data-question="q4" data-value="no">Nein, wir verfolgen diese Zahlen nicht</button>
+              </div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="question">
+              <p class="question-text">5. Gibt es bei Ihnen eine verantwortliche Person für Prozessverbesserung und Technologieeinführung?</p>
+              <div class="options">
+                <button type="button" class="option-btn" data-question="q5" data-value="yes">Ja, wir haben einen Prozessverantwortlichen</button>
+                <button type="button" class="option-btn" data-question="q5" data-value="no">Nein, alle sind zu beschäftigt mit dem Tagesgeschäft</button>
+              </div>
+            </div>
+
+            <div id="result-box">
+              <strong></strong>
+              <p></p>
+            </div>
+
+            <div class="assessment-footer">
+              <p class="score-summary" id="score-summary" style="display: none;"></p>
+              <a href="https://sprint.berias.com/de/#cta" class="btn-primary">Kostenloses Prozess-Audit buchen</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+      <div class="container">
+        <h2>Bereit, die <span>Prozesslücken</span> zu schließen?</h2>
+        <p>BERIAS hilft Spediteuren, ihre Workflows zu kartieren, manuelle Engpässe zu beseitigen und die Grundlage für Automatisierung zu schaffen – in 30 Tagen.</p>
+        <a href="https://sprint.berias.com/de/#cta" class="btn-primary light">Kostenloses 15-Minuten-Audit buchen</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="../../images/LogoBERIASohneHintergrund.png" alt="BERIAS">
+            <p>BERIAS hilft Spediteuren, ihre Workflows zu optimieren und manuelle Prozesse zu automatisieren.</p>
+          </div>
+          <div class="footer-links">
+            <h4 style="color: white; font-size: 0.95rem; margin-bottom: 12px;">Ressourcen</h4>
+            <a href="#process">Prozesskarte</a>
+            <a href="#tools">Tools</a>
+            <a href="#assessment">KI-Check</a>
+          </div>
+          <div class="footer-links">
+            <h4 style="color: white; font-size: 0.95rem; margin-bottom: 12px;">Rechtliches</h4>
+            <a href="/de/datenschutz.html">Datenschutz</a>
+            <a href="/de/agb.html">AGB</a>
+            <a href="/de/impressum.html">Impressum</a>
+            <a href="https://sprint.berias.com">Sprint-Website</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 BERIAS GmbH. Alle Rechte vorbehalten.</p>
+          <div class="lang-switch">
+            <a href="/assessment-ai/">EN</a><span>|</span><a href="/de/assessment-ai/" class="active">DE</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Tracking IDs
+    const GA4_ID = 'G-WP20X6DZPQ';
+    const ADS_ID = 'AW-17546137265';
+    const PIXEL_ID = '680859374507051';
+
+    // Gate Form Handling
+    const gateForm = document.getElementById('gate-form');
+    const gateNameInput = document.getElementById('gate-name');
+    const gateEmailInput = document.getElementById('gate-email');
+    const gateConsentCheckbox = document.getElementById('gate-consent');
+    const gateSubmitBtn = document.getElementById('gate-submit');
+    const gateErrorDiv = document.getElementById('gate-error');
+    const gateLoadingDiv = document.getElementById('gate-loading');
+    const leadGate = document.getElementById('lead-gate');
+    const mainContent = document.getElementById('main-content');
+
+    // Check if user already has access
+    if (localStorage.getItem('ai-assessment-access')) {
+      leadGate.style.display = 'none';
+      mainContent.style.display = 'block';
+      gateForm.style.display = 'none';
+      gateLoadingDiv.style.display = 'none';
+    } else {
+      gateForm.style.display = 'block';
+    }
+
+    // Gate form submission
+    gateForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      gateErrorDiv.style.display = 'none';
+      gateErrorDiv.textContent = '';
+
+      const name = gateNameInput.value.trim();
+      const email = gateEmailInput.value.trim();
+      const consent = gateConsentCheckbox.checked;
+
+      // Validation
+      if (!name || !email || !consent) {
+        if (!name || !email) {
+          gateErrorDiv.textContent = 'Bitte füllen Sie alle Felder aus.';
+        } else if (!gateEmailInput.validity.valid) {
+          gateErrorDiv.textContent = 'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
+        } else if (!consent) {
+          gateErrorDiv.textContent = 'Bitte bestätigen Sie Ihre Einwilligung, bevor Sie fortfahren.';
+        }
+        gateErrorDiv.style.display = 'block';
+        return;
+      }
+
+      if (!gateEmailInput.validity.valid) {
+        gateErrorDiv.textContent = 'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
+        gateErrorDiv.style.display = 'block';
+        return;
+      }
+
+      // Show loading state
+      gateSubmitBtn.disabled = true;
+      gateForm.style.display = 'none';
+      gateLoadingDiv.style.display = 'block';
+
+      try {
+        // Store access in localStorage
+        localStorage.setItem('ai-assessment-access', 'true');
+
+        // GA4 event
+        if (window.gtag) {
+          gtag('event', 'generate_lead', {
+            event_category: 'AI Assessment',
+            event_label: 'Gate Submitted'
+          });
+        }
+
+        // Meta Pixel event
+        if (window.fbq) {
+          fbq('track', 'Lead', { content_name: 'KI-Bereitschaftsanalyse' });
+        }
+
+        // Google Ads conversion
+        try {
+          if (window.gtag) {
+            gtag('event', 'conversion', {
+              'send_to': 'AW-17546137265/wxsICITDyYwcELGd065B',
+              'value': 1.0,
+              'currency': 'USD'
+            });
+          }
+        } catch(err) { console.error('Ads conversion error:', err); }
+
+        // Hide gate and show main content
+        setTimeout(() => {
+          leadGate.style.display = 'none';
+          mainContent.style.display = 'block';
+        }, 500);
+      } catch (error) {
+        console.error('Error:', error);
+        gateSubmitBtn.disabled = false;
+        gateForm.style.display = 'block';
+        gateLoadingDiv.style.display = 'none';
+        gateErrorDiv.textContent = 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.';
+        gateErrorDiv.style.display = 'block';
+      }
+    });
+
+    // Step collapsing
+    document.querySelectorAll('.step-title').forEach(title => {
+      title.addEventListener('click', () => {
+        const detail = title.nextElementSibling;
+        const isOpen = detail.style.display === 'block';
+        detail.style.display = isOpen ? 'none' : 'block';
+        if (isOpen) {
+          title.classList.add('collapsed');
+        } else {
+          title.classList.remove('collapsed');
+        }
+      });
+    });
+
+    // Assessment Logic
+    const assessmentForm = document.getElementById('assessment-form');
+    const optionBtns = document.querySelectorAll('.option-btn');
+    const progressBarFill = document.getElementById('progress-bar');
+    const scoreDisplay = document.getElementById('score-display');
+    const resultBox = document.getElementById('result-box');
+    const scoreSummary = document.getElementById('score-summary');
+
+    let responses = {};
+
+    optionBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const question = btn.dataset.question;
+        const value = btn.dataset.value;
+
+        // Remove previous selection for this question
+        document.querySelectorAll(`[data-question="${question}"]`).forEach(b => {
+          b.classList.remove('selected-yes', 'selected-no');
+        });
+
+        // Add selection to clicked button
+        if (value === 'yes') {
+          btn.classList.add('selected-yes');
+          responses[question] = 1;
+        } else {
+          btn.classList.add('selected-no');
+          responses[question] = 0;
+        }
+
+        // Update score
+        updateScore();
+      });
+    });
+
+    function updateScore() {
+      const answered = Object.keys(responses).length;
+      const score = Object.values(responses).reduce((sum, val) => sum + val, 0);
+
+      // Update progress bar
+      const progress = (answered / 5) * 100;
+      progressBarFill.style.width = progress + '%';
+      scoreDisplay.textContent = `Ergebnis: ${score} / 5`;
+
+      // Show result when all answered
+      if (answered === 5) {
+        displayResult(score);
+      } else {
+        resultBox.style.display = 'none';
+      }
+    }
+
+    function displayResult(score) {
+      resultBox.style.display = 'block';
+      scoreSummary.style.display = 'block';
+
+      let title, message, className;
+
+      if (score >= 4) {
+        className = 'ready';
+        title = 'Sie sind bereit für Automatisierung.';
+        message = 'Ihre operative Grundlage ist solide. Der nächste Schritt ist die Identifizierung, welche manuellen Workflows zuerst automatisiert werden sollen. Buchen Sie ein kostenloses 15-minütiges Prozess-Audit mit BERIAS und wir erstellen gemeinsam Ihre Automatisierungs-Roadmap.';
+      } else if (score >= 2) {
+        className = 'caution';
+        title = 'Vorsicht ist geboten.';
+        message = 'Sie haben einige Grundlagen, aber entscheidende Lücken bleiben. KI-Tools über nicht standardisierte Prozesse zu legen, verstärkt das Chaos — es reduziert es nicht. Lassen Sie uns zuerst die schwachen Bereiche beheben. Buchen Sie ein kostenloses Prozess-Audit.';
+      } else {
+        className = 'not-ready';
+        title = 'Stopp.';
+        message = 'Investieren Sie noch nicht in KI. Ihr Unternehmen braucht Prozessklarheit, bevor Technologie eingesetzt werden kann. Die gute Nachricht: Genau dafür ist der 30-Day Clarity Sprint gedacht. Buchen Sie ein kostenloses 15-minütiges Gespräch und wir zeigen Ihnen den schnellsten Weg nach vorne.';
+      }
+
+      resultBox.className = `${className}`;
+      resultBox.innerHTML = `<strong>${title}</strong><p>${message}</p>`;
+    }
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Close menu on link click
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Language preference
+    function setLanguagePreference(lang) {
+      localStorage.setItem('lang-preference', lang);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setLanguagePreference('de');
+    });
+  </script>
+
+<!-- BERIAS Instant Support Widget -->
+<script>
+window.BERIASChat = {
+  demoMode:        false,
+  language:        'de',
+  apiEndpoint:     '/api/chat.php',
+  hubspotEndpoint: '/api/hubspot-lead.php',
+  n8nWebhook:      'https://automation.berias.com/webhook/berias-lead',
+  calendlyUrl:     'https://calendly.com/hess-tobias/15-minute-process-leak-audit',
+  autoOpenDelay:   25000
+};
+</script>
+<script src="/berias-chatbot-widget.js"></script>
+</body>
+</html>

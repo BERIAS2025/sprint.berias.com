@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Language Auto-Redirect -->
+  <script>
+    (function() {
+      // Don't redirect if user has manually chosen English
+      if (localStorage.getItem('lang-preference') === 'en') return;
+      // Don't redirect if already on a /de/ page
+      if (window.location.pathname.indexOf('/de/') === 0) return;
+      // Check browser language
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (lang.startsWith('de')) {
+        var path = window.location.pathname;
+        var deTarget = '/de/';
+        if (path.indexOf('/assessment-ai') !== -1) deTarget = '/de/assessment-ai/';
+        else if (path.indexOf('/assessment') !== -1) deTarget = '/de/assessment/';
+        window.location.replace(deTarget);
+      }
+    })();
+  </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Stop losing 260+ hours a year to back-office chaos. The 30-Day Clarity Sprint fixes the operational leaks draining your freight brokerage or 3PL. Book a free 15-minute Process Leak Audit.">
     <meta name="keywords" content="freight broker consulting, 3PL operations improvement, logistics process optimization, freight brokerage efficiency, dispatch workflow automation, logistics consulting">
     <meta name="author" content="BERIAS LLC">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NQZV9VC9');</script>
+    <!-- End Google Tag Manager -->
 
     <title>30-Day Clarity Sprint | Fix the Operational Leaks Costing Your Freight Business | BERIAS</title>
 
@@ -573,8 +599,36 @@
             }
         }
     </style>
+  <style id="lang-switcher-style">
+    .lang-switcher { display:flex; align-items:center; gap:4px; font-size:0.8125rem; font-weight:600; margin-left:1rem; }
+    .lang-switcher a { color:rgba(255,255,255,0.55); text-decoration:none; padding:3px 7px; border-radius:3px; transition:color 0.2s,background 0.2s; }
+    .lang-switcher a:hover { color:#fff; }
+    .lang-switcher a.active { color:#fff; background:rgba(255,255,255,0.12); pointer-events:none; }
+    .lang-switcher span { color:rgba(255,255,255,0.25); }
+  </style>
+  <!-- SEO: Canonical & hreflang -->
+  <link rel="canonical" href="https://sprint.berias.com/" />
+  <link rel="alternate" hreflang="en" href="https://sprint.berias.com/" />
+  <link rel="alternate" hreflang="de" href="https://sprint.berias.com/de/" />
+  <link rel="alternate" hreflang="x-default" href="https://sprint.berias.com/" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sprint.berias.com/" />
+  <meta property="og:title" content="30-Day Clarity Sprint | Fix Operational Leaks in Your Freight Business | BERIAS" />
+  <meta property="og:description" content="Stop losing 260+ hours a year to back-office chaos. The 30-Day Clarity Sprint fixes your freight brokerage processes in one focused month. Book your free 15-min audit." />
+  <meta property="og:image" content="https://d2xsxph8kpxj0f.cloudfront.net/310419663030437683/XiaTKX2C7AtY3GCmxwT62P/hero-blueprint-7LemGXbvcYHWbis4WSp7kP.webp" />
+  <meta property="og:site_name" content="BERIAS Sprint" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="30-Day Clarity Sprint | Fix Operational Leaks in Your Freight Business | BERIAS" />
+  <meta name="twitter:description" content="Stop losing 260+ hours a year to back-office chaos. The 30-Day Clarity Sprint fixes your freight brokerage processes in one focused month. Book your free 15-min audit." />
+  <meta name="twitter:image" content="https://d2xsxph8kpxj0f.cloudfront.net/310419663030437683/XiaTKX2C7AtY3GCmxwT62P/hero-blueprint-7LemGXbvcYHWbis4WSp7kP.webp" />
 </head>
-<body>
+<body style="overflow-x: hidden;">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQZV9VC9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
     <!-- Navigation -->
     <nav class="navbar">
@@ -587,7 +641,10 @@
                 <li><a href="#solution">The Solution</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
                 <li><a href="#pricing">Investment</a></li>
+                <li><a href="/assessment/">Back-Office Check</a></li>
+                <li><a href="/assessment-ai/">Process Map</a></li>
                 <li><a href="#cta" class="btn-primary-small">Free 15-Min Audit</a></li>
+                <li class="lang-switcher"><a href="/de/" onclick="localStorage.removeItem('lang-preference')">DE</a><span>|</span><a href="#" class="active" onclick="localStorage.setItem('lang-preference','en');return false;">EN</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -908,7 +965,6 @@
 
             <!-- BPM Assessment CTA (inserted between Deliverable and Audit CTA) -->
             <div class="bpm-assessment-cta-block">
-                <div class="bpm-cta-icon">📋</div>
                 <div class="bpm-cta-text">
                     <h3>Not sure if you really need it? Check your process maturity here.</h3>
                     <p>Take our free 5-minute BPM Maturity Assessment and find out exactly where your operations stand across 15 key dimensions. Get a personalized score and actionable recommendations, instantly.</p>
@@ -916,6 +972,17 @@
                 <div class="bpm-cta-buttons">
                     <a href="/assessment/" class="btn-primary">Take the Free Assessment</a>
                     <a href="/assessment/BERIAS_BPM_Maturity_Assessment.pdf" class="btn-secondary" target="_blank">Download PDF Version</a>
+                </div>
+            </div>
+
+            <!-- AI Readiness Tool CTA -->
+            <div class="bpm-assessment-cta-block" style="margin-top:20px; background:linear-gradient(135deg,#1a4a72 0%,#0F304C 100%);">
+                <div class="bpm-cta-text">
+                    <h3 style="color:#A2C614;">Is Your Brokerage Ready for AI? Find Out in 2 Minutes.</h3>
+                    <p style="color:rgba(255,255,255,0.85);">Explore the interactive freight brokerage process map, see exactly where your manual work is bleeding time and money, and take the free AI readiness check. No cost, no commitment.</p>
+                </div>
+                <div class="bpm-cta-buttons">
+                    <a href="/assessment-ai/" class="btn-primary">Explore the Free Process Map</a>
                 </div>
             </div>
 
@@ -1358,7 +1425,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <img src="images/LogoBERIASohneHintergrund.png" alt="BERIAS Logo">
-                    <p>Transforming freight operations from chaos to clarity.</p>
+                    <p>Transforming business chaos into operational clarity.</p>
                 </div>
 
                 <div class="footer-links">
@@ -1393,76 +1460,125 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 BERIAS LLC. All rights reserved.</p>
+                <p>&copy; 2026 BERIAS LLC. All rights reserved. &nbsp;|&nbsp; <a href="/de/" style="color:rgba(255,255,255,0.6);">Deutsch (DE)</a></p>
             </div>
         </div>
     </footer>
-
-    <!-- GDPR Cookie Consent Banner -->
-    <div id="cookie-consent-banner" class="cookie-consent">
-        <div class="cookie-consent-container">
-            <div class="cookie-consent-text">
-                <h4>🍪 We Value Your Privacy</h4>
-                <p>We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking "Accept All", you consent to our use of cookies. <a href="privacy.html" target="_blank">Read our Privacy Policy</a></p>
-            </div>
-            <div class="cookie-consent-actions">
-                <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept All</button>
-                <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
-                <button id="cookie-settings-btn" class="cookie-btn cookie-btn-settings">Cookie Settings</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Cookie Settings Modal -->
-    <div id="cookie-settings-modal" class="cookie-settings-modal">
-        <div class="cookie-settings-content">
-            <button id="cookie-settings-close" class="cookie-settings-close">&times;</button>
-            <h3>Cookie Preferences</h3>
-            <p>We use different types of cookies to optimize your experience on our website. Choose which cookies you want to allow:</p>
-
-            <div class="cookie-category">
-                <div class="cookie-category-header">
-                    <h4>Necessary Cookies</h4>
-                    <label class="cookie-toggle">
-                        <input type="checkbox" checked disabled>
-                        <span class="cookie-toggle-slider"></span>
-                    </label>
-                </div>
-                <p>These cookies are essential for the website to function properly. They cannot be disabled.</p>
-            </div>
-
-            <div class="cookie-category">
-                <div class="cookie-category-header">
-                    <h4>Analytics Cookies</h4>
-                    <label class="cookie-toggle">
-                        <input type="checkbox" id="toggle-analytics">
-                        <span class="cookie-toggle-slider"></span>
-                    </label>
-                </div>
-                <p>These cookies help us understand how visitors interact with our website (Google Analytics).</p>
-            </div>
-
-            <div class="cookie-category">
-                <div class="cookie-category-header">
-                    <h4>Marketing Cookies</h4>
-                    <label class="cookie-toggle">
-                        <input type="checkbox" id="toggle-marketing">
-                        <span class="cookie-toggle-slider"></span>
-                    </label>
-                </div>
-                <p>These cookies are used to display relevant advertisements (Google Ads, Facebook Pixel).</p>
-            </div>
-
-            <div class="cookie-settings-actions">
-                <button id="cookie-accept-selected" class="cookie-btn cookie-btn-accept">Accept Selected</button>
-                <button id="cookie-save-preferences" class="cookie-btn cookie-btn-decline">Save Preferences</button>
-            </div>
-        </div>
-    </div>
-
     <!-- JavaScript -->
     <script src="js/script.js"></script>
     <script src="js/faq.js"></script>
     <script src="js/cookie-consent.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What exactly do you do during the 30-day sprint?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I am The Architect. I diagnose where your operations are broken, design the systems to fix them, and coach your team through the change. I do not run your business for you. I build the infrastructure so your team can run it without chaos. Think of it like hiring an architect for a building: I draw the blueprints, your crew builds the house."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does my company need to do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your team is essential to this process. I handle the operational audit, workflow redesign, dossier framework architecture, training sessions, change management coaching, and the 90-day roadmap. Your team participates in audit interviews (30-60 min each), provides the details on how things actually work, and attends training sessions. You as the owner do a 60-minute Vision Alignment at the start and a Final Review at the end."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why only 30 days? Is this not a longer project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most process projects fail because they drag on for months and lose momentum. I use a Sprint Methodology to install the 20% of infrastructure that drives 80% of your results. We lay the tracks in 30 days. Your team uses the 90-day roadmap to keep the train moving. For larger companies (35+ employees), we offer a Phase 2 to go deeper."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Operational Clarity Dossier?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is your company's Owner's Manual. A digital, searchable library of how your business actually runs. If your best dispatcher left tomorrow, their replacement could open the Dossier and be 80% productive by lunch on Day 1. I build the architecture and framework. Your team fills in the role-specific details with my guidance. The result is a living document that grows with your company."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the Success Guarantee work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simple. We guarantee we will identify at least three specific, fixable inefficiencies in your freight operation, each with a documented time or cost impact. If we do not, you pay nothing for the Sprint."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "We already have a TMS. Do we need to change it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily. I will audit what you have and what is working. Often, freight businesses have solid tools but poor integration, poor adoption, or workflows that do not match how the tool was designed to be used. I will optimize what you have, eliminate redundancies, and fill the gaps. You will not be starting from scratch. You will be building on your existing foundation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know if my business is ready for this?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your dispatchers are spending more time answering status calls than booking loads, if your back-office team is drowning in paperwork, if you cannot answer basic questions about your operation without digging through spreadsheets, you are ready. Book a free 15-minute Process Leak Audit and we will determine together if the Sprint is the right fit for your current stage."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "BERIAS - 30-Day Clarity Sprint",
+  "url": "https://sprint.berias.com",
+  "logo": "https://sprint.berias.com/images/Logo-BERIAS-100px.png",
+  "description": "Business process management consulting for freight brokerages. Fix operational leaks in 30 days.",
+  "founder": {
+    "@type": "Person",
+    "name": "Tobias Hess"
+  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "addressLocality": "Miami",
+      "addressRegion": "FL",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "PostalAddress",
+      "addressLocality": "Tutzing",
+      "addressCountry": "DE"
+    }
+  ],
+  "telephone": "+13056000960",
+  "email": "hello@berias.com",
+  "sameAs": [
+    "https://berias.com"
+  ]
+}
+</script>
+
+<!-- BERIAS Instant Support Widget -->
+<script>
+window.BERIASChat = {
+  demoMode:        false,
+  language:        'en',
+  apiEndpoint:     '/api/chat.php',
+  hubspotEndpoint: '/api/hubspot-lead.php',
+  n8nWebhook:      'https://automation.berias.com/webhook/berias-lead',
+  calendlyUrl:     'https://calendly.com/hess-tobias/15-minute-process-leak-audit',
+  autoOpenDelay:   25000
+};
+</script>
+<script src="/berias-chatbot-widget.js"></script>
 </body>
 </html>

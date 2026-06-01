@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freight Brokerage Process Flow & AI Readiness | BERIAS</title>
+  <meta name="description" content="See exactly where your freight brokerage is losing time and money. Interactive process flow with automation opportunities and a free AI readiness check.">
+  <link rel="icon" href="../images/BEwithoutBackground.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@400;600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/cookie-consent.css?v=3">
+  <link rel="canonical" href="https://sprint.berias.com/assessment-ai/">
+  <link rel="alternate" hreflang="en" href="https://sprint.berias.com/assessment-ai/">
+  <link rel="alternate" hreflang="de" href="https://sprint.berias.com/de/assessment-ai/">
+  <link rel="alternate" hreflang="x-default" href="https://sprint.berias.com/assessment-ai/">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NQZV9VC9');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta property="og:title" content="Freight Brokerage Process Flow & AI Readiness | BERIAS">
+  <meta property="og:description" content="See exactly where your freight brokerage is losing time and money. Interactive process flow with automation opportunities and a free AI readiness check.">
+  <meta property="og:url" content="https://sprint.berias.com/assessment-ai/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BERIAS Sprint">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WP20X6DZPQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WP20X6DZPQ');
+  </script>
+
+  <!-- Google Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17546137265"></script>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '680859374507051');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=680859374507051&ev=PageView&noscript=1" /></noscript>
+
+  <!-- Language redirect script -->
+  <script>
+    (function(){
+      if (!localStorage.getItem('lang-preference')) {
+        const browserLang = navigator.language.toLowerCase();
+        if (browserLang.startsWith('de')) {
+          window.location.href = '/de/assessment-ai/';
+        }
+      }
+    })();
+  </script>
+
+  <style>
+    :root {
+      --navy: #0F304C;
+      --lime: #A2C614;
+      --text-dark: #1f2937;
+      --text-light: #6b7280;
+      --border-light: #E5E7EB;
+      --bg-light: #f9fafb;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Public Sans', sans-serif;
+      color: var(--text-dark);
+      background: #fff;
+    }
+
+    /* Lead Gate Styles */
+    #lead-gate {
+      min-height: 100vh;
+      background: #f9fafb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 9999;
+      overflow-y: auto;
+    }
+
+    .gate-container {
+      max-width: 960px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      margin: auto;
+      padding: 60px 0;
+    }
+
+    .gate-left {
+      color: var(--navy);
+    }
+
+    .gate-left img {
+      height: 48px;
+      object-fit: contain;
+      margin-bottom: 32px;
+    }
+
+    .gate-left h1 {
+      font-family: 'Ysabeau Office', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: var(--navy);
+    }
+
+    .gate-left h1 span {
+      color: var(--lime);
+    }
+
+    .gate-left p {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+
+    .gate-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .gate-bullets li {
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .gate-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--lime);
+    }
+
+    .gate-card {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 4px 24px rgba(15, 48, 76, 0.1);
+      border: 1px solid var(--border-light);
+    }
+
+    .gate-card h2 {
+      font-family: 'Ysabeau Office', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .gate-card .subtitle {
+      font-size: 0.875rem;
+      color: #9ca3af;
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 6px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid var(--border-light);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-family: 'Public Sans', sans-serif;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus {
+      border-color: var(--navy);
+    }
+
+    .consent-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      font-size: 0.8rem;
+      color: #6b7280;
+      line-height: 1.5;
+    }
+
+    .consent-row input[type="checkbox"] {
+      margin-top: 3px;
+      flex-shrink: 0;
+      accent-color: var(--lime);
+      cursor: pointer;
+    }
+
+    .consent-row a {
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .consent-row a:hover {
+      text-decoration: underline;
+    }
+
+    #gate-submit {
+      width: 100%;
+      background: var(--lime);
+      color: var(--navy);
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: 'Public Sans', sans-serif;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    #gate-submit:hover {
+      background: #8FB011;
+      transform: translateY(-2px);
+    }
+
+    #gate-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .gate-privacy {
+      font-size: 0.75rem;
+      color: #9ca3af;
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    #gate-error {
+      color: #dc2626;
+      font-size: 0.875rem;
+      margin-bottom: 12px;
+      display: none;
+    }
+
+    .gate-back {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: var(--text-light);
+      text-decoration: none;
+    }
+
+    .gate-back:hover {
+      color: var(--navy);
+    }
+
+    @media (max-width: 768px) {
+      .gate-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 40px 0;
+      }
+
+      .gate-left img {
+        height: 36px;
+      }
+
+      .gate-card {
+        padding: 32px 24px;
+      }
+    }
+
+    /* Main Content */
+    #main-content {
+      display: none;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--navy);
+      box-shadow: 0 2px 8px rgba(15, 48, 76, 0.15);
+    }
+
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      height: 68px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar .logo img {
+      height: 40px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: color 0.2s;
+    }
+
+    .nav-menu a:hover {
+      color: #fff;
+    }
+
+    .btn-primary-small {
+      background: var(--lime);
+      color: var(--navy) !important;
+      font-weight: 700 !important;
+      padding: 8px 18px !important;
+      border-radius: 6px !important;
+      transition: background 0.2s;
+    }
+
+    .btn-primary-small:hover {
+      background: #8FB011;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-size: 0.85rem;
+    }
+
+    .lang-switch a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .lang-switch a.active {
+      color: var(--lime);
+      font-weight: 700;
+    }
+
+    .lang-switch a:hover {
+      color: #fff;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(10px, 10px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        padding: 20px;
+        gap: 4px;
+        z-index: 999;
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-right {
+        gap: 8px;
+      }
+
+      .nav-right .btn-primary-small {
+        display: none;
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 80px 24px;
+      background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+      text-align: center;
+    }
+
+    .hero .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--lime);
+      margin-bottom: 12px;
+    }
+
+    .hero h1 {
+      font-family: 'Ysabeau Office', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: var(--text-dark);
+    }
+
+    .hero h1 span {
+      color: var(--lime);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--lime);
+      color: var(--navy);
+      padding: 14px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: #8FB011;
+      transform: translateY(-2px);
+    }
+
+    /* Stats Bar */
+    .stats {
+      padding: 60px 24px;
+      background: var(--navy);
+      color: white;
+    }
+
+    .stats .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: 'Ysabeau Office', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: var(--lime);
+      margin-bottom: 12px;
+    }
+
+    .stat-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* Process Section */
+    .process-section {
+      padding: 80px 24px;
+    }
+
+    .process-section .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header h2 {
+      font-family: 'Ysabeau Office', sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: var(--text-dark);
+    }
+
+    .section-header p {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Process Flow */
+    .process-flow {
+      position: relative;
+      margin-bottom: 80px;
+    }
+
+    .process-flow::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--border-light);
+    }
+
+    .step {
+      margin-bottom: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .step.right {
+      direction: rtl;
+    }
+
+    .step.right > * {
+      direction: ltr;
+    }
+
+    .step-content {
+      padding: 30px;
+      background: var(--bg-light);
+      border-radius: 12px;
+      border-left: 5px solid #d1d5db;
+    }
+
+    .step-content.manual {
+      border-left-color: #8B7355;
+    }
+
+    .step-content.hybrid {
+      border-left-color: #7C3AED;
+    }
+
+    .step-content.automation {
+      border-left-color: var(--lime);
+    }
+
+    .step-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+
+    .tag-manual {
+      background: #F3E8D1;
+      color: #8B7355;
+    }
+
+    .tag-hybrid {
+      background: #EDE9FE;
+      color: #7C3AED;
+    }
+
+    .tag-automation {
+      background: #E6F4D9;
+      color: #16A34A;
+    }
+
+    .step-title {
+      font-family: 'Ysabeau Office', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text-dark);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .step-title::before {
+      content: '▼ ';
+      display: inline-block;
+      margin-right: 8px;
+      transition: transform 0.3s;
+      color: var(--lime);
+    }
+
+    .step-title.collapsed::before {
+      transform: rotate(-90deg);
+    }
+
+    .step-detail {
+      display: none;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .step-detail h4 {
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .step-detail p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .automation-panel {
+      background: white;
+      padding: 16px;
+      border-radius: 8px;
+      border-left: 3px solid var(--lime);
+      margin-top: 16px;
+    }
+
+    .automation-panel h5 {
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+      font-size: 0.85rem;
+    }
+
+    .tool-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tool-badge {
+      background: #F0FDF4;
+      color: #16A34A;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .process-flow::before {
+        display: none;
+      }
+
+      .step {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .step.right {
+        direction: ltr;
+      }
+    }
+
+    /* SIPOC Table */
+    .sipoc-section {
+      padding: 60px 24px;
+      background: var(--bg-light);
+    }
+
+    .sipoc-section .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .sipoc-section .section-label {
+      display: inline-block;
+    }
+
+    .sipoc-section h2 {
+      font-family: 'Ysabeau Office', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 32px;
+      margin-top: 12px;
+      color: var(--text-dark);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    table th {
+      background: var(--navy);
+      color: white;
+      padding: 16px;
+      text-align: left;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border-light);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Tools Section */
+    .tools-section {
+      padding: 80px 24px;
+    }
+
+    .tools-section .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .tools-intro {
+      max-width: 700px;
+      margin-bottom: 48px;
+    }
+
+    .tools-intro p {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-top: 12px;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .tool-card {
+      background: white;
+      border: 1.5px solid var(--border-light);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .tool-card:hover {
+      border-color: var(--lime);
+      box-shadow: 0 8px 24px rgba(162, 198, 20, 0.15);
+      transform: translateY(-4px);
+    }
+
+    .tool-name {
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .tool-category {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 12px;
+    }
+
+    .tool-price {
+      font-size: 0.85rem;
+      color: var(--lime);
+      font-weight: 700;
+    }
+
+    /* Assessment Section */
+    .assessment-section {
+      padding: 80px 24px;
+      background: var(--bg-light);
+    }
+
+    .assessment-section .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .assessment-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .assessment-header h2 {
+      font-family: 'Ysabeau Office', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      margin-top: 12px;
+      color: var(--text-dark);
+    }
+
+    .assessment-header p {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    .assessment-card {
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .assessment-card-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .assessment-card-header h3 {
+      font-family: 'Ysabeau Office', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+
+    .assessment-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    .progress-wrapper {
+      margin-bottom: 32px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 6px;
+      background: var(--border-light);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+
+    #progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--lime) 0%, #7EC021 100%);
+      border-radius: 3px;
+      transition: width 0.3s;
+      width: 0%;
+    }
+
+    #score-display {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      font-weight: 600;
+    }
+
+    .question {
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .question:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .question-text {
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    .options {
+      display: flex;
+      gap: 12px;
+    }
+
+    .option-btn {
+      flex: 1;
+      padding: 12px 16px;
+      border: 1.5px solid var(--border-light);
+      background: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s;
+      color: var(--text-dark);
+    }
+
+    .option-btn:hover {
+      border-color: var(--lime);
+      background: #F0FDF4;
+    }
+
+    .option-btn.selected-yes {
+      background: #16A34A;
+      color: white;
+      border-color: #16A34A;
+    }
+
+    .option-btn.selected-no {
+      background: #EF4444;
+      color: white;
+      border-color: #EF4444;
+    }
+
+    #result-box {
+      display: none;
+      margin-top: 32px;
+      padding: 24px;
+      border-radius: 8px;
+      border-left: 5px solid var(--lime);
+      background: #F0FDF4;
+      color: #16A34A;
+      line-height: 1.6;
+    }
+
+    #result-box.ready {
+      background: #F0FDF4;
+      color: #16A34A;
+      border-left-color: #16A34A;
+    }
+
+    #result-box.caution {
+      background: #FEF3C7;
+      color: #92400E;
+      border-left-color: #F59E0B;
+    }
+
+    #result-box.not-ready {
+      background: #FEE2E2;
+      color: #991B1B;
+      border-left-color: #EF4444;
+    }
+
+    #result-box strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    .assessment-footer {
+      text-align: center;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .assessment-footer .score-summary {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      margin-bottom: 16px;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 80px 24px;
+      background: linear-gradient(135deg, var(--navy) 0%, #1a4a72 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .cta-section .container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cta-section h2 {
+      font-family: 'Ysabeau Office', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .cta-section h2 span {
+      color: var(--lime);
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 32px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .btn-primary.light {
+      background: var(--lime);
+      color: var(--navy);
+    }
+
+    /* Chatbot window size constraint */
+    .bcw-win {
+      max-height: calc(100vh - 110px) !important;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy);
+      color: white;
+      padding: 60px 24px 32px;
+    }
+
+    footer .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-brand img {
+      height: 40px;
+      object-fit: contain;
+      margin-bottom: 12px;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--lime);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-lang {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer-lang a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-lang a.active {
+      color: var(--lime);
+      font-weight: 700;
+    }
+
+    .footer-lang a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+    }
+
+    /* Container utility */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+  </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQZV9VC9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- LEAD GATE -->
+<div id="lead-gate">
+  <div class="gate-container">
+    <div class="gate-left">
+      <img src="../images/LogoBERIASohneHintergrund.png" alt="BERIAS">
+      <h1>Your Freight Brokerage Has <span>Process Leaks.</span> Find Out Exactly Where.</h1>
+      <p>Enter your details to access the interactive process map and free AI readiness check — no spam, ever.</p>
+      <ul class="gate-bullets">
+        <li>Interactive 7-Step Process Map</li>
+        <li>Free AI &amp; Automation Readiness Check</li>
+        <li>Market Tool Recommendations</li>
+      </ul>
+    </div>
+    <div class="gate-card">
+      <h2>Access Your Free Tool</h2>
+      <p class="subtitle">Takes less than 5 minutes</p>
+      <form id="gate-form" onsubmit="return handleGateSubmit(event)">
+        <div id="gate-error"></div>
+        <div class="form-group">
+          <label for="gate-name">Full Name</label>
+          <input type="text" id="gate-name" placeholder="John Smith" required>
+        </div>
+        <div class="form-group">
+          <label for="gate-email">Business Email</label>
+          <input type="email" id="gate-email" placeholder="john@acmelogistics.com" required>
+        </div>
+        <div class="consent-row">
+          <input type="checkbox" id="gate-consent" required>
+          <label for="gate-consent">I consent to BERIAS contacting me to discuss my results and consulting services. <a href="https://sprint.berias.com/privacy.html" target="_blank">Privacy Policy</a></label>
+        </div>
+        <button type="submit" id="gate-submit" class="gate-submit">Access the Free Tool →</button>
+        <div class="gate-privacy">Your information is secure and will not be shared with third parties.</div>
+      </form>
+      <a href="https://sprint.berias.com" class="gate-back">← Back to sprint.berias.com</a>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT (hidden until gate submitted) -->
+<div id="main-content">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="https://sprint.berias.com" class="logo">
+        <img src="../images/LogoBERIASohneHintergrund.png" alt="BERIAS">
+      </a>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#process">Process Map</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#assessment">AI Check</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="https://sprint.berias.com/#cta" class="btn-primary-small">Book Free Audit</a>
+        <div class="lang-switch">
+          <a href="#" class="active">EN</a>
+          <span>|</span>
+          <a href="/de/assessment-ai/">DE</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <div class="section-label">BERIAS Process Intelligence</div>
+      <h1>Your Freight Brokerage Has <span>Process Leaks.</span><br>Here Is Exactly Where They Are.</h1>
+      <p>An interactive map of the freight brokerage workflow, where manual work is costing you the most, and which tools can close the gap today.</p>
+      <a href="#assessment" class="btn-primary">Take the Free AI Readiness Assessment</a>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="stats">
+    <div class="container">
+      <div class="stat-item">
+        <div class="stat-number">68%</div>
+        <div class="stat-text">of freight brokerages experienced financial stress in the past year due to manual back-office operations</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">73%</div>
+        <div class="stat-text">of freight procurement teams still rely on manual processes in 2025</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">10-21</div>
+        <div class="stat-text">days a single missing POD can stall an invoice, trapping your working capital</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">$165K</div>
+        <div class="stat-text">in annual labor savings when tracking coordination is automated (3 FTEs freed)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS SECTION -->
+  <section id="process" class="process-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">7-Step Process Map</div>
+        <h2>The Freight Brokerage Process: Step by Step</h2>
+        <p>Every step in your workflow has a cost. Some are manual and can be automated today. Others need process clarity first. Here's the breakdown.</p>
+      </div>
+
+      <div class="process-flow">
+        <!-- Step 1 -->
+        <div class="step">
+          <div class="step-content manual">
+            <span class="step-tag tag-manual">Manual</span>
+            <h3 class="step-title collapsed" onclick="toggleDetail('d1')">Step 1: Customer Acquisition</h3>
+            <div class="step-detail" id="d1">
+              <h4>Pain Points</h4>
+              <p>Cold calling is time-consuming, no systematic follow-up, leads fall through the cracks.</p>
+              <h4>The Fix</h4>
+              <p>CRM-based warm outreach sequence automates follow-up and tracks every interaction.</p>
+              <div class="automation-panel">
+                <h5>Automated Warm Outreach</h5>
+                <div class="tool-list">
+                  <span class="tool-badge">HubSpot</span>
+                  <span class="tool-badge">Apollo.io</span>
+                  <span class="tool-badge">Warmly.ai</span>
+                  <span class="tool-badge">n8n</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step right">
+          <div class="step-content manual">
+            <span class="step-tag tag-manual">Manual</span>
+            <h3 class="step-title collapsed" onclick="toggleDetail('d2')">Step 2: Load Intake from Shipper</h3>
+            <div class="step-detail" id="d2">
+              <h4>Pain Points</h4>
+              <p>Manual phone entry leading to data errors and delays.</p>
+              <h4>The Fix</h4>
+              <p>Shipper-facing web form or API integration auto-populates TMS.</p>
+              <div class="automation-panel">
+                <h5>Bot Starts Immediately</h5>
+                <div class="tool-list">
+                  <span class="tool-badge">DAT Load Board</span>
+                  <span class="tool-badge">Truckstop.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step">
+          <div class="step-content manual">
+            <span class="step-tag tag-manual">Manual</span>
+            <h3 class="step-title collapsed" onclick="toggleDetail('d3')">Step 3: Carrier Sourcing & Rate Negotiation</h3>
+            <div class="step-detail" id="d3">
+              <h4>Pain Points</h4>
+              <p>30-45 minutes per load on phone calls before carrier confirmed. One brokerage increased win rate from 18% to 27% adding ~$34K monthly gross margin.</p>
+              <h4>The Fix</h4>
+              <p>AI-assisted quoting tools generate rate in under 60 seconds.</p>
+              <div class="automation-panel">
+                <h5>Route & Cost Analysis</h5>
+                <div class="tool-list">
+                  <span class="tool-badge">Route Optimization API</span>
+                  <span class="tool-badge">Factoring Check</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step right">
+          <div class="step-content hybrid">
+            <span class="step-tag tag-hybrid">Hybrid</span>
+            <h3 class="step-title collapsed" onclick="toggleDetail('d4')">Step 4: Carrier Dispatch & Onboarding</h3>
+            <div class="step-detail" id="d4">
+              <h4>Pain Points</h4>
+              <p>Compliance-heavy, missing/expired insurance creates liability, manual verification is slow.</p>
+              <h4>The Fix</h4>
+              <p>Automated verification of insurance, FMCSA safety ratings, and carrier packet digitally in minutes.</p>
+              <div class="automation-panel">
+                <h5>SMS Tracking Link Sent</h5>
+                <div class="tool-list">
+                  <span class="tool-badge">Highway.com</span>
+                  <span class="tool-badge">Trucker Tools</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="step">
+          <div class="step-content manual">
+            <span class="step-tag tag-manual">Manual</span>
+            <h3 class="step-title collapsed" onclick="toggleDetail('d5')">Step 5: In-Transit Monitoring & Check Calls</h3>
+            <div class="step-detail" id="d5">
+              <h4>Pain Points</h4>
+              <p>Check calls biggest time sink; manual completion rates only 55%.</p>
+              <h4>The Fix</h4>
+              <p>Automated SMS tracking raises completion to 92%; proactive ETA alerts eliminate inbound "Where is my shipment?" calls.</p>
+              <div class="automation-panel">
+                <h5>Proactive Shipper Alerts</h5>
+                <div class="tool-list">
+                  <span class="tool-badge">EZ Loader TMS</span>
+                  <span class="tool-badge">n8n Automation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="step right">
+          <div class="step-content automation">
+            <span class="step-tag tag-automation">Automation Ready</span>
+            <h3 class="step-title collapsed" onclick="toggleDetail('d6')">Step 6: POD Collection & Document Management</h3>
+            <div class="step-detail" id="d6">
+              <h4>Pain Points</h4>
+              <p>Single missing POD delays invoice 10-21 days; teams chasing 30-80 docs/day.</p>
+              <h4>The Fix</h4>
+              <p>Geofence triggers POD request; AI OCR extracts data automatically.</p>
+              <div class="automation-panel">
+                <h5>Geofence POD Request</h5>
+                <div class="tool-list">
+                  <span class="tool-badge">Nanonets OCR</span>
+                  <span class="tool-badge">Veryfi</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="step">
+          <div class="step-content automation">
+            <span class="step-tag tag-automation">Automation Ready</span>
+            <h3 class="step-title collapsed" onclick="toggleDetail('d7')">Step 7: Invoicing & Payment</h3>
+            <div class="step-detail" id="d7">
+              <h4>Pain Points</h4>
+              <p>Only 2% brokerages have full AR automation; average DSO 47 days.</p>
+              <h4>The Fix</h4>
+              <p>Automated invoice matching reduces DSO from 47 to 31 days, freeing $1M+ working capital per $2M monthly revenue.</p>
+              <div class="automation-panel">
+                <h5>Automated Invoice & AR</h5>
+                <div class="tool-list">
+                  <span class="tool-badge">OTR Solutions Epay Manager</span>
+                  <span class="tool-badge">HubSpot Sequences</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIPOC TABLE -->
+  <section class="sipoc-section">
+    <div class="container">
+      <div class="section-label">Framework</div>
+      <h2>The Load Booking Process: SIPOC Overview</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Suppliers</th>
+            <th>Inputs</th>
+            <th>Process Steps</th>
+            <th>Outputs</th>
+            <th>Customers</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Marketing databases, lead lists</td>
+            <td>Prospect names, emails, phone</td>
+            <td>Customer Acquisition</td>
+            <td>Qualified leads, new customer</td>
+            <td>Sales team, new clients</td>
+          </tr>
+          <tr>
+            <td>Shippers, brokers, load boards</td>
+            <td>Load details, pickup/delivery info</td>
+            <td>Load Intake</td>
+            <td>Order in TMS, confirmed booking</td>
+            <td>Carrier sourcing, dispatch</td>
+          </tr>
+          <tr>
+            <td>Carrier databases, DAT, Truckstop</td>
+            <td>Carrier rates, capacity, rating</td>
+            <td>Carrier Sourcing & Rate Negotiation</td>
+            <td>Carrier selected, rate confirmed</td>
+            <td>Dispatch team</td>
+          </tr>
+          <tr>
+            <td>Carrier onboarding, insurance vendors</td>
+            <td>Carrier credentials, insurance docs</td>
+            <td>Carrier Dispatch & Onboarding</td>
+            <td>Dispatch instruction, POD tracking link</td>
+            <td>Carrier, shipper</td>
+          </tr>
+          <tr>
+            <td>Tracking systems, GPS, TMS</td>
+            <td>Real-time location, ETA</td>
+            <td>In-Transit Monitoring & Check Calls</td>
+            <td>Status update, shipper alert</td>
+            <td>Shipper, carrier, dispatch</td>
+          </tr>
+          <tr>
+            <td>Carrier, shipper, geolocation</td>
+            <td>Signed POD, photos, geotagged data</td>
+            <td>POD Collection & Document Management</td>
+            <td>Verified POD in system, OCR'd data</td>
+            <td>Accounting, shipper billing</td>
+          </tr>
+          <tr>
+            <td>Carrier factoring, shipper AR</td>
+            <td>POD, rate, factoring request</td>
+            <td>Invoicing & Payment</td>
+            <td>Invoice issued, payment matched, settled DSO</td>
+            <td>Finance team, carrier, shipper</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- TOOLS SECTION -->
+  <section id="tools" class="tools-section">
+    <div class="container">
+      <div class="tools-intro">
+        <div class="section-label">Market Tools</div>
+        <h2>The Tools That Close the Gaps Today</h2>
+        <p>These are the platforms and tools actively used by freight brokerages in 2026 to automate the manual steps described above. None require a full TMS replacement to get started.</p>
+      </div>
+
+      <div class="tools-grid">
+        <div class="tool-card">
+          <div class="tool-name">ThinkOwl</div>
+          <div class="tool-category">Automated Workflows</div>
+          <div class="tool-price">Paid</div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-name">DAT Load Board</div>
+          <div class="tool-category">Load Boards</div>
+          <div class="tool-price">Paid</div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-name">Truckstop.com</div>
+          <div class="tool-category">Load Boards</div>
+          <div class="tool-price">Paid</div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-name">Trucker Tools Text-to-Track</div>
+          <div class="tool-category">Carrier Tracking</div>
+          <div class="tool-price">Paid</div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-name">Nanonets OCR</div>
+          <div class="tool-category">Document Automation</div>
+          <div class="tool-price">Paid</div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-name">Veryfi</div>
+          <div class="tool-category">Document Automation</div>
+          <div class="tool-price">Paid</div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-name">OTR Solutions Epay Manager</div>
+          <div class="tool-category">AR & Invoice Automation</div>
+          <div class="tool-price">Paid</div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-name">n8n Self-Hosted</div>
+          <div class="tool-category">Workflow Automation</div>
+          <div class="tool-price">Free / Self-Hosted</div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-name">HubSpot + Apollo.io</div>
+          <div class="tool-category">CRM & Outreach</div>
+          <div class="tool-price">Paid</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASSESSMENT SECTION -->
+  <section id="assessment" class="assessment-section">
+    <div class="container">
+      <div class="assessment-header">
+        <div class="section-label">Free Self-Assessment</div>
+        <h2>Are You Ready for Automation?</h2>
+        <p>Answer five questions about your current operation. We will tell you exactly where you stand and what to fix first before investing in any technology.</p>
+      </div>
+
+      <div class="assessment-card">
+        <div class="assessment-card-header">
+          <h3>AI & Automation Readiness Check</h3>
+          <p class="assessment-subtitle">5 questions. Takes about 2 minutes.</p>
+        </div>
+
+        <div class="progress-wrapper">
+          <div class="progress-bar">
+            <div id="progress-bar"></div>
+          </div>
+          <div id="score-display">Score: 0 / 5</div>
+        </div>
+
+        <div class="question">
+          <div class="question-text">Do you have documented, standardized SOPs for your core workflows (load booking, carrier vetting, POD collection)?</div>
+          <div class="options">
+            <button class="option-btn" onclick="selectAnswer('q1', 'yes', this)">Yes, we have written SOPs</button>
+            <button class="option-btn" onclick="selectAnswer('q1', 'no', this)">No, every agent does it their own way</button>
+          </div>
+        </div>
+
+        <div class="question">
+          <div class="question-text">Is your TMS data clean and consistently updated, or do you rely on spreadsheets and offline notes?</div>
+          <div class="options">
+            <button class="option-btn" onclick="selectAnswer('q2', 'yes', this)">Our TMS is our single source of truth</button>
+            <button class="option-btn" onclick="selectAnswer('q2', 'no', this)">We use spreadsheets and email threads</button>
+          </div>
+        </div>
+
+        <div class="question">
+          <div class="question-text">Do you know exactly how many hours per week your team spends on manual check calls and status updates?</div>
+          <div class="options">
+            <button class="option-btn" onclick="selectAnswer('q3', 'yes', this)">Yes, we track this metric</button>
+            <button class="option-btn" onclick="selectAnswer('q3', 'no', this)">No, we have no visibility on this</button>
+          </div>
+        </div>
+
+        <div class="question">
+          <div class="question-text">Do you have a clear baseline for your current Days Sales Outstanding (DSO) and order-to-cash cycle time?</div>
+          <div class="options">
+            <button class="option-btn" onclick="selectAnswer('q4', 'yes', this)">Yes, we monitor these KPIs</button>
+            <button class="option-btn" onclick="selectAnswer('q4', 'no', this)">No, we do not track these numbers</button>
+          </div>
+        </div>
+
+        <div class="question">
+          <div class="question-text">Do you have a designated person responsible for process improvement and technology adoption?</div>
+          <div class="options">
+            <button class="option-btn" onclick="selectAnswer('q5', 'yes', this)">Yes, we have a process owner</button>
+            <button class="option-btn" onclick="selectAnswer('q5', 'no', this)">No, everyone is too busy with daily operations</button>
+          </div>
+        </div>
+
+        <div id="result-box"></div>
+
+        <div class="assessment-footer">
+          <div class="score-summary" id="score-summary"></div>
+          <a href="https://sprint.berias.com/#cta" class="btn-primary light">Book a Free Process Audit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Stop the <span>Process Leaks?</span></h2>
+      <p>BERIAS helps freight brokerages map their workflows, eliminate manual bottlenecks, and build the foundation for automation, in 30 days.</p>
+      <a href="https://sprint.berias.com/#cta" class="btn-primary light">Book a Free 15-Minute Process Audit</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="../images/LogoBERIASohneHintergrund.png" alt="BERIAS">
+          <p>Helping freight brokerages eliminate manual processes and build automation-ready operations.</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://sprint.berias.com/privacy.html">Privacy Policy</a>
+          <a href="https://sprint.berias.com/terms.html">Terms</a>
+          <a href="https://sprint.berias.com">Back to sprint.berias.com</a>
+        </div>
+        <div class="footer-lang">
+          <a href="#" class="active">EN</a>
+          <span>|</span>
+          <a href="/de/assessment-ai/">DE</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 BERIAS LLC. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+  // Gate submission logic
+  function handleGateSubmit(e) {
+    e.preventDefault();
+    const name = document.getElementById('gate-name').value.trim();
+    const email = document.getElementById('gate-email').value.trim();
+    const consent = document.getElementById('gate-consent').checked;
+    const errorEl = document.getElementById('gate-error');
+
+    // Validation
+    if (!name || !email) {
+      errorEl.textContent = 'Please fill in all fields.';
+      errorEl.style.display = 'block';
+      return false;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      errorEl.textContent = 'Please enter a valid email address.';
+      errorEl.style.display = 'block';
+      return false;
+    }
+
+    if (!consent) {
+      errorEl.textContent = 'Please confirm your consent before proceeding.';
+      errorEl.style.display = 'block';
+      return false;
+    }
+
+    errorEl.style.display = 'none';
+    document.getElementById('gate-submit').disabled = true;
+    document.getElementById('gate-submit').textContent = 'Loading...';
+
+    // Store in localStorage
+    localStorage.setItem('ai-assessment-access', '1');
+
+    // Send to HubSpot
+    fetch('/api/hubspot-lead.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        firstname: name.split(' ')[0],
+        lastname: name.split(' ').slice(1).join(' ') || '',
+        email: email,
+        source: 'AI Readiness Assessment'
+      })
+    }).catch(function(err) {
+      console.error('HubSpot error:', err);
+    });
+
+    // GA4 event
+    if (window.gtag) {
+      gtag('event', 'generate_lead', {
+        event_category: 'AI Assessment',
+        event_label: 'Gate Submitted'
+      });
+    }
+
+    // Meta Pixel event
+    if (window.fbq) {
+      fbq('track', 'Lead', { content_name: 'AI Readiness Assessment' });
+    }
+
+    // Google Ads conversion
+    try {
+      if (window.gtag) {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17546137265/wxsICITDyYwcELGd065B',
+          'value': 1.0,
+          'currency': 'USD'
+        });
+      }
+    } catch(err) { console.error('Ads conversion error:', err); }
+
+    // Show main content
+    document.getElementById('lead-gate').style.display = 'none';
+    document.getElementById('main-content').style.display = 'block';
+    return false;
+  }
+
+  // Check if user already submitted gate
+  (function() {
+    if (localStorage.getItem('ai-assessment-access') === '1') {
+      document.getElementById('lead-gate').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    }
+  })();
+
+  // Assessment logic
+  const answers = {};
+
+  function selectAnswer(q, val, btn) {
+    const siblings = btn.parentElement.querySelectorAll('.option-btn');
+    siblings.forEach(b => {
+      b.classList.remove('selected-yes', 'selected-no');
+    });
+    btn.classList.add(val === 'yes' ? 'selected-yes' : 'selected-no');
+    answers[q] = val;
+
+    const score = Object.values(answers).filter(v => v === 'yes').length;
+    const total = Object.keys(answers).length;
+
+    document.getElementById('score-display').textContent = 'Score: ' + score + ' / 5';
+    document.getElementById('progress-bar').style.width = (total / 5 * 100) + '%';
+
+    if (total === 5) {
+      const box = document.getElementById('result-box');
+      box.style.display = 'block';
+
+      if (score >= 4) {
+        box.className = 'result-box ready';
+        box.innerHTML = '<strong>You are ready for automation.</strong> Your operational foundation is solid. The next step is identifying which manual workflows to automate first. Book a free 15-minute Process Audit with BERIAS and we will build your automation roadmap together.';
+      } else if (score >= 2) {
+        box.className = 'result-box caution';
+        box.innerHTML = '<strong>Proceed with caution.</strong> You have some foundations in place, but key gaps remain. Deploying AI tools over unstandardized processes will amplify the chaos, not reduce it. Let\'s fix the weak areas first. Book a free Process Audit to find out exactly where to start.';
+      } else {
+        box.className = 'result-box not-ready';
+        box.innerHTML = '<strong>Stop. Do not invest in AI yet.</strong> Your brokerage needs process clarity before technology. The good news: this is exactly what the 30-Day Clarity Sprint is designed to fix. Book a free 15-minute call and we will show you the fastest path forward.';
+      }
+
+      box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      // GA4 event
+      if (window.gtag) {
+        gtag('event', 'assessment_complete', {
+          event_category: 'AI Assessment',
+          value: score
+        });
+      }
+    }
+  }
+
+  // Toggle step details
+  function toggleDetail(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const titleEl = el.previousElementSibling;
+    const isOpen = el.style.display === 'block';
+    el.style.display = isOpen ? 'none' : 'block';
+    if (isOpen) {
+      titleEl.classList.add('collapsed');
+    } else {
+      titleEl.classList.remove('collapsed');
+    }
+  }
+
+  // Mobile hamburger menu
+  (function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (hamburger && navMenu) {
+      hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      document.querySelectorAll('.nav-menu a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
+    }
+  })();
+
+  // Set language preference
+  document.querySelectorAll('.lang-switch a, .footer-lang a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      if (this.href !== '#') {
+        localStorage.setItem('lang-preference', this.textContent.trim().toLowerCase());
+      }
+    });
+  });
+</script>
+
+<!-- BERIAS Instant Support Widget -->
+<script>
+window.BERIASChat = {
+  demoMode:        false,
+  language:        'en',
+  apiEndpoint:     '/api/chat.php',
+  hubspotEndpoint: '/api/hubspot-lead.php',
+  n8nWebhook:      'https://automation.berias.com/webhook/berias-lead',
+  calendlyUrl:     'https://calendly.com/hess-tobias/15-minute-process-leak-audit',
+  autoOpenDelay:   25000
+};
+</script>
+<script src="/berias-chatbot-widget.js"></script>
+</body>
+</html>

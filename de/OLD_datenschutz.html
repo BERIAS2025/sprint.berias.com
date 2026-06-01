@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+      <meta name="description" content="Datenschutzerklärung für sprint.berias.com. Erfahren Sie, wie BERIAS GmbH Ihre personenbezogenen Daten gemäß DSGVO und TTDSG erhebt und verarbeitet." />
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklärung | BERIAS GmbH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@400;600;700;800&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --navy: #0F304C;
+            --green: #A2C614;
+            --font-heading: 'Ysabeau Office', sans-serif;
+            --font-body: 'Public Sans', sans-serif;
+        }
+        body {
+            font-family: var(--font-body);
+            color: #333;
+            background: #fff;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .navbar {
+            background: var(--navy);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1280px;
+        }
+        .navbar a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.9375rem; }
+        .navbar a:hover { color: #fff; }
+        .navbar .logo { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: #fff; }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .btn-nav {
+            background: var(--green);
+            color: var(--navy) !important;
+            font-weight: 700;
+            padding: 0.5rem 1.25rem;
+            border-radius: 0.375rem;
+            font-size: 0.875rem;
+        }
+        .legal-hero {
+            background: linear-gradient(135deg, #0F304C 0%, #1a4a72 100%);
+            padding: 3.5rem 0 3rem;
+            margin-bottom: 3rem;
+        }
+        .legal-hero h1 {
+            font-family: var(--font-heading);
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        .legal-hero .meta { color: rgba(255,255,255,0.7); font-size: 0.9375rem; }
+        .legal-hero .meta strong { color: var(--green); }
+        .legal-toc {
+            background: #f0f4f8;
+            border-radius: 10px;
+            padding: 1.75rem 2rem;
+            margin-bottom: 2.5rem;
+        }
+        .legal-toc h3 {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin: 0 0 1rem 0;
+        }
+        .legal-toc ol { margin: 0; padding-left: 1.25rem; }
+        .legal-toc li { font-size: 0.875rem; line-height: 1.9; color: #444; }
+        .legal-toc a { color: var(--navy); text-decoration: none; }
+        .legal-toc a:hover { color: var(--green); text-decoration: underline; }
+        .legal-section {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 2rem 2.25rem;
+            margin-bottom: 1.5rem;
+            scroll-margin-top: 80px;
+        }
+        .legal-section h2 {
+            font-family: var(--font-heading);
+            font-size: 1.375rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 0 0 1.25rem 0;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--green);
+        }
+        .legal-section h3 {
+            font-family: var(--font-heading);
+            font-size: 1.0625rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 1.5rem 0 0.625rem;
+        }
+        .legal-section p {
+            font-size: 0.9375rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 0.875rem;
+        }
+        .legal-section p:last-child { margin-bottom: 0; }
+        .legal-section ul, .legal-section ol {
+            margin: 0.75rem 0 0.875rem 1.5rem;
+            color: #444;
+        }
+        .legal-section li { font-size: 0.9375rem; line-height: 1.8; margin-bottom: 0.5rem; }
+        .legal-section a { color: var(--green); font-weight: 500; }
+        .ttdsg-badge {
+            display: inline-block;
+            background: var(--navy);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.875rem;
+        }
+        .data-table th {
+            background: var(--navy);
+            color: #fff;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-family: var(--font-heading);
+            font-weight: 600;
+        }
+        .data-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            color: #444;
+            vertical-align: top;
+        }
+        .data-table tr:nth-child(even) td { background: #f9fafb; }
+        .back-link {
+            display: inline-block;
+            margin-top: 2.5rem;
+            padding: 0.75rem 1.75rem;
+            background: var(--green);
+            color: var(--navy);
+            font-family: var(--font-heading);
+            font-weight: 700;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-size: 0.9375rem;
+        }
+        .back-link:hover { background: #8fb010; }
+        .footer {
+            background: var(--navy);
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+        .footer .container { max-width: 1280px; }
+        .footer-bottom {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1rem;
+            align-items: center;
+        }
+        .footer-bottom p { color: rgba(255,255,255,0.5); font-size: 0.8125rem; }
+        .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.8125rem; }
+        .footer-bottom a:hover { color: #fff; }
+        .footer-links-row { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+        @media (max-width: 768px) {
+            .legal-hero h1 { font-size: 1.75rem; }
+            .legal-section { padding: 1.5rem; }
+            .data-table { font-size: 0.8125rem; }
+        }
+    /* FIX2-mobile-legal */
+    @media (max-width: 768px) {
+      .legal-container, .privacy-container, .terms-container,
+      .agb-container, .datenschutz-container, .impressum-container,
+      .container, main, article, section {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+      }
+      h1 { font-size: 1.75rem !important; line-height: 1.2; }
+      h2 { font-size: 1.35rem !important; }
+      h3 { font-size: 1.1rem !important; }
+      table { font-size: 0.8rem; display: block; overflow-x: auto; }
+      .hero, .page-hero, .legal-hero {
+        padding: 3rem 1.25rem 2rem !important;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../css/cookie-consent.css?v=3">
+  <!-- SEO: Canonical & hreflang -->
+  <link rel="canonical" href="https://sprint.berias.com/de/datenschutz.html" />
+  <link rel="alternate" hreflang="en" href="https://sprint.berias.com/privacy.html" />
+  <link rel="alternate" hreflang="de" href="https://sprint.berias.com/de/datenschutz.html" />
+  <link rel="alternate" hreflang="x-default" href="https://sprint.berias.com/privacy.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sprint.berias.com/de/datenschutz.html" />
+  <meta property="og:title" content="Datenschutzerklärung | BERIAS GmbH | DSGVO & TTDSG konform" />
+  <meta property="og:description" content="Datenschutzerklärung für sprint.berias.com. Erfahren Sie, wie BERIAS GmbH Ihre personenbezogenen Daten gemäß DSGVO und TTDSG erhebt und verarbeitet." />
+  <meta property="og:image" content="https://d2xsxph8kpxj0f.cloudfront.net/310419663030437683/XiaTKX2C7AtY3GCmxwT62P/hero-blueprint-7LemGXbvcYHWbis4WSp7kP.webp" />
+  <meta property="og:site_name" content="BERIAS Sprint" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Datenschutzerklärung | BERIAS GmbH | DSGVO & TTDSG konform" />
+  <meta name="twitter:description" content="Datenschutzerklärung für sprint.berias.com. Erfahren Sie, wie BERIAS GmbH Ihre personenbezogenen Daten gemäß DSGVO und TTDSG erhebt und verarbeitet." />
+  <meta name="twitter:image" content="https://d2xsxph8kpxj0f.cloudfront.net/310419663030437683/XiaTKX2C7AtY3GCmxwT62P/hero-blueprint-7LemGXbvcYHWbis4WSp7kP.webp" />
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WP20X6DZPQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WP20X6DZPQ');
+  </script>
+</head>
+<body style="overflow-x: hidden;">
+  <!-- Language bar -->
+  <div style="background:#0F304C;padding:8px 0;text-align:right;">
+    <div style="max-width:1100px;margin:0 auto;padding:0 2rem;display:flex;justify-content:flex-end;align-items:center;gap:6px;font-size:0.8125rem;font-weight:600;">
+      <a href="#" style="color:#fff;background:rgba(255,255,255,0.12);text-decoration:none;padding:3px 7px;border-radius:3px;pointer-events:none;">DE</a>
+      <span style="color:rgba(255,255,255,0.25);">|</span>
+      <a href="/privacy.html" onclick="localStorage.setItem('lang-preference','en')" style="color:rgba(255,255,255,0.55);text-decoration:none;padding:3px 7px;border-radius:3px;">EN</a>
+    </div>
+  </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="/de/" class="logo">BERIAS</a>
+            <div class="nav-links">
+                <a href="/de/">Startseite</a>
+                <a href="https://calendly.com/hess-tobias/15-minute-process-leak-audit" target="_blank" class="btn-nav">Kostenloses Audit buchen</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="legal-hero">
+        <div class="container">
+            <h1>Datenschutzerklärung</h1>
+            <p class="meta"><strong>Stand:</strong> März 2026 &nbsp;|&nbsp; Gilt für: sprint.berias.com/de/ inkl. BPM-Assessment-Tool</p>
+        </div>
+    </div>
+
+    <section style="padding-bottom: 4rem;">
+        <div class="container">
+
+            <div class="legal-toc">
+                <h3>Inhaltsverzeichnis</h3>
+                <ol>
+                    <li><a href="#s1">Verantwortlicher und Kontakt</a></li>
+                    <li><a href="#s2">Erhebung, Verarbeitung und Nutzung personenbezogener Daten</a></li>
+                    <li><a href="#s3">Cookies und Tracking (TTDSG)</a></li>
+                    <li><a href="#s4">Google Analytics und Google Ads</a></li>
+                    <li><a href="#s5">Meta Pixel (Facebook)</a></li>
+                    <li><a href="#s6">HubSpot CRM</a></li>
+                    <li><a href="#s7">Calendly (Terminbuchung)</a></li>
+                    <li><a href="#s8">BPM-Reifegrad-Assessment-Tool</a></li>
+                    <li><a href="#s9">Einsatz von Kuenstlicher Intelligenz (KI)</a></li>
+                    <li><a href="#s10">Datenweitergabe und Empfaenger</a></li>
+                    <li><a href="#s11">Speicherdauer</a></li>
+                    <li><a href="#s12">Internationale Datenübermittlung</a></li>
+                    <li><a href="#s13">Ihre Rechte als betroffene Person</a></li>
+                    <li><a href="#s14">Datensicherheit</a></li>
+                    <li><a href="#s15">Kinder</a></li>
+                    <li><a href="#s16">Änderungen dieser Erklärung</a></li>
+                </ol>
+            </div>
+
+            <!-- Abschnitt 1 -->
+            <div class="legal-section" id="s1">
+                <h2>1 Verantwortlicher und Kontakt</h2>
+                <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) und des Bundesdatenschutzgesetzes (BDSG) ist:</p>
+                <div style="background:#fff;border-radius:8px;padding:1.25rem 1.5rem;border:1px solid #e5e7eb;margin:1rem 0;">
+                    <p style="margin:0;">
+                        <strong>BERIAS GmbH</strong><br>
+                        Traubinger Str. 26<br>
+                        82327 Tutzing<br>
+                        Deutschland<br><br>
+                        E-Mail: <a href="mailto:hello@berias.com">hello@berias.com</a><br>
+                        Telefon: +49 (0)176 3808 1336<br>
+                        Geschäftsführer: Tobias Hess
+                    </p>
+                </div>
+                <p>Für Fragen zu dieser Datenschutzerklärung oder unseren Datenpraktiken wenden Sie sich bitte an die oben genannte E-Mail-Adresse. Da wir gesetzlich nicht zur Bestellung eines Datenschutzbeauftragten verpflichtet sind, können alle Anfragen direkt an diese Adresse gerichtet werden.</p>
+                <p>Diese Datenschutzerklärung gilt für die Website <a href="https://sprint.berias.com/de/">sprint.berias.com/de/</a> einschliesslich des BPM-Reifegrad-Assessment-Tools sowie alle damit verbundenen Dienstleistungen, insbesondere den 30-Day Clarity Sprint.</p>
+            </div>
+
+            <!-- Abschnitt 2 -->
+            <div class="legal-section" id="s2">
+                <h2>2 Erhebung, Verarbeitung und Nutzung personenbezogener Daten</h2>
+                <p>Wir erheben personenbezogene Daten, um unsere Dienstleistungen zu erbringen und zu verbessern. Die Rechtsgrundlagen für die Verarbeitung sind gemaess DSGVO primaer die <strong>Vertragsdurchführung</strong> (Art. 6 Abs. 1 lit. b DSGVO), das <strong>berechtigte Interesse</strong> (Art. 6 Abs. 1 lit. f DSGVO) und die <strong>Einwilligung</strong> (Art. 6 Abs. 1 lit. a DSGVO).</p>
+
+                <h3>A. Direkt bereitgestellte Daten</h3>
+                <p><strong>Kontakt- und Unternehmensdaten:</strong> Wenn Sie uns kontaktieren, einen Termin buchen oder das BPM-Assessment-Tool nutzen, erheben wir Ihren Namen, Ihre E-Mail-Adresse, Ihre Telefonnummer und Ihren Unternehmensnamen. Zweck: Terminplanung, Kommunikation und Erbringung der Beratungsleistungen. Rechtsgrundlage: Vertragsdurchführung, berechtigtes Interesse.</p>
+                <p><strong>Operative Kundendaten:</strong> Während des 30-Day Clarity Sprint können Sie Geschäftsdokumente und Informationen zur Analyse bereitstellen. Zweck: Erbringung der Beratungsleistungen. Rechtsgrundlage: Vertragsdurchführung.</p>
+                <p><em>Die Nichtbereitstellung dieser Daten kann dazu führen, dass wir keinen Vertrag abschliessen oder die Leistungen nicht erbringen können.</em></p>
+
+                <h3>B. Automatisch erhobene Daten</h3>
+                <p><strong>Technische und Nutzungsdaten:</strong> Beim Besuch unserer Website erheben wir automatisch Ihre IP-Adresse, Browsertyp, Geraeteinformationen, besuchte Seiten und Nutzungsmuster über Cookies und ähnliche Technologien. Zweck: Analyse der Website-Performance, Verbesserung der Nutzererfahrung und Sicherheit. Rechtsgrundlage: Berechtigtes Interesse, Einwilligung für nicht-essentielle Cookies (gemaess TTDSG Sec. 25).</p>
+
+                <h3>C. Server-Logfiles</h3>
+                <p>Der Hosting-Provider unserer Seiten erhebt und speichert automatisch Informationen in Server-Logfiles, die Ihr Browser automatisch uebermittelt. Dies sind: Browsertyp und -version, verwendetes Betriebssystem, Referrer-URL, Hostname des zugreifenden Rechners sowie Uhrzeit der Serveranfrage. Diese Daten sind nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Rechtsgrundlage: Berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO).</p>
+            </div>
+
+            <!-- Abschnitt 3 -->
+            <div class="legal-section" id="s3">
+                <h2>3 Cookies und Tracking (TTDSG)</h2>
+                <span class="ttdsg-badge">TTDSG-konform</span>
+                <p>Gemaess Sec. 25 des Telekommunikation-Telemedien-Datenschutz-Gesetzes (TTDSG) ist das Speichern von Informationen auf Ihrem Endgeraet oder der Zugriff auf bereits gespeicherte Informationen grundsaetzlich nur mit Ihrer Einwilligung zulaessig, es sei denn, dies ist für die Bereitstellung eines von Ihnen ausdruecklich gewuenschten Telemediendienstes unbedingt erforderlich (Sec. 25 Abs. 2 TTDSG).</p>
+
+                <h3>Essentielle Cookies (keine Einwilligung erforderlich)</h3>
+                <p>Technisch notwendige Cookies, die für den Betrieb der Website unbedingt erforderlich sind, werden gemaess Sec. 25 Abs. 2 Nr. 2 TTDSG ohne Einwilligung gesetzt. Dazu gehören Sitzungscookies für die Funktionsfaehigkeit der Website.</p>
+
+                <h3>Nicht-essentielle Cookies (Einwilligung erforderlich)</h3>
+                <p>Für alle anderen Cookies, insbesondere Analyse- und Marketing-Cookies (Google Analytics, Google Ads, Meta Pixel), holen wir Ihre ausdrueckliche Einwilligung gemaess Sec. 25 Abs. 1 TTDSG i.V.m. Art. 6 Abs. 1 lit. a DSGVO ein. Diese Einwilligung erfolgt über unser Cookie-Consent-Banner beim ersten Besuch der Website. Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, indem Sie die Cookie-Einstellungen in Ihrem Browser anpassen oder uns unter hello@berias.com kontaktieren.</p>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Cookie / Dienst</th>
+                            <th>Kategorie</th>
+                            <th>Zweck</th>
+                            <th>Speicherdauer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sitzungscookies</td>
+                            <td>Essentiell</td>
+                            <td>Grundfunktionen der Website</td>
+                            <td>Sitzungsende</td>
+                        </tr>
+                        <tr>
+                            <td>_ga, _gid (Google Analytics)</td>
+                            <td>Analyse</td>
+                            <td>Website-Nutzungsanalyse</td>
+                            <td>2 Jahre / 24 Stunden</td>
+                        </tr>
+                        <tr>
+                            <td>Google Ads (_gcl_au)</td>
+                            <td>Marketing</td>
+                            <td>Conversion-Tracking</td>
+                            <td>90 Tage</td>
+                        </tr>
+                        <tr>
+                            <td>Meta Pixel (_fbp)</td>
+                            <td>Marketing</td>
+                            <td>Zielgruppenbildung, Anzeigenoptimierung</td>
+                            <td>90 Tage</td>
+                        </tr>
+                        <tr>
+                            <td>HubSpot (__hs_cookie_cat_pref)</td>
+                            <td>Funktional</td>
+                            <td>CRM-Tracking, Lead-Management</td>
+                            <td>13 Monate</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Abschnitt 4 -->
+            <div class="legal-section" id="s4">
+                <h2>4 Google Analytics und Google Ads</h2>
+                <h3>Google Analytics</h3>
+                <p>Diese Website nutzt Google Analytics, einen Webanalysedienst der Google LLC (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA), bzw. bei Nutzern in der EU der Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Irland). Google Analytics verwendet Cookies, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website ermöglicht. Die durch das Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA uebertragen und dort gespeichert. Wir haben die IP-Anonymisierung aktiviert, sodass Ihre IP-Adresse von Google innerhalb der EU vor der Uebermittlung gekuerzt wird.</p>
+                <p>Rechtsgrundlage: Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, Sec. 25 Abs. 1 TTDSG). Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+
+                <h3>Google Ads (Conversion-Tracking)</h3>
+                <p>Wir nutzen Google Ads Conversion-Tracking der Google LLC. Wenn Sie auf eine von Google geschaltete Anzeige klicken, wird ein Cookie auf Ihrem Computer gesetzt. Dieses Cookie verliert nach 30 Tagen seine Gueltigkeit und dient nicht der persönlichen Identifizierung. Rechtsgrundlage: Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, Sec. 25 Abs. 1 TTDSG).</p>
+            </div>
+
+            <!-- Abschnitt 5 -->
+            <div class="legal-section" id="s5">
+                <h2>5 Meta Pixel (Facebook)</h2>
+                <p>Auf unserer Website ist das Meta Pixel der Meta Platforms Ireland Limited (4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland) eingebunden. Das Meta Pixel ermöglicht es Meta, die Besucher unserer Website als Zielgruppe für die Anzeige von Werbeanzeigen auf Facebook und Instagram zu bestimmen. Dabei können Besucher unserer Website auf Facebook und Instagram Werbeanzeigen angezeigt bekommen. Wir erhalten von Meta anonymisierte Berichte über die Anzeigenaktivitaet und die Interaktionen der Nutzer.</p>
+                <p>Rechtsgrundlage: Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, Sec. 25 Abs. 1 TTDSG). Weitere Informationen: <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">facebook.com/privacy/policy/</a>. Sie können der Nutzung von Daten durch Meta für Werbezwecke in den Datenschutzeinstellungen Ihres Facebook-Kontos widersprechen.</p>
+            </div>
+
+            <!-- Abschnitt 6 -->
+            <div class="legal-section" id="s6">
+                <h2>6 HubSpot CRM</h2>
+                <p>Wir verwenden HubSpot, ein CRM-System der HubSpot Inc. (25 First Street, 2nd Floor, Cambridge, MA 02141, USA), bzw. der HubSpot GmbH für europaeische Nutzer. HubSpot ermöglicht uns, Kontaktdaten zu verwalten, Leads zu verfolgen und mit Interessenten zu kommunizieren. Wenn Sie das BPM-Assessment-Tool nutzen oder ein Kontaktformular ausfüllen, werden Ihre Daten (Name, E-Mail, Unternehmen) an HubSpot uebermittelt und dort gespeichert.</p>
+                <p>Rechtsgrundlage: Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) und berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO) an der effizienten Verwaltung von Kundenbeziehungen. HubSpot ist unter dem EU-US Data Privacy Framework zertifiziert. Weitere Informationen: <a href="https://legal.hubspot.com/privacy-policy" target="_blank" rel="noopener">legal.hubspot.com/privacy-policy</a>.</p>
+            </div>
+
+            <!-- Abschnitt 7 -->
+            <div class="legal-section" id="s7">
+                <h2>7 Calendly (Terminbuchung)</h2>
+                <p>Für die Buchung von Terminen (z.B. das kostenlose 15-Minuten-Prozess-Audit) nutzen wir Calendly, einen Dienst der Calendly LLC (271 17th St NW, Ste 1000, Atlanta, GA 30363, USA). Wenn Sie einen Termin buchen, werden Ihre Daten (Name, E-Mail, ggf. Telefonnummer und Nachricht) an Calendly uebermittelt. Calendly ist unter dem EU-US Data Privacy Framework zertifiziert.</p>
+                <p>Rechtsgrundlage: Vertragsdurchführung (Art. 6 Abs. 1 lit. b DSGVO) und berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO). Weitere Informationen: <a href="https://calendly.com/privacy" target="_blank" rel="noopener">calendly.com/privacy</a>.</p>
+            </div>
+
+            <!-- Abschnitt 8 -->
+            <div class="legal-section" id="s8">
+                <h2>8 BPM-Reifegrad-Assessment-Tool</h2>
+                <p>Auf unserer Website betreiben wir ein kostenloses BPM-Reifegrad-Assessment-Tool unter <a href="https://sprint.berias.com/de/assessment/">sprint.berias.com/de/assessment/</a>. Dieses Tool dient der Selbsteinschaetzung Ihrer Geschäftsprozessreife und ist kein verbindliches Beratungsprodukt.</p>
+
+                <h3>Erhobene Daten und Zweck</h3>
+                <p>Um das Assessment zu starten, müssen Sie Ihren Namen, Ihren Unternehmensnamen und Ihre geschäftliche E-Mail-Adresse angeben sowie Ihre ausdrueckliche Einwilligung zur Kontaktaufnahme erteilen. Diese Daten werden verwendet, um: (1) Ihnen Ihre personalisierten Assessment-Ergebnisse zuzusenden, (2) Sie im Rahmen unserer Beratungsleistungen zu kontaktieren, und (3) Ihre Daten in unserem CRM-System (HubSpot) zu erfassen.</p>
+
+                <h3>Einwilligung und Widerruf</h3>
+                <p>Die Nutzung des Assessment-Tools und die damit verbundene Datenerhebung erfolgen ausschliesslich auf Grundlage Ihrer ausdruecklichen Einwilligung gemaess Art. 6 Abs. 1 lit. a DSGVO. Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, indem Sie uns unter <a href="mailto:hello@berias.com">hello@berias.com</a> kontaktieren.</p>
+
+                <h3>Assessment-Ergebnisse</h3>
+                <p>Ihre Antworten auf die 15 Bewertungsfragen sowie Ihr berechneter BPM-Reifegrad-Score werden zusammen mit Ihren Kontaktdaten in HubSpot gespeichert, um Ihnen eine personalisierte Beratungsempfehlung unterbreiten zu können. Es findet keine automatisierte Entscheidungsfindung im Sinne von Art. 22 DSGVO statt; alle Empfehlungen sind algorithmisch generierte Hinweise, die keine rechtlich verbindlichen Auswirkungen haben.</p>
+
+                <h3>Keine Verarbeitung sensibler Daten</h3>
+                <p>Das Assessment-Tool verarbeitet keine besonderen Kategorien personenbezogener Daten im Sinne von Art. 9 DSGVO. Wir bitten Sie, im Assessment ausschliesslich sachbezogene, nicht-personenbezogene Informationen über Ihre Geschäftsprozesse bereitzustellen.</p>
+            </div>
+
+            <!-- Abschnitt 9 -->
+            <div class="legal-section" id="s9">
+                <h2>9 Einsatz von Kuenstlicher Intelligenz (KI)</h2>
+                <p>Im Rahmen bestimmter Beratungs- und Analyseprozesse, insbesondere beim 30-Day Clarity Sprint, setzt BERIAS GmbH Technologien der Kuenstlichen Intelligenz (KI) ein, um die vom Kunden bereitgestellten Informationen effizient auszuwerten und eine zielgerichtete Beratung zu ermöglichen.</p>
+                <p>Die KI wird ausschliesslich zur Auswertung sachbezogener Angaben genutzt, die der Kunde freiwillig und eigeninitiativ bereitstellt. Zu keinem Zeitpunkt werden personenbezogene Daten (wie Namen, E-Mail-Adressen, Telefonnummern oder andere direkt identifizierende Informationen) durch KI-Systeme verarbeitet. Personenbezogene Daten werden ausschliesslich durch BERIAS-Mitarbeiter verarbeitet. Die KI-Verarbeitung dient nicht dem Training von KI-Modellen und fuehrt nicht zu automatisierten Einzelentscheidungen im Sinne von Art. 22 DSGVO.</p>
+                <p>Rechtsgrundlage: Vertragsdurchführung (Art. 6 Abs. 1 lit. b DSGVO) und berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO) an effizienter Leistungserbringung.</p>
+            </div>
+
+            <!-- Abschnitt 10 -->
+            <div class="legal-section" id="s10">
+                <h2>10 Datenweitergabe und Empfaenger</h2>
+                <p><strong>Wir verkaufen Ihre personenbezogenen Daten nicht.</strong> Wir geben Ihre Daten nur in folgenden Faellen weiter:</p>
+                <ul>
+                    <li><strong>Dienstleister:</strong> Unternehmen, die in unserem Auftrag Dienstleistungen erbringen, wie Website-Hosting (Cloudflare), Analyse (Google), CRM (HubSpot), Terminplanung (Calendly) und Werbung (Meta/Facebook). Diese Dienstleister sind vertraglich zur Einhaltung des Datenschutzes verpflichtet und handeln als Auftragsverarbeiter gemaess Art. 28 DSGVO.</li>
+                    <li><strong>Behörden:</strong> Wenn wir gesetzlich dazu verpflichtet sind oder zur Wahrung unserer rechtlichen Ansprueche.</li>
+                    <li><strong>Unternehmenstransaktionen:</strong> Im Falle einer Fusion, Akquisition oder eines Unternehmensverkaufs, wobei der Erwerber an diese Datenschutzerklärung gebunden ist.</li>
+                </ul>
+                <p>Für Geschäftskunden in der EU wird unsere Datenverarbeitungsbeziehung durch einen Auftragsverarbeitungsvertrag (AVV) gemaess Art. 28 DSGVO geregelt.</p>
+            </div>
+
+            <!-- Abschnitt 11 -->
+            <div class="legal-section" id="s11">
+                <h2>11 Speicherdauer</h2>
+                <p>Wir speichern personenbezogene Daten nur so lange, wie es für die Zwecke, für die sie erhoben wurden, erforderlich ist. Die Kriterien für die Festlegung der Speicherdauer sind:</p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Datenkategorie</th>
+                            <th>Speicherdauer</th>
+                            <th>Begründung</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kunden- und Vertragsdaten</td>
+                            <td>Bis zu 10 Jahre nach Vertragsende</td>
+                            <td>Gesetzliche Aufbewahrungspflichten (HGB, AO) in Deutschland und den USA</td>
+                        </tr>
+                        <tr>
+                            <td>Assessment-Daten (BPM-Tool)</td>
+                            <td>2 Jahre nach letztem Kontakt</td>
+                            <td>Nachverfolgung und Beratungsangebote</td>
+                        </tr>
+                        <tr>
+                            <td>Website-Analysedaten</td>
+                            <td>Bis zu 26 Monate (anonymisiert)</td>
+                            <td>Langfristige Trendanalyse</td>
+                        </tr>
+                        <tr>
+                            <td>Kontakt- und Anfragedaten</td>
+                            <td>2 Jahre nach letzter Kommunikation</td>
+                            <td>Bearbeitung von Folgefragen</td>
+                        </tr>
+                        <tr>
+                            <td>Server-Logfiles</td>
+                            <td>7 Tage</td>
+                            <td>Sicherheit und Fehlerbehebung</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Abschnitt 12 -->
+            <div class="legal-section" id="s12">
+                <h2>12 Internationale Datenübermittlung</h2>
+                <p>Als Unternehmen mit Betriebsstaetten in Deutschland und den USA können Ihre Daten in die USA uebermittelt werden. Wir stellen sicher, dass solche Uebermittlungen durch geeignete Garantien geschützt sind, insbesondere durch:</p>
+                <ul>
+                    <li><strong>EU-Standardvertragsklauseln (SCC)</strong> gemaess Art. 46 Abs. 2 lit. c DSGVO, die von der Europaeischen Kommission genehmigt wurden.</li>
+                    <li><strong>EU-US Data Privacy Framework:</strong> Soweit unsere Dienstleister (z.B. HubSpot, Calendly) unter dem EU-US Data Privacy Framework zertifiziert sind, stuetzen wir uns auf diesen Angemessenheitsbeschluss der Europaeischen Kommission.</li>
+                </ul>
+                <p>Sie haben das Recht, eine Kopie der angewendeten Garantien zu erhalten. Bitte kontaktieren Sie uns unter hello@berias.com.</p>
+            </div>
+
+            <!-- Abschnitt 13 -->
+            <div class="legal-section" id="s13">
+                <h2>13 Ihre Rechte als betroffene Person</h2>
+                <p>Sie haben folgende Rechte hinsichtlich Ihrer personenbezogenen Daten gemaess DSGVO:</p>
+
+                <h3>Rechte nach DSGVO (für Personen im EWR)</h3>
+                <ul>
+                    <li><strong>Auskunftsrecht (Art. 15 DSGVO):</strong> Sie können Auskunft über die von uns verarbeiteten personenbezogenen Daten verlangen.</li>
+                    <li><strong>Berichtigungsrecht (Art. 16 DSGVO):</strong> Sie können die Berichtigung unrichtiger Daten verlangen.</li>
+                    <li><strong>Löschungsrecht ("Recht auf Vergessenwerden", Art. 17 DSGVO):</strong> Sie können die Löschung Ihrer Daten verlangen, soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</li>
+                    <li><strong>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO):</strong> Sie können die Einschränkung der Verarbeitung Ihrer Daten verlangen.</li>
+                    <li><strong>Recht auf Datenuebertragbarkeit (Art. 20 DSGVO):</strong> Sie können Ihre Daten in einem strukturierten, gaengigen und maschinenlesbaren Format erhalten.</li>
+                    <li><strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Sie können der Verarbeitung Ihrer Daten widersprechen, insbesondere bei Direktwerbung.</li>
+                    <li><strong>Widerruf der Einwilligung (Art. 7 Abs. 3 DSGVO):</strong> Sie können eine erteilte Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen.</li>
+                </ul>
+
+                <p>Sie haben ausserdem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Die zuständige Aufsichtsbehörde für BERIAS GmbH ist das Bayerische Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach, <a href="https://www.lda.bayern.de" target="_blank" rel="noopener">www.lda.bayern.de</a>.</p>
+
+                <p>Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: <a href="mailto:hello@berias.com">hello@berias.com</a>.</p>
+            </div>
+
+            <!-- Abschnitt 14 -->
+            <div class="legal-section" id="s14">
+                <h2>14 Datensicherheit</h2>
+                <p>BERIAS speichert und verarbeitet alle Kundendaten in einer sicheren Microsoft 365-Umgebung. Der Zugriff auf Kundendaten ist auf BERIAS-Mitarbeiter und autorisierte Subunternehmer beschraenkt, die für die Erbringung der Dienstleistungen Zugriff benötigen. Wir setzen geeignete technische und organisatorische Maßnahmen ein, um Ihre Daten vor unbefugtem Zugriff, Verlust oder Zerstoerung zu schützen, einschliesslich SSL/TLS-Verschlüsselung für die Datenübertragung.</p>
+            </div>
+
+            <!-- Abschnitt 15 -->
+            <div class="legal-section" id="s15">
+                <h2>15 Kinder</h2>
+                <p>Unsere Dienstleistungen richten sich nicht an Personen unter 18 Jahren. Wir erheben wissentlich keine personenbezogenen Daten von Kindern. Wenn wir feststellen, dass ein Kind uns personenbezogene Daten mitgeteilt hat, werden wir diese unverzueglich löschen.</p>
+            </div>
+
+            <!-- Abschnitt 16 -->
+            <div class="legal-section" id="s16">
+                <h2>16 Änderungen dieser Erklärung</h2>
+                <p>Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren, um Änderungen in unseren Datenpraktiken, neuen gesetzlichen Anforderungen oder technischen Entwicklungen Rechnung zu tragen. Das Datum der letzten Änderung ist oben in dieser Erklärung angegeben. Wir empfehlen Ihnen, diese Erklärung regelmäßig zu ueberprüfen. Bei wesentlichen Änderungen werden wir Sie per E-Mail oder durch einen deutlichen Hinweis auf unserer Website informieren.</p>
+            </div>
+
+            <a href="/de/" class="back-link">Zurück zur Startseite</a>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 BERIAS GmbH. Alle Rechte vorbehalten.</p>
+                <div class="footer-links-row">
+                    <a href="/de/impressum.html">Impressum</a>
+                    <a href="/de/datenschutz.html">Datenschutz</a>
+                    <a href="/de/agb.html">AGB</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  <script src="../js/cookie-consent.js"></script>
+  <!-- Lang preference: set EN when user manually switches -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.lang-switcher a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (this.textContent.trim() === 'EN') {
+            localStorage.setItem('lang-preference', 'en');
+          } else {
+            localStorage.removeItem('lang-preference');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

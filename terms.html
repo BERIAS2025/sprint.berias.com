@@ -1,8 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <!-- Language Auto-Redirect -->
+  <script>
+    (function() {
+      // Don't redirect if user has manually chosen English
+      if (localStorage.getItem('lang-preference') === 'en') return;
+      // Don't redirect if already on a /de/ page
+      if (window.location.pathname.indexOf('/de/') === 0) return;
+      // Check browser language
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (lang.startsWith('de')) {
+        var path = window.location.pathname;
+        var deTarget = '/de/';
+        if (path.indexOf('/assessment') !== -1) deTarget = '/de/assessment/';
+        window.location.replace(deTarget);
+      }
+    })();
+  </script>
+      <meta name="description" content="Terms of Service for the BERIAS 30-Day Clarity Sprint consulting engagement. Read our service agreement, payment terms, and client obligations." />
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NQZV9VC9');</script>
+    <!-- End Google Tag Manager -->
     <title>Terms of Service | BERIAS LLC</title>
     <link rel="icon" type="image/png" href="images/BEwithoutBackground.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -236,9 +261,71 @@
             .legal-section, .legal-section-eu { padding: 1.5rem; }
             .legal-toc ol { columns: 1; }
         }
-    </style>
+    /* FIX2-mobile-legal */
+    @media (max-width: 768px) {
+      .legal-container, .privacy-container, .terms-container,
+      .agb-container, .datenschutz-container, .impressum-container,
+      .container, main, article, section {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+      }
+      h1 { font-size: 1.75rem !important; line-height: 1.2; }
+      h2 { font-size: 1.35rem !important; }
+      h3 { font-size: 1.1rem !important; }
+      table { font-size: 0.8rem; display: block; overflow-x: auto; }
+      .hero, .page-hero, .legal-hero {
+        padding: 3rem 1.25rem 2rem !important;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="css/cookie-consent.css?v=3">
+  <style id="lang-switcher-style">
+    .lang-switcher { display:flex; align-items:center; gap:4px; font-size:0.8125rem; font-weight:600; margin-left:1rem; }
+    .lang-switcher a { color:rgba(255,255,255,0.55); text-decoration:none; padding:3px 7px; border-radius:3px; transition:color 0.2s,background 0.2s; }
+    .lang-switcher a:hover { color:#fff; }
+    .lang-switcher a.active { color:#fff; background:rgba(255,255,255,0.12); pointer-events:none; }
+    .lang-switcher span { color:rgba(255,255,255,0.25); }
+  </style>
+  <!-- SEO: Canonical & hreflang -->
+  <link rel="canonical" href="https://sprint.berias.com/terms.html" />
+  <link rel="alternate" hreflang="en" href="https://sprint.berias.com/terms.html" />
+  <link rel="alternate" hreflang="de" href="https://sprint.berias.com/de/agb.html" />
+  <link rel="alternate" hreflang="x-default" href="https://sprint.berias.com/terms.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sprint.berias.com/terms.html" />
+  <meta property="og:title" content="Terms of Service | 30-Day Clarity Sprint | BERIAS LLC" />
+  <meta property="og:description" content="Terms of Service for the BERIAS 30-Day Clarity Sprint consulting engagement. Read our service agreement, payment terms, and client obligations." />
+  <meta property="og:image" content="https://d2xsxph8kpxj0f.cloudfront.net/310419663030437683/XiaTKX2C7AtY3GCmxwT62P/hero-blueprint-7LemGXbvcYHWbis4WSp7kP.webp" />
+  <meta property="og:site_name" content="BERIAS Sprint" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Terms of Service | 30-Day Clarity Sprint | BERIAS LLC" />
+  <meta name="twitter:description" content="Terms of Service for the BERIAS 30-Day Clarity Sprint consulting engagement. Read our service agreement, payment terms, and client obligations." />
+  <meta name="twitter:image" content="https://d2xsxph8kpxj0f.cloudfront.net/310419663030437683/XiaTKX2C7AtY3GCmxwT62P/hero-blueprint-7LemGXbvcYHWbis4WSp7kP.webp" />
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WP20X6DZPQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WP20X6DZPQ');
+  </script>
 </head>
-<body>
+<body style="overflow-x: hidden;">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQZV9VC9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <!-- Language bar -->
+  <div style="background:#0F304C;padding:8px 0;text-align:right;">
+    <div style="max-width:1100px;margin:0 auto;padding:0 2rem;display:flex;justify-content:flex-end;align-items:center;gap:6px;font-size:0.8125rem;font-weight:600;">
+      <a href="/de/agb.html" onclick="localStorage.removeItem('lang-preference')" style="color:rgba(255,255,255,0.55);text-decoration:none;padding:3px 7px;border-radius:3px;">DE</a>
+      <span style="color:rgba(255,255,255,0.25);">|</span>
+      <a href="#" style="color:#fff;background:rgba(255,255,255,0.12);text-decoration:none;padding:3px 7px;border-radius:3px;pointer-events:none;">EN</a>
+    </div>
+  </div>
 
     <nav class="navbar">
         <div class="container">
@@ -604,10 +691,11 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 BERIAS LLC. All rights reserved.</p>
+                <p>&copy; 2026 BERIAS LLC. All rights reserved. &nbsp;|&nbsp; <a href="/de/" style="color:rgba(255,255,255,0.6);">Deutsch (DE)</a></p>
             </div>
         </div>
     </footer>
 
+  <script src="js/cookie-consent.js"></script>
 </body>
 </html>

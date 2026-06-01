@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+      <meta name="description" content="AGB für den BERIAS 30-Day Clarity Sprint. Lesen Sie unsere Leistungsbeschreibung, Zahlungsbedingungen und Widerrufsbelehrung." />
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allgemeine Geschäftsbedingungen | BERIAS GmbH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@400;600;700;800&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --navy: #0F304C;
+            --green: #A2C614;
+            --font-heading: 'Ysabeau Office', sans-serif;
+            --font-body: 'Public Sans', sans-serif;
+        }
+        body {
+            font-family: var(--font-body);
+            color: #333;
+            background: #fff;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .navbar {
+            background: var(--navy);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1280px;
+        }
+        .navbar a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.9375rem; }
+        .navbar a:hover { color: #fff; }
+        .navbar .logo { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: #fff; }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .btn-nav {
+            background: var(--green);
+            color: var(--navy) !important;
+            font-weight: 700;
+            padding: 0.5rem 1.25rem;
+            border-radius: 0.375rem;
+            font-size: 0.875rem;
+        }
+        .legal-hero {
+            background: linear-gradient(135deg, #0F304C 0%, #1a4a72 100%);
+            padding: 3.5rem 0 3rem;
+            margin-bottom: 3rem;
+        }
+        .legal-hero h1 {
+            font-family: var(--font-heading);
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        .legal-hero .meta {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9375rem;
+        }
+        .legal-hero .meta strong { color: var(--green); }
+        .legal-alert {
+            background: #fff8e1;
+            border-left: 4px solid var(--green);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.75rem;
+            margin-bottom: 2rem;
+        }
+        .legal-alert p { margin: 0; color: #333; font-size: 0.9375rem; line-height: 1.7; }
+        .legal-alert strong { color: var(--navy); }
+        .legal-toc {
+            background: #f0f4f8;
+            border-radius: 10px;
+            padding: 1.75rem 2rem;
+            margin-bottom: 2.5rem;
+        }
+        .legal-toc h3 {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin: 0 0 1rem 0;
+        }
+        .legal-toc ol { margin: 0; padding-left: 1.25rem; }
+        .legal-toc li { font-size: 0.875rem; line-height: 1.9; color: #444; }
+        .legal-toc a { color: var(--navy); text-decoration: none; }
+        .legal-toc a:hover { color: var(--green); text-decoration: underline; }
+        .legal-section {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 2rem 2.25rem;
+            margin-bottom: 1.5rem;
+            scroll-margin-top: 80px;
+        }
+        .legal-section h2 {
+            font-family: var(--font-heading);
+            font-size: 1.375rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 0 0 1.25rem 0;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--green);
+        }
+        .legal-section h3 {
+            font-family: var(--font-heading);
+            font-size: 1.0625rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 1.5rem 0 0.625rem;
+        }
+        .legal-section p {
+            font-size: 0.9375rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 0.875rem;
+        }
+        .legal-section p:last-child { margin-bottom: 0; }
+        .legal-section ol, .legal-section ul {
+            margin: 0.75rem 0 0.875rem 1.5rem;
+            color: #444;
+        }
+        .legal-section li { font-size: 0.9375rem; line-height: 1.8; margin-bottom: 0.5rem; }
+        .widerruf-box {
+            background: #fff;
+            border: 2px dashed #d1d5db;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .widerruf-box h4 {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+        }
+        .widerruf-box p { font-size: 0.875rem; color: #555; line-height: 1.7; margin-bottom: 0.5rem; }
+        .highlight-box {
+            background: linear-gradient(135deg, #0F304C 0%, #1a4a72 100%);
+            border-radius: 8px;
+            padding: 1.5rem 1.75rem;
+            margin: 1rem 0;
+        }
+        .highlight-box p { color: rgba(255,255,255,0.9); margin: 0; }
+        .highlight-box strong { color: var(--green); }
+        .legal-closing {
+            background: var(--navy);
+            border-radius: 10px;
+            padding: 2rem 2.25rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .legal-closing p { color: rgba(255,255,255,0.9); font-size: 0.9375rem; line-height: 1.7; margin: 0; }
+        .legal-closing strong { color: var(--green); }
+        .legal-contact {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 2rem 2.25rem;
+            margin-top: 1.5rem;
+        }
+        .legal-contact h3 {
+            font-family: var(--font-heading);
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 0 0 1rem 0;
+        }
+        .legal-contact p { font-size: 0.9375rem; color: #444; line-height: 1.8; margin: 0; }
+        .legal-contact a { color: var(--navy); font-weight: 600; }
+        .back-link {
+            display: inline-block;
+            margin-top: 2.5rem;
+            padding: 0.75rem 1.75rem;
+            background: var(--green);
+            color: var(--navy);
+            font-family: var(--font-heading);
+            font-weight: 700;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-size: 0.9375rem;
+        }
+        .back-link:hover { background: #8fb010; }
+        .footer {
+            background: var(--navy);
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+        .footer .container { max-width: 1280px; }
+        .footer-bottom {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1rem;
+            align-items: center;
+        }
+        .footer-bottom p { color: rgba(255,255,255,0.5); font-size: 0.8125rem; }
+        .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.8125rem; }
+        .footer-bottom a:hover { color: #fff; }
+        .footer-links-row { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+        @media (max-width: 768px) {
+            .legal-hero h1 { font-size: 1.75rem; }
+            .legal-section { padding: 1.5rem; }
+        }
+    /* FIX2-mobile-legal */
+    @media (max-width: 768px) {
+      .legal-container, .privacy-container, .terms-container,
+      .agb-container, .datenschutz-container, .impressum-container,
+      .container, main, article, section {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+      }
+      h1 { font-size: 1.75rem !important; line-height: 1.2; }
+      h2 { font-size: 1.35rem !important; }
+      h3 { font-size: 1.1rem !important; }
+      table { font-size: 0.8rem; display: block; overflow-x: auto; }
+      .hero, .page-hero, .legal-hero {
+        padding: 3rem 1.25rem 2rem !important;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../css/cookie-consent.css?v=3">
+  <!-- SEO: Canonical & hreflang -->
+  <link rel="canonical" href="https://sprint.berias.com/de/agb.html" />
+  <link rel="alternate" hreflang="en" href="https://sprint.berias.com/terms.html" />
+  <link rel="alternate" hreflang="de" href="https://sprint.berias.com/de/agb.html" />
+  <link rel="alternate" hreflang="x-default" href="https://sprint.berias.com/terms.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sprint.berias.com/de/agb.html" />
+  <meta property="og:title" content="Allgemeine Geschäftsbedingungen | 30-Day Clarity Sprint | BERIAS GmbH" />
+  <meta property="og:description" content="AGB für den BERIAS 30-Day Clarity Sprint. Lesen Sie unsere Leistungsbeschreibung, Zahlungsbedingungen und Widerrufsbelehrung." />
+  <meta property="og:image" content="https://d2xsxph8kpxj0f.cloudfront.net/310419663030437683/XiaTKX2C7AtY3GCmxwT62P/hero-blueprint-7LemGXbvcYHWbis4WSp7kP.webp" />
+  <meta property="og:site_name" content="BERIAS Sprint" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Allgemeine Geschäftsbedingungen | 30-Day Clarity Sprint | BERIAS GmbH" />
+  <meta name="twitter:description" content="AGB für den BERIAS 30-Day Clarity Sprint. Lesen Sie unsere Leistungsbeschreibung, Zahlungsbedingungen und Widerrufsbelehrung." />
+  <meta name="twitter:image" content="https://d2xsxph8kpxj0f.cloudfront.net/310419663030437683/XiaTKX2C7AtY3GCmxwT62P/hero-blueprint-7LemGXbvcYHWbis4WSp7kP.webp" />
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WP20X6DZPQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WP20X6DZPQ');
+  </script>
+</head>
+<body style="overflow-x: hidden;">
+  <!-- Language bar -->
+  <div style="background:#0F304C;padding:8px 0;text-align:right;">
+    <div style="max-width:1100px;margin:0 auto;padding:0 2rem;display:flex;justify-content:flex-end;align-items:center;gap:6px;font-size:0.8125rem;font-weight:600;">
+      <a href="#" style="color:#fff;background:rgba(255,255,255,0.12);text-decoration:none;padding:3px 7px;border-radius:3px;pointer-events:none;">DE</a>
+      <span style="color:rgba(255,255,255,0.25);">|</span>
+      <a href="/terms.html" onclick="localStorage.setItem('lang-preference','en')" style="color:rgba(255,255,255,0.55);text-decoration:none;padding:3px 7px;border-radius:3px;">EN</a>
+    </div>
+  </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="/de/" class="logo">BERIAS</a>
+            <div class="nav-links">
+                <a href="/de/">Startseite</a>
+                <a href="https://calendly.com/hess-tobias/15-minute-process-leak-audit" target="_blank" class="btn-nav">Kostenloses Audit buchen</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="legal-hero">
+        <div class="container">
+            <h1>Allgemeine Geschäftsbedingungen</h1>
+            <p class="meta"><strong>Stand:</strong> März 2026 &nbsp;|&nbsp; Gilt für: 30-Day Clarity Sprint &amp; Beratungsleistungen der BERIAS GmbH</p>
+        </div>
+    </div>
+
+    <section style="padding-bottom: 4rem;">
+        <div class="container">
+
+            <div class="legal-alert">
+                <p><strong>Wichtiger rechtlicher Hinweis:</strong> Diese Allgemeinen Geschäftsbedingungen (AGB) stellen einen rechtsverbindlichen Vertrag dar. Mit dem Kauf oder der Inanspruchnahme des 30-Day Clarity Sprint oder anderer Beratungsleistungen der BERIAS GmbH bestätigen Sie, dass Sie diese AGB vollständig gelesen, verstanden haben und damit einverstanden sind. Wenn Sie nicht einverstanden sind, dürfen Sie die Leistung nicht in Anspruch nehmen.</p>
+            </div>
+
+            <div class="legal-toc">
+                <h3>Inhaltsverzeichnis</h3>
+                <ol>
+                    <li><a href="#s1">Geltungsbereich und Anbieter</a></li>
+                    <li><a href="#s2">Leistungsbeschreibung</a></li>
+                    <li><a href="#s3">Vertragsschluss und Widerrufsrecht</a></li>
+                    <li><a href="#s4">Mitwirkungspflichten des Kunden</a></li>
+                    <li><a href="#s5">Vergütung, Zahlung und Rückerstattung</a></li>
+                    <li><a href="#s6">Leistungserbringung und Termine</a></li>
+                    <li><a href="#s7">Vertraulichkeit und Datenschutz</a></li>
+                    <li><a href="#s8">Gewährleistung und Haftung</a></li>
+                    <li><a href="#s9">Rechte an Arbeitsergebnissen</a></li>
+                    <li><a href="#s10">Vertragsdauer und Kündigung</a></li>
+                    <li><a href="#s11">Hoehere Gewalt</a></li>
+                    <li><a href="#s12">Referenzen</a></li>
+                    <li><a href="#s13">Schlussbestimmungen</a></li>
+                    <li><a href="#s14">Kontaktdaten und Unternehmensangaben</a></li>
+                </ol>
+            </div>
+
+            <!-- Abschnitt 1 -->
+            <div class="legal-section" id="s1">
+                <h2>1 Geltungsbereich und Anbieter</h2>
+                <h3>1.1 Anbieter</h3>
+                <p>Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge über Beratungsleistungen, insbesondere den 30-Day Clarity Sprint, zwischen der BERIAS GmbH (nachfolgend "BERIAS") und ihren Kunden (nachfolgend "Kunde"). BERIAS ist ein auf Unternehmensberatung, Prozessmanagement und KI-Automatisierung spezialisiertes Beratungsunternehmen mit Sitz in Deutschland und einer weiteren Betriebsstaette in den USA.</p>
+
+                <h3>1.2 Vorrang individueller Vereinbarungen</h3>
+                <p>Individuelle vertragliche Vereinbarungen zwischen BERIAS und dem Kunden (einschliesslich Nebenabreden, Ergaenzungen und Änderungen) haben stets Vorrang vor diesen AGB. Für den Inhalt solcher Vereinbarungen ist ein schriftlicher Vertrag oder eine schriftliche Bestätigung durch BERIAS massgebend.</p>
+
+                <h3>1.3 Keine Geltung abweichender AGB</h3>
+                <p>Entgegenstehende oder von diesen AGB abweichende Bedingungen des Kunden werden nur dann Vertragsbestandteil, wenn BERIAS ihrer Geltung ausdruecklich schriftlich zugestimmt hat. Dies gilt auch dann, wenn BERIAS in Kenntnis entgegenstehender Bedingungen des Kunden die Leistung vorbehaltlos erbringt.</p>
+
+                <h3>1.4 Verbraucher und Unternehmer</h3>
+                <p>Verbraucher im Sinne dieser AGB ist jede natuerliche Person, die ein Rechtsgeschäft zu Zwecken abschliesst, die ueberwiegend weder ihrer gewerblichen noch ihrer selbständigen beruflichen Tätigkeit zugerechnet werden können (Sec. 13 BGB). Unternehmer ist eine natuerliche oder juristische Person oder eine rechtsfahige Personengesellschaft, die bei Abschluss eines Rechtsgeschäfts in Ausübung ihrer gewerblichen oder selbständigen beruflichen Tätigkeit handelt (Sec. 14 BGB).</p>
+            </div>
+
+            <!-- Abschnitt 2 -->
+            <div class="legal-section" id="s2">
+                <h2>2 Leistungsbeschreibung</h2>
+                <h3>2.1 30-Day Clarity Sprint</h3>
+                <p>Der 30-Day Clarity Sprint ist ein zeitlich befristetes, intensives Beratungsprogramm mit einer Laufzeit von dreissig (30) Kalendertagen. BERIAS analysiert die Geschäftsprozesse des Kunden, identifiziert operative Ineffizienzen und liefert einen dokumentierten strategischen Maßnahmenplan. Die Leistung wird vollständig remote erbracht, in der Regel über Microsoft Teams, per E-Mail und durch strukturierte Dokumentenanalyse.</p>
+
+                <h3>2.2 Leistungsumfang und Statement of Work</h3>
+                <p>Der genaue Leistungsumfang, die Liefergegenstande, Meilensteine und der Zeitplan werden in einem separaten Leistungsverzeichnis (Statement of Work, SOW) oder einem individuellen Angebot festgelegt, das dem Kunden vor dem Kauf uebermittelt wird. Dieses SOW ist Bestandteil des Vertrages und bei Widerspruchen mit diesen AGB massgebend für den spezifischen Leistungsumfang; diese AGB gelten für alle sonstigen Belange.</p>
+
+                <h3>2.3 Änderungen des Leistungsumfangs</h3>
+                <p>Leistungen, die über den vereinbarten SOW hinausgehen, gelten als "Scope Change". Ein Scope Change wird nur wirksam, wenn er von beiden Parteien schriftlich vereinbart wurde. Scope Changes können zu zusätzlichen Gebühren und einer angepassten Zeitplanung führen, über die der Kunde vorab informiert wird.</p>
+
+                <h3>2.4 Professionelle Haftungsausschlüsse</h3>
+                <p>Die Leistungen von BERIAS beschraenken sich auf Unternehmens- und Managementberatung. BERIAS erbringt keine Rechtsberatung, Finanzberatung, Buchhaltungsleistungen, Steuerberatung oder zertifizierte Ingenieurleistungen. Alle Beratungsergebnisse sind empfehlender Natur. Der Kunde ist allein verantwortlich für die Beurteilung der Eignung von Empfehlungen und für die Einholung qualifizierter Fachberatung (einschliesslich Rechts-, Finanz- und Steuerberater), bevor er auf Grundlage von Empfehlungen handelt.</p>
+
+                <h3>2.5 Einsatz von Kuenstlicher Intelligenz (KI)</h3>
+                <p>BERIAS kann im Rahmen bestimmter Analyse- und Beratungsprozesse Technologien der Kuenstlichen Intelligenz (KI) einsetzen, um die Effizienz und Qualität der Leistungserbringung zu verbessern. Diese KI-Anwendungen werden ausschliesslich zur Auswertung nicht-personenbezogener, sachbezogener Informationen genutzt, die der Kunde freiwillig bereitstellt. Zu keinem Zeitpunkt werden personenbezogene Daten im Sinne der DSGVO (wie Namen, E-Mail-Adressen, Telefonnummern oder andere direkt identifizierende Informationen) durch KI-Systeme verarbeitet. Der Kunde ist dafür verantwortlich sicherzustellen, dass die zur KI-gestuetzten Analyse uebermittelten Informationen keine personenbezogenen oder sensiblen Daten enthalten.</p>
+
+                <h3>2.6 BPM-Reifegrad-Assessment</h3>
+                <p>BERIAS stellt ein kostenloses BPM-Reifegrad-Assessment-Tool unter <a href="https://sprint.berias.com/de/assessment/" style="color:var(--green);font-weight:600;">sprint.berias.com/de/assessment/</a> bereit. Dieses Tool dient der Selbsteinschaetzung und stellt keine verbindliche Beratungsleistung dar. Die im Rahmen des Assessments erhobenen Daten werden gemaess der Datenschutzerklärung verarbeitet. Die Ergebnisse des Assessments können als Grundlage für ein Erstgespräch oder den Abschluss eines 30-Day Clarity Sprint dienen, begründen jedoch keinen Anspruch auf eine bestimmte Leistung.</p>
+            </div>
+
+            <!-- Abschnitt 3 -->
+            <div class="legal-section" id="s3">
+                <h2>3 Vertragsschluss und Widerrufsrecht</h2>
+                <h3>3.1 Vertragsschluss</h3>
+                <p>Der Vertrag über den 30-Day Clarity Sprint oder andere Beratungsleistungen kommt durch schriftliche oder elektronische Beauftragung der über die Internetpraesenz von BERIAS oder in individuellen Angeboten dargestellten Leistungen zustande. Die Annahme erfolgt durch eine Auftragsbestätigung von BERIAS in Textform. Die Darstellung der Leistungen auf der Website stellt kein verbindliches Angebot, sondern lediglich eine Aufforderung zur Abgabe eines Angebots (invitatio ad offerendum) dar.</p>
+
+                <h3>3.2 Widerrufsrecht für Verbraucher</h3>
+                <p>Für Verbraucher-Kunden besteht hinsichtlich der Dienstleistungen von BERIAS ein gesetzliches Widerrufsrecht nach Sec. 312g Abs. 1 BGB. Hierzu informiert BERIAS mit der nachfolgenden Widerrufsbelehrung:</p>
+
+                <div class="widerruf-box">
+                    <h4>Widerrufsbelehrung</h4>
+                    <p><strong>Widerrufsrecht</strong></p>
+                    <p>Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist betraegt vierzehn Tage ab dem Tag des Vertragsabschlusses. Um Ihr Widerrufsrecht auszuueben, müssen Sie uns (BERIAS GmbH, Traubinger Str. 26, 82327 Tutzing, E-Mail: hello@berias.com, Tel.: +49 176 3808 1336) mittels einer eindeutigen Erklärung (z.B. via E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren. Sie können dafür das beigefuegte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.</p>
+                    <p><strong>Folgen des Widerrufs</strong></p>
+                    <p>Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle Zahlungen, die wir von Ihnen erhalten haben, unverzueglich und spätestens binnen vierzehn Tagen ab dem Tag zurückzuzahlen, an dem die Mitteilung über Ihren Widerruf dieses Vertrags bei uns eingegangen ist. Für diese Rückzahlung verwenden wir dasselbe Zahlungsmittel, das Sie bei der urspruenglichen Transaktion eingesetzt haben, es sei denn, mit Ihnen wurde ausdruecklich etwas anderes vereinbart; in keinem Fall werden Ihnen wegen dieser Rückzahlung Entgelte berechnet.</p>
+                    <p>Haben Sie verlangt, dass die Dienstleistungen während der Widerrufsfrist beginnen sollen, so haben Sie uns einen angemessenen Betrag zu zahlen, der dem Anteil der bis zu dem Zeitpunkt, zu dem Sie uns von der Ausübung des Widerrufsrechts hinsichtlich dieses Vertrags unterrichten, bereits erbrachten Dienstleistungen im Vergleich zum Gesamtumfang der im Vertrag vorgesehenen Dienstleistungen entspricht.</p>
+                    <p><strong>Erlöschen des Widerrufsrechts</strong></p>
+                    <p>Das Widerrufsrecht erloscht bei einem Vertrag zur Erbringung von Dienstleistungen, wenn BERIAS die Dienstleistung vollständig erbracht hat und mit der Ausführung der Dienstleistung erst begonnen hat, nachdem der Verbraucher dazu seine ausdrueckliche Zustimmung gegeben hat und gleichzeitig seine Kenntnis davon bestätigt hat, dass er sein Widerrufsrecht bei vollständiger Vertragserfüllung durch BERIAS verliert.</p>
+                </div>
+
+                <div class="widerruf-box">
+                    <h4>Muster-Widerrufsformular</h4>
+                    <p>(Wenn Sie den Vertrag widerrufen wollen, dann füllen Sie bitte dieses Formular aus und senden Sie es zurück.)</p>
+                    <p>An: BERIAS GmbH, Traubinger Str. 26, 82327 Tutzing, E-Mail: hello@berias.com</p>
+                    <p>Hiermit widerrufe(n) ich/wir den von mir/uns abgeschlossenen Vertrag über die Erbringung der folgenden Dienstleistung: ___________________</p>
+                    <p>Bestellt am: _______________ | Name des/der Verbraucher(s): ___________________</p>
+                    <p>Anschrift des/der Verbraucher(s): ___________________</p>
+                    <p>Datum: ___________________</p>
+                </div>
+
+                <h3>3.3 Kein Widerrufsrecht bei B2B-Verträgen</h3>
+                <p>Für Kunden, die als Unternehmer handeln, besteht kein gesetzliches Widerrufsrecht. Es gelten ausschliesslich die Kündigungsregelungen in Abschnitt 10 dieser AGB.</p>
+            </div>
+
+            <!-- Abschnitt 4 -->
+            <div class="legal-section" id="s4">
+                <h2>4 Mitwirkungspflichten des Kunden</h2>
+                <h3>4.1 Kooperationspflicht</h3>
+                <p>Der Kunde verpflichtet sich, BERIAS während der gesamten Leistungserbringung vollständig und zeitnah zu unterstützen. Dies umfasst insbesondere die Bereitstellung aller erforderlichen Informationen, Daten und den Zugang zu relevanten Mitarbeitern. Der Kunde erkennt an, dass der 30-Day Clarity Sprint eine kollaborative Zusammenarbeit erfordert und dass Verzögerungen oder fehlende Kooperation die Qualität und Effektivitaet der Leistung wesentlich beeintraechtigen können. BERIAS haftet nicht für Verzögerungen bei der Erreichung von Lieferzielen, die durch mangelnde Mitwirkung des Kunden verursacht werden.</p>
+
+                <h3>4.2 Vorleistungen vor Beginn</h3>
+                <p>Vor Beginn der Leistungserbringung hat der Kunde alle erforderlichen Vorabfragen vollständig zu beantworten und alle angeforderten Informationen spätestens 72 Stunden vor dem vereinbarten Starttermin bereitzustellen. Die Nichterfüllung dieser Pflicht kann nach alleinigem Ermessen von BERIAS zu einer Verzögerung oder Stornierung der Leistung ohne Anspruch auf Rückerstattung führen.</p>
+
+                <h3>4.3 Richtigkeit der Informationen</h3>
+                <p>Der Kunde versichert, dass alle an BERIAS uebermittelten Informationen nach bestem Wissen vollständig, richtig und aktuell sind. Der Kunde erkennt an, dass die Qualität der Beratungsergebnisse unmittelbar von der Qualität der bereitgestellten Informationen abhaengt. BERIAS haftet nicht für Fehler in der Analyse oder den Empfehlungen, die auf unvollständigen oder unrichtigen Angaben des Kunden beruhen.</p>
+
+                <h3>4.4 Vertretungsbefugnis</h3>
+                <p>Der Kunde versichert, dass er über die volle Berechtigung und Vollmacht verfuegt, diesen Vertrag im eigenen Namen oder im Namen des von ihm vertretenen Unternehmens abzuschliessen und alle vertraglichen Verpflichtungen zu erfüllen.</p>
+
+                <h3>4.5 Technische Voraussetzungen</h3>
+                <p>Der Kunde stellt sicher, dass er über die notwendige Software, Hardware und technische Infrastruktur verfuegt, um die Leistungen über die vereinbarten Plattformen, insbesondere Microsoft Teams, in Empfang nehmen zu können. BERIAS haftet nicht für Leistungsunterbrechungen, die durch fehlende technische Voraussetzungen auf Seiten des Kunden verursacht werden.</p>
+            </div>
+
+            <!-- Abschnitt 5 -->
+            <div class="legal-section" id="s5">
+                <h2>5 Vergütung, Zahlung und Rückerstattung</h2>
+                <h3>5.1 Preise</h3>
+                <p>Die Vergütung für den 30-Day Clarity Sprint und sonstige Beratungsleistungen richtet sich nach den zum Zeitpunkt des Vertragsabschlusses gueltigen Preisen gemaess dem individuellen Angebot oder SOW. Alle Preise verstehen sich zuzueglich der gesetzlichen Mehrwertsteuer in ihrer jeweiligen Hoehe.</p>
+
+                <h3>5.2 Abrechnung des 30-Day Clarity Sprint</h3>
+                <p>Der 30-Day Clarity Sprint wird als Festpreis vereinbart und ist vor Beginn der Leistungserbringung in voller Hoehe faellig, sofern im SOW keine abweichende Zahlungsstruktur vereinbart wurde.</p>
+
+                <h3>5.3 Zahlungsmodalitaeten</h3>
+                <p>Die Zahlung erfolgt durch Überweisung auf das in der Rechnung angegebene Konto der BERIAS oder per Kreditkarte über den Payment-Provider Stripe. Bei Zahlung per Kreditkarte können zusätzliche Transaktionsgebühren anfallen, die vom Kunden zu tragen sind. Rechnungen sind ohne Abzug innerhalb von 14 Tagen nach Rechnungsstellung zur Zahlung faellig. Bei Ueberschreitung der Zahlungsfrist ist BERIAS berechtigt, Verzugszinsen in Hoehe von 9 Prozentpunkten über dem Basiszinssatz (bei Unternehmern) bzw. 5 Prozentpunkten über dem Basiszinssatz (bei Verbrauchern) zu berechnen.</p>
+
+                <h3>5.4 Rückerstattungsrichtlinie</h3>
+                <p>Da der 30-Day Clarity Sprint ein zeitintensives, personalisiertes Beratungsprogramm ist, sind Zahlungen grundsaetzlich nicht erstattungsfaehig, sobald die Leistungserbringung begonnen hat. Im Falle einer Kündigung durch den Kunden nach Beginn der Leistungserbringung werden bereits erbrachte Leistungen anteilig in Rechnung gestellt. Im Falle einer Kündigung durch BERIAS wird der anteilige Betrag für noch nicht erbrachte Leistungen zurückerstattet. Das gesetzliche Widerrufsrecht für Verbraucher bleibt unverändert bestehen (vgl. Abschnitt 3.2).</p>
+
+                <h3>5.5 Preisanpassungen</h3>
+                <p>BERIAS behält sich vor, die vereinbarten Preise nach billigem Ermessen der Entwicklung der Gesamtkosten anzupassen. Eine Preiserhohung kommt in Betracht und eine Preisermäßigung ist vorzunehmen, wenn sich die Gesamtkosten für Personal, Subunternehmer oder sonstige Betriebskosten wesentlich veraendern. Preisanpassungen werden dem Kunden mindestens vier Wochen vor Inkrafttreten schriftlich mitgeteilt.</p>
+            </div>
+
+            <!-- Abschnitt 6 -->
+            <div class="legal-section" id="s6">
+                <h2>6 Leistungserbringung und Termine</h2>
+                <h3>6.1 Terminvereinbarung</h3>
+                <p>Die Termine für die Erbringung der Dienstleistungen werden zwischen BERIAS und dem Kunden einvernehmlich vereinbart. Terminverschiebungen müssen mindestens 48 Stunden vor dem vereinbarten Termin mitgeteilt werden. Bei späterer Absage oder Nichterscheinen des Kunden ist BERIAS berechtigt, den vollen Stundenaufwand für den ausgefallenen Termin in Rechnung zu stellen.</p>
+
+                <h3>6.2 Qualität der Leistungserbringung</h3>
+                <p>BERIAS erbringt die Dienstleistungen nach bestem Wissen und Gewissen auf Basis des aktuellen Stands der Technik und ihrer Beratungsexpertise. Eine Garantie für das Erreichen bestimmter wirtschaftlicher oder sonstiger Ziele wird nicht uebernommen, es sei denn, eine solche Garantie ist ausdruecklich im SOW vereinbart. BERIAS schuldet Dienstleistungen (Dienstvertrag gemaess Sec. 611 ff. BGB), keinen bestimmten Erfolg (Werkvertrag).</p>
+
+                <h3>6.3 Erbringungsort und Plattform</h3>
+                <p>Die Beratungsleistungen werden in der Regel online über Microsoft Teams oder vergleichbare Plattformen erbracht. Praesenztermine beim Kunden sind nach gesonderter Vereinbarung möglich. Die hierdurch entstehenden Reisekosten traegt der Kunde, sofern nicht anders vereinbart.</p>
+
+                <h3>6.4 Subunternehmer</h3>
+                <p>BERIAS ist berechtigt, zur Erbringung der vereinbarten Leistungen qualifizierte Subunternehmer oder Erfüllungsgehilfen einzusetzen. Einen Anspruch auf die Leistungserbringung durch bestimmte Mitarbeiter oder Subunternehmer hat der Kunde nicht, es sei denn, dies ist ausdruecklich im SOW vereinbart.</p>
+            </div>
+
+            <!-- Abschnitt 7 -->
+            <div class="legal-section" id="s7">
+                <h2>7 Vertraulichkeit und Datenschutz</h2>
+                <h3>7.1 Vertraulichkeitspflicht</h3>
+                <p>BERIAS verpflichtet sich, über alle im Rahmen der Beratungstätigkeit bekannt gewordenen betrieblichen, geschäftlichen und privaten Angelegenheiten des Kunden auch nach Beendigung des Vertrages Stillschweigen zu bewahren. Saemtliche uebergebenen Geschäftsunterlagen werden sorgfaeltig verwahrt, vor dem Zugriff Dritter geschützt und nach Beendigung des Auftrages auf Wunsch des Kunden zurückgegeben oder vernichtet. Diese Vertraulichkeitspflicht gilt für einen Zeitraum von drei (3) Jahren nach Vertragsende.</p>
+
+                <h3>7.2 Datenschutz</h3>
+                <p>Die Verarbeitung personenbezogener Daten erfolgt ausschliesslich im Rahmen der gesetzlichen Bestimmungen, insbesondere der EU-Datenschutz-Grundverordnung (DSGVO), des Bundesdatenschutzgesetzes (BDSG) und des Telekommunikation-Telemedien-Datenschutz-Gesetzes (TTDSG). Detaillierte Informationen zur Verarbeitung personenbezogener Daten sind der gesonderten Datenschutzerklärung zu entnehmen, die unter <a href="https://sprint.berias.com/de/datenschutz.html" style="color:var(--green);font-weight:600;">sprint.berias.com/de/datenschutz.html</a> abrufbar ist.</p>
+
+                <h3>7.3 Auftragsverarbeitung</h3>
+                <p>Soweit BERIAS im Rahmen der Leistungserbringung als Auftragsverarbeiter im Sinne der DSGVO tätig wird, schliessen die Parteien einen gesonderten Auftragsverarbeitungsvertrag (AVV) gemaess Art. 28 DSGVO, der Bestandteil des Gesamtvertrages wird.</p>
+
+                <h3>7.4 Internationale Datenübermittlung</h3>
+                <p>BERIAS betreibt auch eine Betriebsstaette in den USA. Soweit im Rahmen der Leistungserbringung Daten in die USA uebermittelt werden, erfolgt dies auf Grundlage geeigneter Garantien, insbesondere durch den Einsatz von Standardvertragsklauseln (SCC) gemaess Art. 46 DSGVO.</p>
+            </div>
+
+            <!-- Abschnitt 8 -->
+            <div class="legal-section" id="s8">
+                <h2>8 Gewährleistung und Haftung</h2>
+                <h3>8.1 Sorgfaltspflicht</h3>
+                <p>BERIAS erbringt ihre Beratungsleistungen mit der Sorgfalt eines ordentlichen Kaufmanns unter Beachtung des aktuellen Stands der Technik und ihrer Beratungsexpertise. BERIAS gewaehrleistet die fachgerechte und sorgfaeltige Erbringung der vereinbarten Dienstleistungen, uebernimmt jedoch keine Gewaehr für den wirtschaftlichen Erfolg der empfohlenen Maßnahmen.</p>
+
+                <h3>8.2 Unbeschraenkte Haftung</h3>
+                <p>Bei Vorsatz oder grober Fahrlaessigkeit sowie bei Fehlen einer garantierten Eigenschaft haftet BERIAS für alle darauf zurückzuführenden Schaeden unbeschraenkt.</p>
+
+                <h3>8.3 Beschraenkte Haftung bei leichter Fahrlaessigkeit</h3>
+                <p>Bei leichter Fahrlaessigkeit haftet BERIAS nur bei Verletzung wesentlicher Vertragspflichten (Kardinalpflichten). Die Haftung ist in diesem Fall der Hoehe nach begrenzt auf den vertragstypischen vorhersehbaren Schaden. Wesentliche Vertragspflichten sind solche Pflichten, deren Erfüllung die ordnungsgemaesse Durchführung des Vertrages ueberhaupt erst ermöglicht und auf deren Einhaltung der Vertragspartner regelmäßig vertrauen darf.</p>
+
+                <h3>8.4 Ausnahmen</h3>
+                <p>Die vorstehenden Haftungsbeschränkungen gelten nicht bei der Verletzung von Leben, Koerper und Gesundheit sowie bei Anspruechen aus dem Produkthaftungsgesetz.</p>
+
+                <h3>8.5 Verjaehrung</h3>
+                <p>Schadensersatzansprueche des Kunden verjaehren nach einem Jahr ab Kenntnis von den anspruchsbegründenden Umstaenden. Dies gilt nicht bei Vorsatz, grober Fahrlaessigkeit oder der Verletzung wesentlicher Vertragspflichten.</p>
+            </div>
+
+            <!-- Abschnitt 9 -->
+            <div class="legal-section" id="s9">
+                <h2>9 Rechte an Arbeitsergebnissen</h2>
+                <h3>9.1 Eigentumsrecht bis zur Zahlung</h3>
+                <p>Saemtliche durch BERIAS im Rahmen der Leistungserbringung erstellten Unterlagen, Konzepte, Präsentationen und sonstigen Arbeitsergebnisse verbleiben bis zur vollständigen Bezahlung der vereinbarten Vergütung im Eigentum von BERIAS.</p>
+
+                <h3>9.2 Nutzungsrecht nach vollständiger Zahlung</h3>
+                <p>Nach vollständiger Bezahlung räumt BERIAS dem Kunden das nicht-ausschliessliche, zeitlich und räumlich unbeschraenkte Recht ein, die Arbeitsergebnisse im vereinbarten Umfang zu nutzen. Die Weitergabe an Dritte oder die Verwendung für andere als die vereinbarten Zwecke bedarf der vorherigen schriftlichen Zustimmung von BERIAS.</p>
+
+                <h3>9.3 Allgemeine Erkenntnisse</h3>
+                <p>BERIAS behält sich das Recht vor, die im Rahmen der Leistungserbringung gewonnenen allgemeinen Erkenntnisse, Erfahrungen und Methoden für andere Projekte zu verwenden, soweit dabei keine vertraulichen Informationen des Kunden offengelegt werden.</p>
+            </div>
+
+            <!-- Abschnitt 10 -->
+            <div class="legal-section" id="s10">
+                <h2>10 Vertragsdauer und Kündigung</h2>
+                <h3>10.1 Vertragsdauer</h3>
+                <p>Der 30-Day Clarity Sprint endet automatisch nach Ablauf der vereinbarten 30-Tage-Laufzeit und vollständiger Erbringung der vereinbarten Leistungen. Verträge über sonstige Beratungsleistungen richten sich nach der jeweiligen Vereinbarung.</p>
+
+                <h3>10.2 Ausserordentliche Kündigung</h3>
+                <p>Jede Partei kann den Vertrag aus wichtigem Grund ausserordentlich kündigen. Ein wichtiger Grund liegt insbesondere vor, wenn die andere Partei eine wesentliche Vertragspflicht verletzt und diese Verletzung nicht innerhalb von zehn (10) Kalendertagen nach schriftlicher Abmahnung behebt. Ein wichtiger Grund auf Seiten des Kunden umfasst insbesondere die Nichtzahlung faelliger Beträge oder die Verletzung der Kooperationspflichten gemaess Abschnitt 4.</p>
+
+                <h3>10.3 Kündigung zur Bequemlichkeit</h3>
+                <p>Jede Partei kann den Vertrag mit einer Frist von vierzehn (14) Tagen in Textform kündigen. Im Falle einer Kündigung durch den Kunden sind alle bis zum Vertragsende erbrachten Leistungen zu vergüten; bereits gezahlte Vergütungen für noch nicht erbrachte Leistungen werden zeitanteilig zurückerstattet. Im Falle einer Kündigung durch BERIAS wird der anteilige Betrag für noch nicht erbrachte Leistungen zurückerstattet.</p>
+
+                <h3>10.4 Folgen der Kündigung</h3>
+                <p>Mit Beendigung des Vertrages: (a) enden alle dem Kunden eingeräumt Nutzungsrechte an BERIAS-Materialien; (b) hat der Kunde alle vertraulichen Unterlagen von BERIAS auf Anforderung zurückzugeben oder zu vernichten; (c) werden alle ausstehenden Zahlungsverpflichtungen des Kunden sofort faellig.</p>
+            </div>
+
+            <!-- Abschnitt 11 -->
+            <div class="legal-section" id="s11">
+                <h2>11 Hoehere Gewalt</h2>
+                <p>In Faellen hoeherer Gewalt ist BERIAS für die Dauer der Stoerung von der Leistungspflicht befreit. Als hoehere Gewalt gelten insbesondere Streik, Aussperrung, behoerdliche Anordnungen, der Ausfall von Kommunikationsnetzen und Gateways anderer Betreiber, Stoerungen im Bereich von Leitungsgebern, sonstige technische Stoerungen sowie Pandemien und Naturkatastrophen. BERIAS wird den Kunden über den Eintritt von Ereignissen hoeherer Gewalt unverzueglich in Kenntnis setzen und mit dem Kunden angemessene Alternativlösungen vereinbaren. Dauert ein Ereignis hoeherer Gewalt länger als dreissig (30) Tage an, kann jede Partei den Vertrag ohne Vertragsstrafe schriftlich kündigen.</p>
+            </div>
+
+            <!-- Abschnitt 12 -->
+            <div class="legal-section" id="s12">
+                <h2>12 Referenzen</h2>
+                <p>BERIAS ist berechtigt, den Kunden unter Verwendung seines Firmennamens und Logos als Referenzkunden zu nennen, es sei denn, der Kunde widerspricht dem ausdruecklich in Textform. Darüber hinausgehende Referenzdarstellungen, insbesondere die Beschreibung konkreter Projekte oder Beratungsleistungen, bedürften der vorherigen schriftlichen Zustimmung des Kunden.</p>
+            </div>
+
+            <!-- Abschnitt 13 -->
+            <div class="legal-section" id="s13">
+                <h2>13 Schlussbestimmungen</h2>
+                <h3>13.1 Gerichtsstand</h3>
+                <p>Erfüllungsort und ausschliesslicher Gerichtsstand für alle Streitigkeiten aus und im Zusammenhang mit diesem Vertrag ist München, sofern der Kunde Kaufmann, juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermoegen ist. Bei Verbrauchern gelten die gesetzlichen Gerichtsstandsregelungen.</p>
+
+                <h3>13.2 Anwendbares Recht</h3>
+                <p>Es gilt ausschliesslich das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts (CISG). Gegenüber Verbrauchern gilt diese Rechtswahl nur insoweit, als dadurch keine zwingenden gesetzlichen Bestimmungen des Staates, in dem der Verbraucher seinen gewoehnlichen Aufenthalt hat, eingeschraenkt werden.</p>
+
+                <h3>13.3 Online-Streitbeilegung (ODR)</h3>
+                <p>Die Europaeische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die unter <a href="http://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" style="color:var(--green);">http://ec.europa.eu/consumers/odr/</a> erreichbar ist. BERIAS ist nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen. Wir sind jedoch bemuht, Streitigkeiten direkt und in gutem Glauben zu lösen.</p>
+
+                <h3>13.4 Textform</h3>
+                <p>Nebenabreden, Änderungen und Ergaenzungen dieses Vertrages bedürften der Textform. Dies gilt auch für die Aufhebung dieser Formklausel.</p>
+
+                <h3>13.5 Salvatorische Klausel</h3>
+                <p>Sollten einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam sein oder werden, beruehrt dies die Wirksamkeit der uebrigen Bestimmungen nicht. Die Parteien verpflichten sich, unwirksame Bestimmungen durch solche zu ersetzen, die dem wirtschaftlich Gewollten am nächsten kommen. Dasselbe gilt für etwaige Lücken in diesen AGB.</p>
+
+                <h3>13.6 AGB-Änderungen</h3>
+                <p>BERIAS behält sich vor, diese AGB jederzeit unter Wahrung einer angemessenen Ankündigungsfrist von mindestens vier Wochen zu aendern. Die Änderungen werden dem Kunden in Textform mitgeteilt. Widerspricht der Kunde den geänderten Bedingungen nicht innerhalb von vier Wochen nach Zugang der Änderungsmitteilung, gelten die geänderten Bedingungen als akzeptiert. Auf dieses Widerspruchsrecht und die Folgen des Schweigens wird BERIAS in der Änderungsmitteilung gesondert hinweisen.</p>
+            </div>
+
+            <!-- Abschnitt 14 -->
+            <div class="legal-section" id="s14">
+                <h2>14 Kontaktdaten und Unternehmensangaben</h2>
+                <div style="background:#fff;border-radius:8px;padding:1.5rem;border:1px solid #e5e7eb;">
+                    <p>
+                        <strong>BERIAS GmbH</strong><br>
+                        Traubinger Str. 26<br>
+                        82327 Tutzing<br>
+                        Deutschland<br><br>
+                        Telefon: +49 (0)176 3808 1336<br>
+                        E-Mail: <a href="mailto:hello@berias.com" style="color:var(--green);font-weight:600;">hello@berias.com</a><br>
+                        Website: <a href="https://www.berias.com" style="color:var(--green);font-weight:600;">www.berias.com</a><br><br>
+                        Geschäftsführer: Tobias Hess<br>
+                        Handelsregister: HRB 290747<br>
+                        USt-IdNr.: DE367867294
+                    </p>
+                </div>
+            </div>
+
+            <div class="legal-closing">
+                <p><strong>MIT DEM KAUF ODER DER INANSPRUCHNAHME DER LEISTUNG BESTAETIGEN SIE, DASS SIE DIESE AGB IN IHRER GESAMTHEIT GELESEN UND VERSTANDEN HABEN UND MIT ALLEN BEDINGUNGEN EINVERSTANDEN SIND.</strong></p>
+            </div>
+
+            <a href="/de/" class="back-link">Zurück zur Startseite</a>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 BERIAS GmbH. Alle Rechte vorbehalten.</p>
+                <div class="footer-links-row">
+                    <a href="/de/impressum.html">Impressum</a>
+                    <a href="/de/datenschutz.html">Datenschutz</a>
+                    <a href="/de/agb.html">AGB</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  <script src="../js/cookie-consent.js"></script>
+  <!-- Lang preference: set EN when user manually switches -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.lang-switcher a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (this.textContent.trim() === 'EN') {
+            localStorage.setItem('lang-preference', 'en');
+          } else {
+            localStorage.removeItem('lang-preference');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
