@@ -1,0 +1,6 @@
+Contact: mailto:hello@berias.com
+Contact: https://berias.com
+Expires: 2027-05-28T23:59:59Z
+Preferred-Languages: en, de
+Canonical: https://sprint.berias.com/.well-known/security.txt
+Policy: https://sprint.berias.com/privacy.html
