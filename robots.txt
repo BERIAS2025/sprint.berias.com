@@ -1,4 +1,80 @@
+# BERIAS Sprint - robots.txt
+# https://sprint.berias.com
+
+# ─── General crawlers ───────────────────────────────────────────────────────
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /cgi-bin/
 
+# ─── Google ─────────────────────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /cgi-bin/
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+# ─── Bing / Microsoft ───────────────────────────────────────────────────────
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /cgi-bin/
+
+# ─── AI Crawlers (ChatGPT / OpenAI) ─────────────────────────────────────────
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+Disallow: /cgi-bin/
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# ─── AI Crawlers (Anthropic / Claude) ───────────────────────────────────────
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# ─── AI Crawlers (Perplexity) ────────────────────────────────────────────────
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+
+# ─── AI Crawlers (Meta / Llama) ──────────────────────────────────────────────
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# ─── AI Crawlers (Apple) ─────────────────────────────────────────────────────
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ─── AI Crawlers (Cohere, You.com, others) ───────────────────────────────────
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+# ─── Sitemaps ────────────────────────────────────────────────────────────────
 Sitemap: https://sprint.berias.com/sitemap.xml
