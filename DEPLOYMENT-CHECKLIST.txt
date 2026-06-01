@@ -1,0 +1,177 @@
+================================================================================
+DEPLOYMENT CHECKLIST
+30-Day Clarity Sprint Landing Page
+================================================================================
+
+BEFORE UPLOAD:
+--------------
+□ Unzip the package to your computer
+□ Review all files (HTML, CSS, JS, images)
+□ Have your cPanel login ready
+□ Have tracking codes ready (Google Analytics, Google Ads, Facebook Pixel)
+□ Have HubSpot form code ready
+
+UPLOAD PHASE:
+-------------
+□ Log in to DomainFactory cPanel
+□ Navigate to File Manager
+□ Find or create /sprint/ directory
+□ Upload ALL files from package
+□ Verify folder structure is correct:
+  □ index.html in root of /sprint/
+  □ css/ folder with 2 CSS files
+  □ js/ folder with 2 JS files
+  □ images/ folder with 21 images
+  □ Legal pages (impressum.html, privacy.html, terms.html)
+□ Set file permissions (755 for folders, 644 for files)
+
+SSL SETUP:
+----------
+□ Access SSL/TLS section in cPanel
+□ Enable SSL for sprint.berias.com
+□ Wait 10-15 minutes for activation
+□ Test https://sprint.berias.com
+□ Verify padlock icon appears
+
+TRACKING CODES:
+---------------
+□ Download index.html from cPanel
+□ Add Google Analytics code (lines 28-36)
+□ Add Google Ads code (lines 42-48)
+□ Add Facebook Pixel code (lines 54-68)
+□ Save file
+□ Re-upload to cPanel (overwrite)
+□ Clear browser cache
+□ Test tracking (check real-time reports)
+
+HUBSPOT INTEGRATION:
+--------------------
+□ Log in to HubSpot
+□ Create or select contact form
+□ Copy embed code
+□ Add to index.html (search for "HUBSPOT FORM EMBED CODE")
+□ Save and re-upload
+□ Test form submission
+□ Verify contact appears in HubSpot
+
+FINAL TESTING:
+--------------
+□ Visit https://sprint.berias.com
+□ Test on desktop browser
+□ Test on mobile phone
+□ Test on tablet
+□ Check all images load correctly
+□ Test mobile menu (hamburger icon)
+□ Click all navigation links
+□ Test FAQ accordion (click each question)
+□ Verify Calendly widget loads
+□ Test Trustindex reviews display
+□ Submit test form
+□ Check all external links work
+□ Verify legal pages accessible
+□ Test "Back to Top" functionality
+□ Check page load speed (should be under 3 seconds)
+
+BROWSER TESTING:
+----------------
+□ Google Chrome
+□ Mozilla Firefox
+□ Safari (Mac/iPhone)
+□ Microsoft Edge
+□ Mobile browsers (iOS Safari, Chrome)
+
+CONTENT VERIFICATION:
+---------------------
+□ All text is correct (no typos)
+□ Pricing is accurate
+□ Contact information correct (email, address, phone)
+□ Calendly link works
+□ All logos display correctly
+□ Photos are high quality
+□ Legal pages complete
+
+ANALYTICS VERIFICATION:
+-----------------------
+□ Google Analytics tracking
+□ Google Ads conversion tracking
+□ Facebook Pixel tracking
+□ HubSpot form submissions
+□ Calendly booking notifications
+
+PERFORMANCE CHECK:
+------------------
+□ Page loads in under 3 seconds
+□ Images are optimized
+□ No broken links (404 errors)
+□ No console errors (F12 → Console)
+□ Mobile responsive design works
+□ All animations smooth
+
+SEO CHECK:
+----------
+□ Page title correct
+□ Meta description present
+□ Keywords included
+□ Images have alt text
+□ Headings structured properly (H1, H2, H3)
+□ Internal links work
+□ Sitemap accessible
+
+LEGAL COMPLIANCE:
+-----------------
+□ Privacy Policy accessible
+□ Terms of Service accessible
+□ Impressum accessible (German law requirement)
+□ Cookie consent (if applicable)
+□ GDPR compliant
+
+POST-LAUNCH:
+------------
+□ Monitor analytics daily for first week
+□ Check form submissions regularly
+□ Respond to inquiries within 24 hours
+□ Monitor page performance
+□ Check for any error reports
+□ Backup all files regularly
+
+ONGOING MAINTENANCE:
+--------------------
+□ Update content monthly
+□ Check tracking codes quarterly
+□ Review analytics monthly
+□ Update pricing as needed
+□ Add new testimonials/reviews
+□ Keep legal pages current
+□ Renew SSL certificate annually (usually automatic)
+
+================================================================================
+TROUBLESHOOTING CONTACTS:
+================================================================================
+
+Hosting Issues:
+DomainFactory Support - support@df.eu
+
+Tracking Issues:
+Google Support - support.google.com
+Facebook Support - facebook.com/business/help
+
+Integration Issues:
+HubSpot Support - help.hubspot.com
+Calendly Support - help.calendly.com
+Trustindex Support - trustindex.io/support
+
+Content/Strategy Questions:
+BERIAS - hello@berias.com
+
+================================================================================
+LAUNCH DATE: _____________________
+
+LAUNCHED BY: _____________________
+
+NOTES:
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+
+================================================================================

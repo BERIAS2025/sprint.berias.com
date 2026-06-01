@@ -1,0 +1,61 @@
+================================================================================
+QUICK START GUIDE
+30-Day Clarity Sprint Landing Page
+================================================================================
+
+STEP 1: UPLOAD TO cPANEL
+-------------------------
+1. Log in to DomainFactory.eu cPanel
+2. Open "File Manager"
+3. Navigate to your subdomain folder: /sprint/
+4. Click "Upload" button
+5. Select ALL files from the unzipped package
+6. Wait for upload to complete
+7. Set permissions: Folders = 755, Files = 644
+
+STEP 2: VERIFY SSL
+------------------
+1. In cPanel, find "SSL/TLS Status"
+2. Enable SSL for sprint.berias.com
+3. Wait 5-10 minutes
+4. Visit https://sprint.berias.com (note the "s")
+5. Verify padlock icon appears
+
+STEP 3: ADD TRACKING CODES
+---------------------------
+1. Download index.html from cPanel
+2. Open in text editor (Notepad++, Sublime, VS Code)
+3. Find lines 24-70 (clearly marked sections)
+4. Paste your codes:
+   - Google Analytics (lines 28-36)
+   - Google Ads (lines 42-48)
+   - Facebook Pixel (lines 54-68)
+5. Save and re-upload to cPanel
+
+STEP 4: ADD HUBSPOT FORM
+-------------------------
+1. Log in to HubSpot
+2. Go to Marketing → Forms
+3. Create or select your form
+4. Copy embed code
+5. In index.html, find: "<!-- HUBSPOT FORM EMBED CODE HERE -->"
+6. Paste the code there
+7. Save and re-upload
+
+STEP 5: TEST EVERYTHING
+------------------------
+□ Visit https://sprint.berias.com
+□ Check all images load
+□ Test mobile menu (resize browser)
+□ Click all navigation links
+□ Test FAQ accordion (click questions)
+□ Verify Calendly widget works
+□ Submit test form to HubSpot
+□ Check on mobile phone
+□ Verify SSL padlock shows
+
+DONE! Your landing page is live! 🎉
+
+For detailed instructions, see README.txt
+
+================================================================================

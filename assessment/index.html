@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>BPM Maturity Assessment | BERIAS</title>
+  <meta name="description" content="Evaluate your organization's Business Process Management maturity across 15 key dimensions. Get a personalized score and actionable recommendations from BERIAS." />
+  <meta name="keywords" content="BPM maturity assessment, business process management, process optimization, BERIAS consulting" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@400;500;600;700&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WP20X6DZPQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WP20X6DZPQ');
+  </script>
+  <!-- Google Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17546137265"></script>
+  <script>
+    gtag('config', 'AW-17546137265');
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') { window.location = url; }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17546137265/wxsICITDyYwcELGd065B',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','1303422577734498');fbq('track','PageView');
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0F304C;
+      --green: #A2C614;
+      --purple: #7918B5;
+      --font-heading: 'Ysabeau Office', sans-serif;
+      --font-body: 'Public Sans', sans-serif;
+    }
+    body {
+      font-family: var(--font-body);
+      color: #333;
+      background: #fff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    @media (min-width: 640px) { .container { padding: 0 1.5rem; } }
+    @media (min-width: 1024px) { .container { padding: 0 2rem; } }
+
+    /* Utility */
+    .hidden { display: none !important; }
+    .fade-in {
+      animation: fadeIn 0.6s ease-out forwards;
+      opacity: 0;
+    }
+    .fade-in-up {
+      animation: fadeInUp 0.6s ease-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn { to { opacity: 1; } }
+    @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } from { transform: translateY(20px); } }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+    .delay-5 { animation-delay: 0.5s; }
+    .delay-7 { animation-delay: 0.7s; }
+
+    /* ===== LEAD GATE ===== */
+    .lead-gate {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
+    }
+    .lead-grid {
+      display: grid;
+      gap: 3rem;
+      align-items: center;
+      max-width: 72rem;
+      margin: 0 auto;
+    }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 1fr 1fr; gap: 4rem; } }
+    .lead-gate h1 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+    }
+    @media (min-width: 768px) { .lead-gate h1 { font-size: 2.75rem; } }
+    @media (min-width: 1024px) { .lead-gate h1 { font-size: 3.25rem; } }
+    .lead-gate h1 span { color: var(--green); }
+    .lead-gate .desc { font-size: 1.125rem; color: #6b7280; line-height: 1.7; margin-bottom: 2rem; }
+    .lead-meta { display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.875rem; color: #9ca3af; }
+    .lead-meta span { display: flex; align-items: center; gap: 0.5rem; }
+    .lead-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); display: inline-block; }
+
+    /* Form card */
+    .form-card {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+      padding: 2rem;
+      border: 1px solid #f3f4f6;
+    }
+    @media (min-width: 768px) { .form-card { padding: 2.5rem; } }
+    .form-card h2 { font-family: var(--font-heading); font-size: 1.375rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+    .form-card .subtitle { font-size: 0.875rem; color: #9ca3af; margin-bottom: 1.5rem; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 0.375rem;
+    }
+    .form-group label svg { vertical-align: -2px; margin-right: 4px; }
+    .form-group input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      font-size: 1rem;
+      color: #111;
+      font-family: var(--font-body);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(162,198,20,0.15);
+    }
+    .form-group input::placeholder { color: #9ca3af; }
+    .form-error { color: #dc2626; font-size: 0.875rem; margin-bottom: 0.5rem; }
+    .btn-primary {
+      width: 100%;
+      padding: 0.875rem;
+      border-radius: 0.5rem;
+      border: none;
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 600;
+      background: var(--green);
+      color: var(--navy);
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 4px 12px rgba(162,198,20,0.3);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(162,198,20,0.4); }
+    .btn-primary:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    .form-privacy { font-size: 0.75rem; color: #9ca3af; text-align: center; margin-top: 0.75rem; }
+    .form-privacy a { color: #6b7280; text-decoration: underline; }
+
+    /* ===== HERO (after lead gate) ===== */
+    .hero {
+      position: relative;
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310419663030437683/XiaTKX2C7AtY3GCmxwT62P/hero-blueprint-7LemGXbvcYHWbis4WSp7kP.webp');
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(15,48,76,0.95) 0%, rgba(15,48,76,0.80) 100%);
+    }
+    .hero .container { position: relative; z-index: 2; padding-top: 4rem; padding-bottom: 4rem; }
+    .hero .tag { font-size: 0.875rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--green); margin-bottom: 1rem; }
+    .hero h1 { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 1rem; }
+    @media (min-width: 768px) { .hero h1 { font-size: 3.25rem; } }
+    .hero h1 span { color: var(--green); }
+    .hero .welcome { font-size: 1.125rem; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; }
+    .hero .welcome strong { color: #fff; }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .btn-hero-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 1rem 2rem; font-family: var(--font-heading); font-weight: 600; font-size: 1rem;
+      border-radius: 0.5rem; border: none; background: var(--green); color: var(--navy);
+      cursor: pointer; text-decoration: none; transition: all 0.3s;
+      box-shadow: 0 4px 16px rgba(162,198,20,0.3);
+    }
+    .btn-hero-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(162,198,20,0.4); }
+    .btn-hero-secondary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 1rem 1.5rem; font-family: var(--font-heading); font-weight: 600; font-size: 1rem;
+      border-radius: 0.5rem; border: 2px solid rgba(255,255,255,0.3); background: transparent; color: #fff;
+      cursor: pointer; text-decoration: none; transition: all 0.3s;
+    }
+    .btn-hero-secondary:hover { background: rgba(255,255,255,0.1); }
+
+    /* ===== SECTIONS ===== */
+    .section { padding: 3.5rem 0; }
+    .section-alt { background: #F8F9FA; }
+    .section-border { border-bottom: 1px solid #f3f4f6; }
+    .section-inner { max-width: 56rem; margin: 0 auto; }
+    .section-grid { display: grid; gap: 1.5rem; }
+    @media (min-width: 768px) { .section-grid { grid-template-columns: 60px 1fr; gap: 2.5rem; } }
+    .section-num { display: none; font-family: var(--font-heading); font-size: 3.75rem; font-weight: 700; color: #e5e7eb; line-height: 1; }
+    @media (min-width: 768px) { .section-num { display: block; } }
+    .section h2 { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--navy); margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .section h2 { font-size: 1.875rem; } }
+
+    /* How it works */
+    .scoring-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+    .score-card { text-align: center; padding: 0.75rem; border-radius: 0.5rem; border: 1px solid; }
+    .score-card .num { font-size: 1.5rem; font-weight: 700; }
+    .score-card .lbl { font-size: 0.875rem; font-weight: 500; margin-top: 0.25rem; }
+    .score-no { background: #fef2f2; border-color: #fecaca; color: #b91c1c; }
+    .score-sometimes { background: #fffbeb; border-color: #fde68a; color: #b45309; }
+    .score-yes { background: #f0fdf4; border-color: #bbf7d0; color: #15803d; }
+    .scoring-note { font-size: 0.875rem; color: #9ca3af; text-align: center; margin-top: 1rem; }
+
+    /* Questions */
+    .progress-bar-wrap { margin-bottom: 2.5rem; }
+    .progress-info { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; }
+    .progress-info span { font-size: 0.875rem; }
+    .progress-info .count { color: #6b7280; }
+    .progress-info .pct { font-weight: 600; color: var(--navy); }
+    .progress-track { height: 8px; background: #e5e7eb; border-radius: 9999px; overflow: hidden; }
+    .progress-fill { height: 100%; background: var(--green); border-radius: 9999px; transition: width 0.5s ease-out; }
+
+    .category-divider { display: flex; align-items: center; gap: 0.75rem; margin: 2rem 0 1rem; }
+    .category-divider .line { flex: 1; height: 1px; background: #e5e7eb; }
+    .category-divider .label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--green); }
+
+    .question-card {
+      padding: 1.25rem 1.5rem;
+      border-radius: 0.75rem;
+      border: 1px solid #f3f4f6;
+      background: rgba(255,255,255,0.6);
+      margin-bottom: 0.75rem;
+      transition: all 0.3s;
+    }
+    .question-card.answered { background: #fff; border-color: #e5e7eb; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .q-inner { display: flex; gap: 1rem; }
+    .q-num { font-size: 0.875rem; font-weight: 700; color: rgba(162,198,20,0.5); width: 1.5rem; text-align: right; flex-shrink: 0; margin-top: 2px; }
+    .q-content { flex: 1; }
+    .q-text { font-size: 1rem; font-weight: 500; color: var(--navy); line-height: 1.5; margin-bottom: 1rem; }
+    @media (min-width: 768px) { .q-text { font-size: 1.125rem; } }
+    .q-options { display: flex; gap: 0.75rem; }
+    .q-btn {
+      flex: 1; padding: 0.625rem 1rem; border-radius: 0.5rem;
+      border: 2px solid; font-family: var(--font-heading); font-size: 0.875rem;
+      font-weight: 600; cursor: pointer; transition: all 0.2s; background: transparent;
+    }
+    .q-btn-no { border-color: #fca5a5; background: #fef2f2; color: #991b1b; }
+    .q-btn-no:hover { background: #fee2e2; border-color: #f87171; }
+    .q-btn-no.active { border-color: #ef4444; background: #fee2e2; color: #7f1d1d; box-shadow: 0 0 0 3px rgba(239,68,68,0.2); }
+    .q-btn-sometimes { border-color: #fcd34d; background: #fffbeb; color: #92400e; }
+    .q-btn-sometimes:hover { background: #fef3c7; border-color: #fbbf24; }
+    .q-btn-sometimes.active { border-color: #f59e0b; background: #fef3c7; color: #78350f; box-shadow: 0 0 0 3px rgba(245,158,11,0.2); }
+    .q-btn-yes { border-color: #86efac; background: #f0fdf4; color: #166534; }
+    .q-btn-yes:hover { background: #dcfce7; border-color: #4ade80; }
+    .q-btn-yes.active { border-color: #22c55e; background: #dcfce7; color: #14532d; box-shadow: 0 0 0 3px rgba(34,197,94,0.2); }
+
+    .view-results-wrap { text-align: center; margin-top: 2.5rem; }
+    .btn-results {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      padding: 1rem 2.5rem; border-radius: 0.5rem; font-family: var(--font-heading);
+      font-size: 1.125rem; font-weight: 600; border: none; cursor: pointer; transition: all 0.3s;
+    }
+    .btn-results.enabled { background: var(--green); color: var(--navy); box-shadow: 0 4px 16px rgba(162,198,20,0.3); }
+    .btn-results.enabled:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(162,198,20,0.4); }
+    .btn-results.disabled { background: #e5e7eb; color: #9ca3af; cursor: not-allowed; }
+
+    .reset-btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.875rem; color: #6b7280; background: none; border: none;
+      cursor: pointer; transition: color 0.2s;
+    }
+    .reset-btn:hover { color: #111827; }
+    .section-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 2rem; }
+
+    /* ===== RESULTS ===== */
+    .score-display { text-align: center; margin-bottom: 1.5rem; }
+    .score-big { font-size: 4.5rem; font-weight: 700; color: var(--navy); font-family: var(--font-heading); }
+    @media (min-width: 768px) { .score-big { font-size: 6rem; } }
+    .score-max { font-size: 1.5rem; color: #9ca3af; }
+    @media (min-width: 768px) { .score-max { font-size: 1.875rem; } }
+    .score-level { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 600; margin-top: 0.5rem; }
+    @media (min-width: 768px) { .score-level { font-size: 1.5rem; } }
+
+    .gauge-track { height: 1rem; background: #e5e7eb; border-radius: 9999px; overflow: hidden; margin-bottom: 0.75rem; }
+    .gauge-fill { height: 100%; border-radius: 9999px; transition: width 1.2s ease-out; }
+    .gauge-labels { display: flex; justify-content: space-between; font-size: 0.75rem; color: #9ca3af; }
+
+    .level-card { padding: 1.5rem; border-radius: 0.75rem; border: 1px solid; margin-top: 2rem; }
+    .level-card h3 { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .level-card p { color: #374151; line-height: 1.7; }
+
+    .level-initial { background: #fef2f2; border-color: #fecaca; }
+    .level-initial h3 { color: #b91c1c; }
+    .level-managed { background: #fff7ed; border-color: #fed7aa; }
+    .level-managed h3 { color: #c2410c; }
+    .level-standardized { background: #fffbeb; border-color: #fde68a; }
+    .level-standardized h3 { color: #b45309; }
+    .level-predictable { background: #eff6ff; border-color: #bfdbfe; }
+    .level-predictable h3 { color: #1d4ed8; }
+    .level-innovating { background: #f0fdf4; border-color: #bbf7d0; }
+    .level-innovating h3 { color: #15803d; }
+
+    .bar-red { background: #ef4444; }
+    .bar-orange { background: #f97316; }
+    .bar-amber { background: #f59e0b; }
+    .bar-blue { background: #3b82f6; }
+    .bar-green { background: #22c55e; }
+
+    /* Category breakdown */
+    .cat-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+    .cat-name { width: 10rem; font-size: 0.875rem; font-weight: 500; color: var(--navy); font-family: var(--font-heading); flex-shrink: 0; }
+    @media (min-width: 768px) { .cat-name { width: 12rem; } }
+    .cat-bar { flex: 1; height: 0.75rem; background: #e5e7eb; border-radius: 9999px; overflow: hidden; }
+    .cat-bar-fill { height: 100%; border-radius: 9999px; transition: width 0.8s ease-out; }
+    .cat-score { width: 4rem; text-align: right; font-size: 0.875rem; font-weight: 600; color: var(--navy); }
+
+    /* Recommendation */
+    .rec-card { padding: 1.5rem 2rem; border-radius: 0.75rem; border: 2px solid; margin-bottom: 2rem; }
+    .rec-card h3 { font-family: var(--font-heading); font-size: 1.125rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .rec-card p { color: #374151; line-height: 1.7; }
+    .weak-item { padding: 1rem; border-radius: 0.75rem; background: rgba(255,251,235,0.5); border: 1px solid rgba(253,230,138,0.5); display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; }
+    .weak-score { font-size: 0.875rem; font-weight: 700; color: #d97706; flex-shrink: 0; }
+    .weak-name { font-family: var(--font-heading); font-size: 0.875rem; font-weight: 600; color: var(--navy); }
+    .weak-note { font-size: 0.75rem; color: #6b7280; margin-top: 0.25rem; }
+
+    /* CTAs */
+    .cta-card {
+      display: block; padding: 1.5rem 2rem; border-radius: 0.75rem;
+      border: 2px solid #e5e7eb; background: #fff; text-decoration: none;
+      transition: all 0.3s; margin-bottom: 1rem;
+    }
+    .cta-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
+    .cta-card-primary { border-color: var(--green); background: rgba(162,198,20,0.05); }
+    .cta-inner { display: flex; align-items: flex-start; gap: 1.25rem; }
+    .cta-icon {
+      width: 3rem; height: 3rem; border-radius: 0.75rem;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .cta-icon-green { background: var(--green); }
+    .cta-icon-navy { background: var(--navy); }
+    .cta-icon-purple { background: var(--purple); }
+    .cta-icon svg { width: 1.5rem; height: 1.5rem; color: #fff; }
+    .cta-content { flex: 1; }
+    .cta-content h3 { font-family: var(--font-heading); font-size: 1.125rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+    @media (min-width: 768px) { .cta-content h3 { font-size: 1.25rem; } }
+    .cta-content p { color: #6b7280; line-height: 1.7; font-size: 0.9375rem; }
+    .cta-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.75rem; font-size: 0.875rem; font-weight: 600; }
+    .cta-link-green { color: var(--green); }
+    .cta-link-navy { color: var(--navy); }
+    .cta-link-purple { color: var(--purple); }
+
+    /* ===== FOOTER ===== */
+    .footer { background: var(--navy); padding: 2.5rem 0; }
+    .footer-grid { display: grid; gap: 2rem; margin-bottom: 2rem; }
+    @media (min-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .footer p, .footer a { color: rgba(255,255,255,0.6); font-size: 0.875rem; line-height: 1.6; }
+    .footer a { text-decoration: none; transition: color 0.2s; }
+    .footer a:hover { color: #fff; }
+    .footer h4 { color: #fff; font-family: var(--font-heading); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.75rem; }
+    .footer ul { list-style: none; }
+    .footer li { margin-bottom: 0.5rem; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+    .footer-bottom p { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+    .footer-logo { height: 2.5rem; margin-bottom: 1rem; }
+
+    /* SVG icons inline */
+    .icon { display: inline-block; vertical-align: middle; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== LEAD GATE ===== -->
+  <div id="lead-gate" class="lead-gate">
+    <div class="container" style="padding-top:4rem;padding-bottom:4rem;">
+      <div class="lead-grid">
+        <div class="fade-in">
+          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030437683/XiaTKX2C7AtY3GCmxwT62P/berias-logo-color_109fc43b.webp" alt="BERIAS" style="height:3.5rem;object-fit:contain;margin-bottom:2rem;" />
+          <h1>How Mature Are Your<br><span>Business Processes?</span></h1>
+          <p class="desc">Take this free 5-minute assessment to discover where your organization stands on the BPM maturity spectrum. Get personalized recommendations to drive operational excellence.</p>
+          <div class="lead-meta">
+            <span><span class="lead-dot"></span> 15 Questions</span>
+            <span><span class="lead-dot"></span> 5 Minutes</span>
+            <span><span class="lead-dot"></span> Instant Results</span>
+          </div>
+        </div>
+        <div class="fade-in delay-2">
+          <div class="form-card">
+            <h2>Start Your Free Assessment</h2>
+            <p class="subtitle">Enter your details below to begin. Your results will be shown immediately after completing the assessment.</p>
+            <form id="lead-form" onsubmit="return handleLeadSubmit(event)">
+              <div class="form-group">
+                <label><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--green)"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Full Name</label>
+                <input type="text" id="lead-name" placeholder="John Smith" required />
+              </div>
+              <div class="form-group">
+                <label><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--green)"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg> Company</label>
+                <input type="text" id="lead-company" placeholder="Acme Logistics Inc." required />
+              </div>
+              <div class="form-group">
+                <label><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--green)"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> Business Email</label>
+                <input type="email" id="lead-email" placeholder="john@acmelogistics.com" required />
+              </div>
+              <div id="lead-error" class="form-error hidden"></div>
+              <div class="form-group" style="margin-top:1.5rem;">
+                <label style="display:flex;align-items:flex-start;gap:0.75rem;cursor:pointer;font-size:0.9375rem;color:#555;">
+                  <input type="checkbox" id="lead-consent" style="margin-top:0.25rem;cursor:pointer;" />
+                  <span>I consent to BERIAS contacting me via email or phone to discuss my assessment results and consulting services. I can unsubscribe or opt-out anytime. <a href="https://sprint.berias.com/privacy.html" target="_blank" style="color:var(--green);text-decoration:none;font-weight:500;">Privacy Policy</a></span>
+                </label>
+              </div>
+              <button type="submit" class="btn-primary" id="lead-submit">Start Assessment →</button>
+              <p class="form-privacy">Your information is secure and will not be shared with third parties.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MAIN APP (hidden until lead submitted) ===== -->
+  <div id="main-app" class="hidden">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <div style="max-width:48rem;">
+          <div class="fade-in">
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030437683/XiaTKX2C7AtY3GCmxwT62P/berias-logo-white_d4de117b.webp" alt="BERIAS" style="height:3.5rem;object-fit:contain;margin-bottom:1.5rem;" />
+          </div>
+          <div class="fade-in delay-2">
+            <p class="tag">Free Assessment Tool</p>
+            <h1>Rate Your Current<br><span>BPM Maturity</span></h1>
+            <p class="welcome">Welcome, <strong id="welcome-name"></strong>. Answer 15 questions to discover your organization's process maturity level.</p>
+          </div>
+          <div class="hero-btns fade-in delay-4">
+            <a href="#assessment" class="btn-hero-primary" onclick="scrollToAssessment(event)">Start Assessment →</a>
+            <a href="https://d2xsxph8kpxj0f.cloudfront.net/310419663030437683/XiaTKX2C7AtY3GCmxwT62P/BERIAS_BPM_Maturity_Assessment_6dab7e79.pdf" target="_blank" class="btn-hero-secondary">Download PDF ↓</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="section section-border" style="background:#fff;">
+      <div class="container">
+        <div class="section-inner">
+          <div class="section-grid">
+            <div><span class="section-num">01</span></div>
+            <div>
+              <h2>Why Assess Your BPM Maturity?</h2>
+              <div style="color:#6b7280;font-size:1.0625rem;line-height:1.7;">
+                <p style="margin-bottom:1rem;">In the contemporary landscape of organizational management, the maturity of business processes serves as a critical determinant of operational efficiency and strategic agility. Business Process Management (BPM) is not merely a technological implementation but a holistic management philosophy that aligns an organization's processes with its strategic goals.</p>
+                <p>This assessment provides you with a clear snapshot of your current BPM maturity level. By evaluating key dimensions such as process ownership, standardization, documentation, and performance measurement, you can identify specific areas for improvement and transition from reactive operations to a state of continuous innovation.</p>
+              </div>
+              <div style="margin-top:2rem;padding:1.5rem;background:#f9fafb;border-radius:0.75rem;border:1px solid #f3f4f6;">
+                <h3 style="font-family:var(--font-heading);font-size:1.125rem;font-weight:600;color:var(--navy);margin-bottom:1rem;">How It Works</h3>
+                <div class="scoring-grid">
+                  <div class="score-card score-no"><div class="num">1</div><div class="lbl">No</div></div>
+                  <div class="score-card score-sometimes"><div class="num">2</div><div class="lbl">Sometimes</div></div>
+                  <div class="score-card score-yes"><div class="num">3</div><div class="lbl">Yes</div></div>
+                </div>
+                <p class="scoring-note">Maximum Score: 45 points | Minimum Score: 15 points</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Assessment Questions -->
+    <section id="assessment" class="section section-alt section-border">
+      <div class="container">
+        <div class="section-inner">
+          <div class="section-grid">
+            <div><span class="section-num">02</span></div>
+            <div>
+              <div class="section-header">
+                <h2 style="margin-bottom:0;">Fundamentals of BPM</h2>
+                <button class="reset-btn hidden" id="reset-btn" onclick="resetAssessment()">↺ Reset All</button>
+              </div>
+              <div class="progress-bar-wrap">
+                <div class="progress-info">
+                  <span class="count" id="progress-count">0 / 15 answered</span>
+                  <span class="pct" id="progress-pct">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+                </div>
+              </div>
+              <div id="questions-container"></div>
+              <div class="view-results-wrap">
+                <button class="btn-results disabled" id="results-btn" onclick="showResults()" disabled>
+                  Answer all 15 questions to see results (0/15)
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results (hidden until complete) -->
+    <div id="results-section" class="hidden">
+
+      <!-- Score Overview -->
+      <section class="section section-border" style="background:#fff;" id="results-anchor">
+        <div class="container">
+          <div class="section-inner">
+            <div class="section-grid">
+              <div><span class="section-num">03</span></div>
+              <div>
+                <h2>Your BPM Maturity Score</h2>
+                <div class="score-display">
+                  <span class="score-big" id="score-value">0</span><span class="score-max">/45</span>
+                  <p class="score-level" id="score-level"></p>
+                </div>
+                <div class="gauge-track">
+                  <div class="gauge-fill" id="gauge-fill" style="width:0%"></div>
+                </div>
+                <div class="gauge-labels">
+                  <span>15 (Initial)</span><span>25</span><span>30</span><span>38</span><span>45 (Innovating)</span>
+                </div>
+                <div class="level-card" id="level-card">
+                  <h3 id="level-title"></h3>
+                  <p id="level-desc"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category Breakdown -->
+      <section class="section section-alt section-border">
+        <div class="container">
+          <div class="section-inner">
+            <div class="section-grid">
+              <div><span class="section-num">04</span></div>
+              <div>
+                <h2>Category Breakdown</h2>
+                <div id="cat-breakdown"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recommendations -->
+      <section class="section section-border" style="background:#fff;">
+        <div class="container">
+          <div class="section-inner">
+            <div class="section-grid">
+              <div><span class="section-num">05</span></div>
+              <div>
+                <h2>Recommendations</h2>
+                <p style="color:#6b7280;margin-bottom:2rem;line-height:1.7;">Based on your score of <strong style="color:var(--navy)" id="rec-score"></strong>, here is what we recommend to advance your BPM maturity.</p>
+                <div class="rec-card" id="rec-card">
+                  <h3 id="rec-title">Primary Recommendation</h3>
+                  <p id="rec-text"></p>
+                </div>
+                <div id="weak-areas"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What's Next CTAs -->
+      <section class="section section-alt section-border">
+        <div class="container">
+          <div class="section-inner">
+            <div class="section-grid">
+              <div><span class="section-num">06</span></div>
+              <div>
+                <h2>What's Next?</h2>
+                <p style="color:#6b7280;margin-bottom:2rem;line-height:1.7;font-size:1.0625rem;">Your assessment results are a starting point, not a destination. Based on where you stand, here is how BERIAS can help you take the next step toward operational excellence.</p>
+
+                <a href="https://calendly.com/hess-tobias/15-minute-process-leak-audit" target="_blank" class="cta-card cta-card-primary">
+                  <div class="cta-inner">
+                    <div class="cta-icon cta-icon-green"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg></div>
+                    <div class="cta-content">
+                      <h3>Schedule a Free 15-Min Process Leak Audit</h3>
+                      <p>One quick Teams call. We look at your assessment results together, identify one obvious operational leak, and give you a clear, actionable finding you can use immediately. No pitch, no obligation.</p>
+                      <span class="cta-link cta-link-green">Book Now - It's Free →</span>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="https://berias.com/sign-up/?redirect_page=micro-consultant-survey" target="_blank" class="cta-card">
+                  <div class="cta-inner">
+                    <div class="cta-icon cta-icon-navy"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M15 2v20"/><path d="M9 12h.01"/></svg></div>
+                    <div class="cta-content">
+                      <h3>Explore Adaptive Micro Consulting</h3>
+                      <p>Answer a quick survey about your business challenges, and we will create a personalized consulting proposal. Micro Consulting offers modular, fast, and flexible sessions that focus on the 20% of decisive steps impacting your company most. No long-term commitments, no high fees.</p>
+                      <span class="cta-link cta-link-navy">Start the Survey →</span>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="https://sprint.berias.com" target="_blank" class="cta-card">
+                  <div class="cta-inner">
+                    <div class="cta-icon cta-icon-purple"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+                    <div class="cta-content">
+                      <h3>30-Day Clarity Sprint</h3>
+                      <p>A focused, intensive 30-day engagement that diagnoses your operational challenges, maps a clear path forward, and delivers a custom playbook your team can execute immediately. From process mapping to implementation, all in one month.</p>
+                      <span class="cta-link cta-link-purple">Learn More →</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div style="max-width:72rem;margin:0 auto;">
+          <div class="footer-grid">
+            <div>
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030437683/XiaTKX2C7AtY3GCmxwT62P/berias-logo-white_d4de117b.webp" alt="BERIAS" class="footer-logo" />
+              <p>Micro-Consulting, Project Management & AI Automation for fast, actionable business solutions.</p>
+            </div>
+            <div>
+              <h4>Services</h4>
+              <ul>
+                <li><a href="https://sprint.berias.com" target="_blank">30-Day Clarity Sprint</a></li>
+                <li><a href="https://berias.com/micro-consulting/" target="_blank">Adaptive Micro Consulting</a></li>
+                <li><a href="https://berias.com" target="_blank">BERIAS Main Site</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Company</h4>
+              <ul>
+                <li><a href="https://sprint.berias.com/impressum.html" target="_blank">Impressum</a></li>
+                <li><a href="https://sprint.berias.com/privacy.html" target="_blank">Privacy Policy</a></li>
+                <li><a href="https://sprint.berias.com/terms.html" target="_blank">Terms of Service</a></li>
+                <li style="padding-top:0.5rem;"><a href="mailto:hello@berias.com">✉ hello@berias.com</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2025 BERIAS LLC. All rights reserved.</p>
+            <p>255 Giralda Ave, 5th Floor, Coral Gables, FL 33134</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+<script>
+// ===== DATA =====
+const questions = [
+  { id: 1, text: "Focus is on business projects, not simply technology projects.", category: "Strategy" },
+  { id: 2, text: "Management Team of processes in question is diverse (skillset, experience, seniority, departments).", category: "Strategy" },
+  { id: 3, text: "We have a BPM Centre of Excellence (COE).", category: "Governance" },
+  { id: 4, text: "We can effectively control management expectations regarding process changes.", category: "Governance" },
+  { id: 5, text: "Roles and responsibilities in processes are clearly defined and adhered to.", category: "Governance" },
+  { id: 6, text: "A formal BPM methodology is being or has been used to aid delivery.", category: "Methodology" },
+  { id: 7, text: "Our approach ensures the quality of primary and supporting information in processes.", category: "Methodology" },
+  { id: 8, text: "We have a suite of current state process maps, fully documented.", category: "Documentation" },
+  { id: 9, text: "Process maps are standardized across all departments (symbols, icons, approach).", category: "Documentation" },
+  { id: 10, text: "We are identifying, capturing, and defining all business capabilities and rules.", category: "Documentation" },
+  { id: 11, text: "Performance measurements with clearly defined KPIs are added to workflow models.", category: "Performance" },
+  { id: 12, text: "Consistent training is provided to team members (including standardized SOPs).", category: "Performance" },
+  { id: 13, text: "The voice of the customer is gathered and used to build out process requirements.", category: "Continuous Improvement" },
+  { id: 14, text: "All key processes have clearly assigned owners.", category: "Continuous Improvement" },
+  { id: 15, text: "Business models and supporting information are kept up to date post-completion.", category: "Continuous Improvement" }
+];
+
+const categories = [
+  { name: "Strategy", ids: [1, 2] },
+  { name: "Governance", ids: [3, 4, 5] },
+  { name: "Methodology", ids: [6, 7] },
+  { name: "Documentation", ids: [8, 9, 10] },
+  { name: "Performance", ids: [11, 12] },
+  { name: "Continuous Improvement", ids: [13, 14, 15] }
+];
+
+const answers = {};
+let leadData = null;
+
+function getMaturityLevel(score) {
+  if (score <= 20) return { level: "Initial", cssClass: "level-initial", barClass: "bar-red", color: "#b91c1c", description: "Processes are largely ad-hoc and reactive. Success depends on individual heroics rather than institutionalized systems. There is little to no formal process documentation, and outcomes are unpredictable.", recommendation: "Start by documenting your most critical \"as-is\" processes. Assign clear ownership for each key process and establish a common vocabulary for how your organization talks about its workflows. Even simple flowcharts can create alignment and reduce confusion." };
+  if (score <= 25) return { level: "Managed", cssClass: "level-managed", barClass: "bar-orange", color: "#c2410c", description: "Some processes are documented and managed at the departmental level, but consistency across the organization is limited. Improvements happen in pockets rather than systematically.", recommendation: "Focus on connecting the dots between departments. Establish a shared BPM methodology and begin standardizing your process mapping approach. Consider forming a small BPM working group to coordinate efforts and share best practices across teams." };
+  if (score <= 30) return { level: "Standardized", cssClass: "level-standardized", barClass: "bar-amber", color: "#b45309", description: "You have established a solid foundation. Processes are documented and standardized across the organization, but they may lack dynamic optimization and real-time performance tracking.", recommendation: "This is your \"Improvement Zone.\" Integrate KPIs and performance measurements into your workflow models. Start leveraging your BPM data to drive proactive decision-making rather than just documenting history. A BPM Centre of Excellence can accelerate this transition." };
+  if (score <= 38) return { level: "Predictable", cssClass: "level-predictable", barClass: "bar-blue", color: "#1d4ed8", description: "Processes are managed quantitatively with clear KPIs. You can predict outcomes and identify bottlenecks before they become critical. BPM is recognized as a strategic capability.", recommendation: "Refine your performance measurement system and begin incorporating the voice of the customer more systematically. Explore automation opportunities for repetitive process steps and ensure your process documentation stays current through regular review cycles." };
+  return { level: "Innovating", cssClass: "level-innovating", barClass: "bar-green", color: "#15803d", description: "Your processes are mature, continuously improving, and strategically aligned. BPM is embedded in your organizational culture, and you actively innovate through data-driven insights and advanced automation.", recommendation: "Focus on advanced automation and AI integration. Use your mature process data to predict bottlenecks before they occur and foster a culture of relentless innovation. Consider sharing your BPM expertise as a competitive differentiator in your market." };
+}
+
+// ===== LEAD GATE =====
+function handleLeadSubmit(e) {
+  e.preventDefault();
+  const name = document.getElementById('lead-name').value.trim();
+  const company = document.getElementById('lead-company').value.trim();
+  const email = document.getElementById('lead-email').value.trim();
+  const consent = document.getElementById('lead-consent').checked;
+  const errorEl = document.getElementById('lead-error');
+
+  if (!name || !company || !email) {
+    errorEl.textContent = 'Please fill in all fields.';
+    errorEl.classList.remove('hidden');
+    return false;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    errorEl.textContent = 'Please enter a valid email address.';
+    errorEl.classList.remove('hidden');
+    return false;
+  }
+  if (!consent) {
+    errorEl.textContent = 'Please confirm you consent to contact before proceeding.';
+    errorEl.classList.remove('hidden');
+    return false;
+  }
+
+  errorEl.classList.add('hidden');
+  document.getElementById('lead-submit').disabled = true;
+  document.getElementById('lead-submit').textContent = 'Submitting...';
+
+  leadData = { name, company, email };
+
+  // Send to HubSpot via PHP proxy
+  fetch('/api/hubspot-lead.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      firstname: name.split(' ')[0],
+      lastname: name.split(' ').slice(1).join(' ') || '',
+      company: company,
+      email: email
+    })
+  }).catch(function(err) { console.error('HubSpot error:', err); });
+
+  // Fire Google Ads conversion
+  try {
+    if (window.gtag) {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17546137265/wxsICITDyYwcELGd065B',
+        'value': 1.0,
+        'currency': 'USD'
+      });
+    }
+  } catch(err) { console.error('Tracking error:', err); }
+
+  // Show main app
+  document.getElementById('lead-gate').classList.add('hidden');
+  document.getElementById('main-app').classList.remove('hidden');
+  document.getElementById('welcome-name').textContent = name.split(' ')[0];
+
+  return false;
+}
+
+// ===== QUESTIONS =====
+function buildQuestions() {
+  const container = document.getElementById('questions-container');
+  let html = '';
+  let lastCategory = '';
+
+  questions.forEach(function(q) {
+    if (q.category !== lastCategory) {
+      html += '<div class="category-divider"><div class="line"></div><span class="label">' + q.category + '</span><div class="line"></div></div>';
+      lastCategory = q.category;
+    }
+    html += '<div class="question-card" id="qcard-' + q.id + '">' +
+      '<div class="q-inner">' +
+        '<span class="q-num">' + String(q.id).padStart(2, '0') + '</span>' +
+        '<div class="q-content">' +
+          '<p class="q-text">' + q.text + '</p>' +
+          '<div class="q-options">' +
+            '<button class="q-btn q-btn-no" onclick="answer(' + q.id + ',1,this)" data-qid="' + q.id + '">No</button>' +
+            '<button class="q-btn q-btn-sometimes" onclick="answer(' + q.id + ',2,this)" data-qid="' + q.id + '">Sometimes</button>' +
+            '<button class="q-btn q-btn-yes" onclick="answer(' + q.id + ',3,this)" data-qid="' + q.id + '">Yes</button>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  });
+
+  container.innerHTML = html;
+}
+
+function answer(qid, value, btn) {
+  answers[qid] = value;
+
+  // Update button states
+  var card = document.getElementById('qcard-' + qid);
+  card.classList.add('answered');
+  var btns = card.querySelectorAll('.q-btn');
+  btns.forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+
+  // Update progress
+  var count = Object.keys(answers).length;
+  var pct = Math.round((count / 15) * 100);
+  document.getElementById('progress-count').textContent = count + ' / 15 answered';
+  document.getElementById('progress-pct').textContent = pct + '%';
+  document.getElementById('progress-fill').style.width = pct + '%';
+
+  // Show reset button
+  document.getElementById('reset-btn').classList.remove('hidden');
+
+  // Update results button
+  var resultsBtn = document.getElementById('results-btn');
+  if (count === 15) {
+    resultsBtn.disabled = false;
+    resultsBtn.className = 'btn-results enabled';
+    resultsBtn.innerHTML = 'View Your Results →';
+  } else {
+    resultsBtn.disabled = true;
+    resultsBtn.className = 'btn-results disabled';
+    resultsBtn.innerHTML = 'Answer all 15 questions to see results (' + count + '/15)';
+  }
+}
+
+function resetAssessment() {
+  for (var key in answers) { delete answers[key]; }
+  document.querySelectorAll('.question-card').forEach(function(c) { c.classList.remove('answered'); });
+  document.querySelectorAll('.q-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.getElementById('progress-count').textContent = '0 / 15 answered';
+  document.getElementById('progress-pct').textContent = '0%';
+  document.getElementById('progress-fill').style.width = '0%';
+  document.getElementById('reset-btn').classList.add('hidden');
+  document.getElementById('results-section').classList.add('hidden');
+  var resultsBtn = document.getElementById('results-btn');
+  resultsBtn.disabled = true;
+  resultsBtn.className = 'btn-results disabled';
+  resultsBtn.innerHTML = 'Answer all 15 questions to see results (0/15)';
+}
+
+function scrollToAssessment(e) {
+  e.preventDefault();
+  document.getElementById('assessment').scrollIntoView({ behavior: 'smooth' });
+}
+
+// ===== RESULTS =====
+function showResults() {
+  var score = 0;
+  for (var k in answers) { score += answers[k]; }
+  var maturity = getMaturityLevel(score);
+  var pct = ((score - 15) / 30) * 100;
+
+  // Send score to HubSpot
+  if (leadData) {
+    fetch('/api/hubspot-score.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: leadData.email,
+        bpm_maturity_score: score,
+        bpm_maturity_level: maturity.level
+      })
+    }).catch(function(err) { console.error('HubSpot score error:', err); });
+  }
+
+  // Animate score counter
+  var scoreEl = document.getElementById('score-value');
+  animateCounter(scoreEl, score, 1200);
+
+  // Level
+  document.getElementById('score-level').textContent = maturity.level;
+  document.getElementById('score-level').style.color = maturity.color;
+
+  // Gauge
+  setTimeout(function() {
+    document.getElementById('gauge-fill').style.width = pct + '%';
+    document.getElementById('gauge-fill').className = 'gauge-fill ' + maturity.barClass;
+  }, 300);
+
+  // Level card
+  var levelCard = document.getElementById('level-card');
+  levelCard.className = 'level-card ' + maturity.cssClass;
+  document.getElementById('level-title').textContent = 'Level: ' + maturity.level;
+  document.getElementById('level-desc').textContent = maturity.description;
+
+  // Category breakdown
+  var catHtml = '';
+  categories.forEach(function(cat) {
+    var maxPts = cat.ids.length * 3;
+    var pts = 0;
+    cat.ids.forEach(function(id) { pts += (answers[id] || 1); });
+    var catPct = (pts / maxPts) * 100;
+    var barColor = catPct >= 80 ? 'bar-green' : catPct >= 50 ? 'bar-amber' : 'bar-red';
+    catHtml += '<div class="cat-row">' +
+      '<span class="cat-name">' + cat.name + '</span>' +
+      '<div class="cat-bar"><div class="cat-bar-fill ' + barColor + '" style="width:' + catPct + '%"></div></div>' +
+      '<span class="cat-score">' + pts + '/' + maxPts + '</span>' +
+    '</div>';
+  });
+  document.getElementById('cat-breakdown').innerHTML = catHtml;
+
+  // Recommendations
+  document.getElementById('rec-score').textContent = score + '/45';
+  var recCard = document.getElementById('rec-card');
+  recCard.className = 'rec-card ' + maturity.cssClass;
+  document.getElementById('rec-title').style.color = maturity.color;
+  document.getElementById('rec-text').textContent = maturity.recommendation;
+
+  // Weak areas
+  var weakHtml = '';
+  var weakCats = [];
+  categories.forEach(function(cat) {
+    var maxPts = cat.ids.length * 3;
+    var pts = 0;
+    cat.ids.forEach(function(id) { pts += (answers[id] || 1); });
+    var catPct = (pts / maxPts) * 100;
+    if (catPct < 67) weakCats.push({ name: cat.name, pts: pts, maxPts: maxPts });
+  });
+  if (weakCats.length > 0) {
+    weakHtml += '<h3 style="font-family:var(--font-heading);font-size:1.125rem;font-weight:600;color:var(--navy);margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem;">⚠ Areas Requiring Attention</h3>';
+    weakCats.forEach(function(c) {
+      weakHtml += '<div class="weak-item"><span class="weak-score">' + c.pts + '/' + c.maxPts + '</span><div><p class="weak-name">' + c.name + '</p><p class="weak-note">Scoring below 67% in this category indicates room for significant improvement.</p></div></div>';
+    });
+  }
+  document.getElementById('weak-areas').innerHTML = weakHtml;
+
+  // Show results section
+  document.getElementById('results-section').classList.remove('hidden');
+  setTimeout(function() {
+    document.getElementById('results-anchor').scrollIntoView({ behavior: 'smooth' });
+  }, 100);
+}
+
+function animateCounter(el, target, duration) {
+  var start = performance.now();
+  function step(now) {
+    var elapsed = now - start;
+    var progress = Math.min(elapsed / duration, 1);
+    var eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(eased * target);
+    if (progress < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+// ===== INIT =====
+document.addEventListener('DOMContentLoaded', function() {
+  buildQuestions();
+});
+</script>
+
+</body>
+</html>

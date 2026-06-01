@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | BERIAS LLC</title>
+    <link rel="icon" type="image/png" href="images/BEwithoutBackground.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@400;600;700;800&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .legal-page {
+            padding: 5rem 0 4rem;
+        }
+        .legal-hero {
+            background: linear-gradient(135deg, #0F304C 0%, #1a4a72 100%);
+            padding: 3.5rem 0 3rem;
+            margin-bottom: 3rem;
+        }
+        .legal-hero h1 {
+            font-family: 'Ysabeau Office', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        .legal-hero .last-updated {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9375rem;
+        }
+        .legal-hero .last-updated strong {
+            color: #A2C614;
+        }
+        .legal-alert {
+            background: #fff8e1;
+            border-left: 4px solid #A2C614;
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.75rem;
+            margin-bottom: 2rem;
+        }
+        .legal-alert p {
+            margin: 0;
+            color: #333;
+            font-size: 0.9375rem;
+            line-height: 1.7;
+        }
+        .legal-alert strong {
+            color: #0F304C;
+        }
+        .legal-toc {
+            background: #f0f4f8;
+            border-radius: 10px;
+            padding: 1.75rem 2rem;
+            margin-bottom: 2.5rem;
+        }
+        .legal-toc h3 {
+            font-family: 'Ysabeau Office', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0F304C;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin: 0 0 1rem 0;
+        }
+        .legal-toc ol {
+            margin: 0;
+            padding-left: 1.25rem;
+            columns: 2;
+            column-gap: 2rem;
+        }
+        .legal-toc li {
+            font-size: 0.875rem;
+            line-height: 1.8;
+            color: #444;
+        }
+        .legal-toc a {
+            color: #0F304C;
+            text-decoration: none;
+        }
+        .legal-toc a:hover {
+            color: #A2C614;
+            text-decoration: underline;
+        }
+        .legal-section {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 2rem 2.25rem;
+            margin-bottom: 1.5rem;
+            scroll-margin-top: 100px;
+        }
+        .legal-section h2 {
+            font-family: 'Ysabeau Office', sans-serif;
+            font-size: 1.375rem;
+            font-weight: 700;
+            color: #0F304C;
+            margin: 0 0 1.25rem 0;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #A2C614;
+        }
+        .legal-section h3 {
+            font-family: 'Ysabeau Office', sans-serif;
+            font-size: 1.0625rem;
+            font-weight: 700;
+            color: #0F304C;
+            margin: 1.5rem 0 0.625rem;
+        }
+        .legal-section p {
+            font-size: 0.9375rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 0.875rem;
+        }
+        .legal-section p:last-child {
+            margin-bottom: 0;
+        }
+        .legal-section ul, .legal-section ol {
+            margin: 0.75rem 0 0.875rem 1.5rem;
+            color: #444;
+        }
+        .legal-section li {
+            font-size: 0.9375rem;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+        .legal-section .uppercase-block {
+            font-size: 0.875rem;
+            color: #333;
+            line-height: 1.75;
+            font-weight: 600;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 0.875rem;
+        }
+        .legal-section .guarantee-highlight {
+            background: linear-gradient(135deg, #0F304C 0%, #1a4a72 100%);
+            border-radius: 8px;
+            padding: 1.5rem 1.75rem;
+            margin: 1rem 0;
+        }
+        .legal-section .guarantee-highlight p {
+            color: rgba(255,255,255,0.9);
+            margin: 0;
+        }
+        .legal-section .guarantee-highlight strong {
+            color: #A2C614;
+        }
+        .legal-section-eu {
+            background: #f0f4f8;
+            border: 2px solid #0F304C;
+            border-radius: 10px;
+            padding: 2rem 2.25rem;
+            margin-bottom: 1.5rem;
+        }
+        .legal-section-eu h2 {
+            font-family: 'Ysabeau Office', sans-serif;
+            font-size: 1.375rem;
+            font-weight: 700;
+            color: #0F304C;
+            margin: 0 0 1.25rem 0;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #0F304C;
+        }
+        .legal-section-eu .eu-badge {
+            display: inline-block;
+            background: #0F304C;
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        .legal-section-eu h3 {
+            font-family: 'Ysabeau Office', sans-serif;
+            font-size: 1.0625rem;
+            font-weight: 700;
+            color: #0F304C;
+            margin: 1.5rem 0 0.625rem;
+        }
+        .legal-section-eu p {
+            font-size: 0.9375rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 0.875rem;
+        }
+        .legal-closing {
+            background: #0F304C;
+            border-radius: 10px;
+            padding: 2rem 2.25rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .legal-closing p {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9375rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+        .legal-closing strong {
+            color: #A2C614;
+        }
+        .legal-contact {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 2rem 2.25rem;
+            margin-top: 1.5rem;
+        }
+        .legal-contact h3 {
+            font-family: 'Ysabeau Office', sans-serif;
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #0F304C;
+            margin: 0 0 1rem 0;
+        }
+        .legal-contact p {
+            font-size: 0.9375rem;
+            color: #444;
+            line-height: 1.8;
+            margin: 0;
+        }
+        .legal-contact a {
+            color: #0F304C;
+            font-weight: 600;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2.5rem;
+        }
+        @media (max-width: 768px) {
+            .legal-hero h1 { font-size: 1.875rem; }
+            .legal-section, .legal-section-eu { padding: 1.5rem; }
+            .legal-toc ol { columns: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/LogoBERIASohneHintergrund.png" alt="BERIAS Logo">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#cta" class="btn-primary-small">Book Free Audit</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="legal-hero">
+        <div class="container">
+            <h1>Terms of Service</h1>
+            <p class="last-updated"><strong>Last Updated:</strong> February 28, 2026 &nbsp;|&nbsp; Applies to: 30-Day Clarity Sprint</p>
+        </div>
+    </div>
+
+    <section class="legal-page" style="padding-top: 0;">
+        <div class="container">
+
+            <!-- Important Notice -->
+            <div class="legal-alert">
+                <p><strong>Important Legal Notice:</strong> These Terms of Service constitute a legally binding agreement. By purchasing or using the 30-Day Clarity Sprint, you confirm that you have read, understood, and agree to be bound by all of these terms. If you do not agree, you must not proceed with the purchase. For Clients based in the European Union or Germany, please also review Section 15, which contains specific provisions applicable to you.</p>
+            </div>
+
+            <!-- Table of Contents -->
+            <div class="legal-toc">
+                <h3>Contents</h3>
+                <ol>
+                    <li><a href="#s1">Description of Service</a></li>
+                    <li><a href="#s2">Client Obligations</a></li>
+                    <li><a href="#s3">Fees, Payment, and Refunds</a></li>
+                    <li><a href="#s4">Success Guarantee</a></li>
+                    <li><a href="#s5">Intellectual Property</a></li>
+                    <li><a href="#s6">Confidentiality</a></li>
+                    <li><a href="#s7">Data Protection and Privacy</a></li>
+                    <li><a href="#s8">Disclaimer of Warranties</a></li>
+                    <li><a href="#s9">Limitation of Liability</a></li>
+                    <li><a href="#s10">Term and Termination</a></li>
+                    <li><a href="#s11">Governing Law and Dispute Resolution</a></li>
+                    <li><a href="#s12">Miscellaneous</a></li>
+                    <li><a href="#s13">Prohibited Activities</a></li>
+                    <li><a href="#s14">Modifications to Terms</a></li>
+                    <li><a href="#s15">EU and German Client Provisions</a></li>
+                </ol>
+            </div>
+
+            <!-- Section 1 -->
+            <div class="legal-section" id="s1">
+                <h2>1. Description of Service</h2>
+                <h3>1.1 The 30-Day Clarity Sprint</h3>
+                <p>The Service is a fixed-term, intensive business consulting program designed to analyze a Client's business processes, identify operational inefficiencies, and deliver a documented strategic action plan within a thirty (30) calendar day period. The Service is delivered remotely through a combination of virtual meetings (primarily via Microsoft Teams), email correspondence, and structured document review.</p>
+
+                <h3>1.2 Scope of Work</h3>
+                <p>The precise scope, deliverables, milestones, and schedule of the Service will be detailed in a separate Statement of Work (SOW) or Service Proposal provided to the Client prior to purchase. This SOW is hereby incorporated by reference into these Terms and forms part of the binding agreement. In the event of any conflict between the SOW and these Terms, the SOW shall take precedence with respect to the specific scope of work, and these Terms shall govern all other matters.</p>
+
+                <h3>1.3 Scope Changes</h3>
+                <p>Any services requested by the Client that fall outside the scope of the agreed SOW will be considered a "Scope Change." No Scope Change shall be binding unless agreed upon in writing by both parties. Scope Changes may result in additional fees and an adjusted timeline, which will be communicated to the Client in advance.</p>
+
+                <h3>1.4 Professional Disclaimers</h3>
+                <p>The Service is strictly limited to business and management consulting. BERIAS LLC does not provide legal advice, financial advice, accounting services, tax advice, or certified engineering services. All consulting outputs are advisory in nature. The Client is solely responsible for evaluating the suitability of any recommendations and for seeking advice from qualified licensed professionals (including legal, financial, and tax advisors) as necessary before acting on any advice or recommendations provided through the Service.</p>
+
+                <h3>1.5 Use of Artificial Intelligence</h3>
+                <p>BERIAS LLC may employ Artificial Intelligence (AI) tools to enhance the efficiency and quality of certain analysis and consulting tasks. These AI tools are used solely to analyze non-personal, business-related information voluntarily provided by the Client. At no time will personal data, as defined by applicable data protection laws (including names, email addresses, phone numbers, or other directly identifying information), be processed by AI systems. The Client is responsible for ensuring that any information submitted for AI-assisted analysis does not contain personal or sensitive data.</p>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="legal-section" id="s2">
+                <h2>2. Client Obligations and Acknowledgements</h2>
+                <h3>2.1 Cooperation</h3>
+                <p>The Client agrees to cooperate fully and in a timely manner with BERIAS throughout the Service. This includes, but is not limited to, providing all necessary information, data, and access to relevant personnel as reasonably required to perform the Service. The Client acknowledges that the 30-Day Clarity Sprint is a collaborative engagement, and that any delay or failure to provide such cooperation may materially impact the timeline, quality, and effectiveness of the Service. BERIAS shall not be held responsible for any failure to meet deliverable timelines that is caused by the Client's failure to cooperate.</p>
+
+                <h3>2.2 Pre-Commencement Requirements</h3>
+                <p>Prior to the commencement of the Service, the Client shall complete all required intake surveys and provide all requested information no later than seventy-two (72) hours before the scheduled start date. Failure to provide such information in a timely manner may result in a delay or cancellation of the Service at BERIAS's sole discretion, without entitlement to a refund.</p>
+
+                <h3>2.3 Information Accuracy</h3>
+                <p>The Client represents and warrants that all information provided to BERIAS is accurate, complete, and current to the best of their knowledge. The Client acknowledges that the quality and relevance of the Service's outputs are directly dependent on the quality and accuracy of the information provided. BERIAS shall not be liable for any errors in its analysis or recommendations that result from inaccurate or incomplete information provided by the Client.</p>
+
+                <h3>2.4 Authority to Contract</h3>
+                <p>The Client represents and warrants that they have the full right, power, and authority to enter into this Agreement on behalf of themselves or the entity they represent, and to perform all obligations hereunder. If you are entering into this Agreement on behalf of a company or other legal entity, you represent that you have the authority to bind such entity to these Terms.</p>
+
+                <h3>2.5 Technical Requirements</h3>
+                <p>The Client agrees to maintain the necessary software, hardware, and technical capabilities to receive the Service through the designated platforms, including Microsoft Teams. BERIAS shall not be responsible for any service interruptions caused by the Client's failure to maintain such capabilities.</p>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="legal-section" id="s3">
+                <h2>3. Fees, Payment, and Refunds</h2>
+                <h3>3.1 Service Fee</h3>
+                <p>The total fee for the Service (the "Fee") will be specified in the SOW. All fees are quoted and payable in United States Dollars (USD) unless otherwise agreed in writing.</p>
+
+                <h3>3.2 Payment Schedule</h3>
+                <p>The Fee is structured as a two-part payment: (a) a deposit of fifty percent (50%) of the total Fee is due prior to the commencement of the Service; and (b) the remaining fifty percent (50%) is due upon completion of the 30-day sprint period and prior to the delivery of the final strategic action plan. Specific payment dates will be outlined in the SOW.</p>
+
+                <h3>3.3 Payment Methods</h3>
+                <p>BERIAS accepts payment via wire transfer (preferred) and credit card. Credit card payments may be subject to an additional processing fee, which will be disclosed to the Client in advance of payment. By providing a payment method, you authorize BERIAS to charge that payment method for all amounts due.</p>
+
+                <h3>3.4 Late Payments</h3>
+                <p>All invoices are due upon receipt unless otherwise specified in the SOW. Any payment not received within fifteen (15) calendar days of the due date will be considered overdue. BERIAS reserves the right to: (a) suspend the Service immediately until all overdue amounts are paid in full; and (b) charge interest on overdue amounts at the rate of 1.5% per month, or the highest rate permitted by applicable law, whichever is lower. For German and EU clients, interest on late payments shall be calculated in accordance with Section 288 of the German Civil Code (BGB).</p>
+
+                <h3>3.5 Refund Policy</h3>
+                <p>Due to the intensive, front-loaded nature of the Service, all fees paid are non-refundable, except as explicitly provided for under the Success Guarantee in Section 4. This non-refundable policy reflects the significant preparation, research, and dedicated time that BERIAS invests from the moment the Service commences.</p>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="legal-section" id="s4">
+                <h2>4. Success Guarantee</h2>
+                <div class="guarantee-highlight">
+                    <p><strong>The Guarantee:</strong> If we do not identify at least 5 hours of weekly manual labor savings for your team during the Sprint, you do not pay the final 50% of the fee. No questions asked.</p>
+                </div>
+                <h3>4.1 Scope of Guarantee</h3>
+                <p>BERIAS guarantees that the final deliverable will document a minimum of three (3) specific operational inefficiencies, each accompanied by a quantified estimate of the associated time or cost impact. If the final report does not contain at least three such documented findings, the Client shall not be obligated to pay the final 50% of the Service Fee.</p>
+
+                <h3>4.2 Remedy</h3>
+                <p>If, at the conclusion of the 30-day sprint, BERIAS has failed to identify and document such potential savings in the final report, the Client will not be obligated to pay the final 50% of the Service Fee. This waiver of the final payment is the Client's sole and exclusive remedy for the failure to meet the Success Guarantee. No other compensation, damages, or remedies shall be available to the Client under this guarantee.</p>
+
+                <h3>4.3 Conditions Precedent</h3>
+                <p>The Success Guarantee is conditional upon the Client's full and timely fulfillment of all obligations under Section 2 of these Terms. If the Client fails to cooperate, provide required information, or otherwise fulfills their obligations, the Success Guarantee shall be void and the full Fee shall remain payable.</p>
+
+                <h3>4.4 Nature of Guarantee</h3>
+                <p>This guarantee applies to the identification of potential savings, not to the actual realization of those savings. The implementation of any recommendations is the sole responsibility of the Client. BERIAS makes no guarantee regarding the actual financial outcomes or results that the Client may achieve following the Service.</p>
+            </div>
+
+            <!-- Section 5 -->
+            <div class="legal-section" id="s5">
+                <h2>5. Intellectual Property Rights</h2>
+                <h3>5.1 Pre-Existing Intellectual Property</h3>
+                <p>Each party shall retain all right, title, and interest in and to its own pre-existing intellectual property. BERIAS shall retain all rights to its proprietary methodologies, frameworks, analytical tools, templates, processes, and accumulated know-how used in the performance of the Service ("BERIAS IP"), regardless of whether such IP is disclosed to the Client during the engagement.</p>
+
+                <h3>5.2 Deliverables</h3>
+                <p>Upon full and final payment of the entire Fee, the Client will own the specific, final deliverables created exclusively for them during the Service (e.g., the final strategic action plan). BERIAS grants the Client a non-exclusive, perpetual, worldwide, royalty-free license to use any BERIAS IP incorporated into such deliverables, solely for the Client's internal business purposes. This license does not permit the Client to sublicense, sell, or otherwise transfer the BERIAS IP to any third party.</p>
+
+                <h3>5.3 Client Materials</h3>
+                <p>The Client retains all right, title, and interest in and to any materials, data, or information provided by the Client to BERIAS in connection with the Service ("Client Materials"). The Client grants BERIAS a limited, non-exclusive license to use Client Materials solely for the purpose of performing the Service.</p>
+
+                <h3>5.4 Feedback</h3>
+                <p>If the Client provides any feedback, suggestions, or ideas regarding the Service or BERIAS's methodologies, BERIAS is free to use, implement, and own such feedback without any obligation or compensation to the Client.</p>
+
+                <h3>5.5 No Competing Use</h3>
+                <p>BERIAS agrees not to use the Client's Confidential Information or Client Materials to provide substantially similar services to a direct competitor of the Client during the term of the engagement and for a period of twelve (12) months thereafter.</p>
+            </div>
+
+            <!-- Section 6 -->
+            <div class="legal-section" id="s6">
+                <h2>6. Confidentiality</h2>
+                <h3>6.1 Definition</h3>
+                <p>"Confidential Information" means any non-public information disclosed by one party to the other, whether orally or in writing, that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information and the circumstances of disclosure. This includes, but is not limited to, business plans, financial data, customer lists, operational processes, pricing information, and technical data.</p>
+
+                <h3>6.2 Mutual Obligation</h3>
+                <p>Each party agrees to: (a) hold the other party's Confidential Information in strict confidence using at least the same degree of care it uses for its own confidential information, but in no event less than reasonable care; (b) use such Confidential Information solely for the purpose of performing its obligations under these Terms; and (c) not disclose such Confidential Information to any third party without the prior written consent of the disclosing party, except to its employees or subcontractors who have a need to know and who are bound by written confidentiality obligations no less restrictive than those herein.</p>
+
+                <h3>6.3 Exclusions</h3>
+                <p>Confidential Information does not include information that: (a) is or becomes publicly known through no wrongful act of the receiving party; (b) was in the receiving party's lawful possession before disclosure, as evidenced by written records; (c) is lawfully disclosed to the receiving party by a third party without restriction on disclosure; or (d) is independently developed by the receiving party without use of or reference to the disclosing party's Confidential Information.</p>
+
+                <h3>6.4 Compelled Disclosure</h3>
+                <p>If the receiving party is compelled by law or court order to disclose Confidential Information, it shall provide the disclosing party with prompt written notice of such requirement (to the extent legally permitted) so that the disclosing party may seek a protective order or other appropriate remedy.</p>
+
+                <h3>6.5 Duration</h3>
+                <p>The confidentiality obligations set forth in this Section shall survive the termination of these Terms for a period of three (3) years.</p>
+            </div>
+
+            <!-- Section 7 -->
+            <div class="legal-section" id="s7">
+                <h2>7. Data Protection and Privacy</h2>
+                <h3>7.1 Privacy Policy</h3>
+                <p>BERIAS will process any personal data provided by or on behalf of the Client in accordance with our Privacy Policy, which is available on our website at <a href="privacy.html">berias.com/privacy</a> and is incorporated herein by reference.</p>
+
+                <h3>7.2 GDPR Compliance</h3>
+                <p>For Clients whose operations are subject to the EU General Data Protection Regulation (GDPR), BERIAS acts as a "Data Processor" for any personal data provided by the Client (who acts as the "Data Controller"). A separate Data Processing Addendum (DPA) compliant with Article 28 of the GDPR will be provided to EU-based Clients and must be executed prior to the commencement of the Service. The DPA governs the processing of personal data and is incorporated into these Terms by reference.</p>
+
+                <h3>7.3 Data Security</h3>
+                <p>BERIAS stores and processes all Client data within a secure Microsoft 365 environment. Access to Client data is restricted to BERIAS personnel and authorized subcontractors who require access for the purpose of delivering the Service. BERIAS implements appropriate technical and organizational measures to protect Client data against unauthorized access, loss, or destruction.</p>
+
+                <h3>7.4 Cross-Border Data Transfers</h3>
+                <p>BERIAS operates from the United States. If you are located in the EU or another jurisdiction with data transfer restrictions, your data may be transferred to and processed in the United States. Such transfers will be made in compliance with applicable data protection laws, including through the use of Standard Contractual Clauses (SCCs) where required.</p>
+            </div>
+
+            <!-- Section 8 -->
+            <div class="legal-section" id="s8">
+                <h2>8. Disclaimer of Warranties</h2>
+                <p class="uppercase-block">EXCEPT FOR THE EXPRESS SUCCESS GUARANTEE SET FORTH IN SECTION 4, THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE." BERIAS EXPRESSLY DISCLAIMS ALL OTHER WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. BERIAS DOES NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, OR THAT THE RESULTS WILL MEET THE CLIENT'S SPECIFIC REQUIREMENTS OR EXPECTATIONS.</p>
+                <p>The Client acknowledges that all consulting services are advisory in nature and that the ultimate success of any business outcome depends on a multitude of factors outside of BERIAS's control, including but not limited to the Client's own decisions, market conditions, and the actions of third parties.</p>
+            </div>
+
+            <!-- Section 9 -->
+            <div class="legal-section" id="s9">
+                <h2>9. Limitation of Liability</h2>
+                <h3>9.1 Cap on Liability</h3>
+                <p class="uppercase-block">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE ENTIRE LIABILITY OF BERIAS LLC AND ITS DIRECTORS, OFFICERS, EMPLOYEES, AGENTS, AND AFFILIATES, FOR ANY AND ALL CLAIMS ARISING OUT OF OR IN CONNECTION WITH THESE TERMS OR THE SERVICE, REGARDLESS OF THE FORM OF ACTION (WHETHER IN CONTRACT, TORT, NEGLIGENCE, OR OTHERWISE), SHALL NOT EXCEED THE TOTAL FEES ACTUALLY PAID BY THE CLIENT TO BERIAS FOR THE SPECIFIC SERVICE GIVING RISE TO THE CLAIM IN THE THREE (3) MONTHS PRECEDING THE EVENT GIVING RISE TO THE CLAIM.</p>
+
+                <h3>9.2 Exclusion of Consequential Damages</h3>
+                <p class="uppercase-block">IN NO EVENT SHALL BERIAS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO, LOSS OF PROFITS, LOSS OF REVENUE, LOSS OF DATA, LOSS OF GOODWILL, BUSINESS INTERRUPTION, OR OTHER INTANGIBLE LOSSES, WHETHER BASED ON CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY, OR OTHERWISE, EVEN IF BERIAS HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+
+                <h3>9.3 Basis of the Bargain</h3>
+                <p>The parties acknowledge that the limitations of liability in this Section reflect a reasonable allocation of risk and are a fundamental element of the basis of the bargain between the parties. The pricing of the Service reflects these limitations. These limitations shall apply notwithstanding any failure of essential purpose of any limited remedy.</p>
+
+                <h3>9.4 Exceptions</h3>
+                <p>Nothing in these Terms shall limit or exclude BERIAS's liability for: (a) death or personal injury caused by BERIAS's gross negligence; (b) fraud or fraudulent misrepresentation; or (c) any other liability that cannot be excluded or limited under applicable law.</p>
+            </div>
+
+            <!-- Section 10 -->
+            <div class="legal-section" id="s10">
+                <h2>10. Term and Termination</h2>
+                <h3>10.1 Term</h3>
+                <p>These Terms shall commence upon the Client's purchase of the Service and shall continue until the Service is fully completed and all fees have been paid, unless terminated earlier as provided herein.</p>
+
+                <h3>10.2 Termination for Cause</h3>
+                <p>Either party may terminate this Agreement upon written notice if the other party commits a material breach of these Terms and fails to cure such breach within ten (10) calendar days of receiving written notice specifying the nature of the breach. A material breach by the Client includes, but is not limited to, failure to make timely payment or failure to cooperate as required under Section 2.</p>
+
+                <h3>10.3 Termination for Convenience</h3>
+                <p>Either party may terminate this Agreement for convenience upon fourteen (14) days' written notice. In the event of termination for convenience by the Client, all fees paid are non-refundable and the Client shall pay for all services rendered up to the date of termination. In the event of termination for convenience by BERIAS, BERIAS shall refund the pro-rated portion of any prepaid fees for services not yet rendered.</p>
+
+                <h3>10.4 Effect of Termination</h3>
+                <p>Upon termination of this Agreement for any reason: (a) all rights and licenses granted to the Client shall immediately terminate; (b) the Client shall immediately cease use of all BERIAS IP and Confidential Information; (c) each party shall promptly return or destroy the other party's Confidential Information upon request; and (d) all outstanding payment obligations of the Client shall become immediately due and payable.</p>
+
+                <h3>10.5 Survival</h3>
+                <p>The following Sections shall survive any termination or expiration of this Agreement: Section 5 (Intellectual Property Rights), Section 6 (Confidentiality), Section 7 (Data Protection), Section 8 (Disclaimer of Warranties), Section 9 (Limitation of Liability), Section 11 (Governing Law and Dispute Resolution), and Section 12 (Miscellaneous).</p>
+            </div>
+
+            <!-- Section 11 -->
+            <div class="legal-section" id="s11">
+                <h2>11. Governing Law and Dispute Resolution</h2>
+                <h3>11.1 Governing Law</h3>
+                <p>These Terms shall be governed by and construed in accordance with the laws of the State of Florida, USA, without regard to its conflict of law principles. The United Nations Convention on Contracts for the International Sale of Goods (CISG) does not apply to these Terms.</p>
+
+                <h3>11.2 Informal Resolution</h3>
+                <p>Before initiating any formal dispute resolution proceedings, the parties agree to first attempt to resolve any dispute, controversy, or claim arising out of or relating to these Terms or the Service through good-faith negotiations. Either party may initiate this process by sending written notice to the other party describing the dispute in reasonable detail. The parties shall negotiate in good faith for a period of at least thirty (30) calendar days from the date of such notice before proceeding to arbitration.</p>
+
+                <h3>11.3 Binding Arbitration</h3>
+                <p>If the parties are unable to resolve a dispute through informal negotiations, all claims arising from or relating to these Terms or the Service shall be finally and exclusively resolved by binding arbitration administered by the American Arbitration Association (AAA) in accordance with its Commercial Arbitration Rules. The arbitration shall be conducted in Miami-Dade County, Florida, USA. The proceedings shall be conducted in English. The arbitrator's decision shall be final, binding, and enforceable in any court of competent jurisdiction. Each party shall bear its own costs and attorneys' fees, unless the arbitrator determines that a party has acted in bad faith.</p>
+
+                <h3>11.4 Class Action Waiver</h3>
+                <p class="uppercase-block">ALL CLAIMS AND DISPUTES ARISING UNDER OR RELATING TO THESE TERMS MUST BE ARBITRATED OR LITIGATED ON AN INDIVIDUAL BASIS AND NOT ON A CLASS BASIS. CLAIMS OF MORE THAN ONE CLIENT CANNOT BE ARBITRATED OR LITIGATED JOINTLY OR CONSOLIDATED WITH THOSE OF ANY OTHER CLIENT.</p>
+
+                <h3>11.5 Injunctive Relief</h3>
+                <p>Notwithstanding the foregoing, either party may seek injunctive or other equitable relief in any court of competent jurisdiction to prevent the actual or threatened infringement of intellectual property rights or breach of confidentiality obligations.</p>
+            </div>
+
+            <!-- Section 12 -->
+            <div class="legal-section" id="s12">
+                <h2>12. Miscellaneous</h2>
+                <h3>12.1 Entire Agreement</h3>
+                <p>These Terms, together with the SOW and Privacy Policy, constitute the entire agreement between the parties with respect to the Service and supersede all prior and contemporaneous agreements, understandings, negotiations, and representations, whether written or oral, relating to the subject matter hereof.</p>
+
+                <h3>12.2 Severability</h3>
+                <p>If any provision of these Terms is held to be invalid, illegal, or unenforceable by a court of competent jurisdiction, such provision shall be modified to the minimum extent necessary to make it enforceable, and the remaining provisions of these Terms shall continue in full force and effect.</p>
+
+                <h3>12.3 Waiver</h3>
+                <p>No failure or delay by either party in exercising any right, power, or remedy under these Terms shall operate as a waiver thereof. No single or partial exercise of any right, power, or remedy shall preclude any other or further exercise thereof or the exercise of any other right, power, or remedy.</p>
+
+                <h3>12.4 Assignment</h3>
+                <p>The Client may not assign, transfer, or delegate any of its rights or obligations under these Terms without the prior written consent of BERIAS. BERIAS may assign these Terms in connection with a merger, acquisition, or sale of all or substantially all of its assets, provided that the assignee agrees to be bound by these Terms.</p>
+
+                <h3>12.5 Notices</h3>
+                <p>All notices required or permitted under these Terms must be in writing and shall be deemed delivered when: (a) sent by email to the addresses specified in the SOW or to hello@berias.com (with confirmation of receipt); or (b) sent by certified mail to BERIAS LLC, 255 Giralda Ave, 5th Floor, Coral Gables, FL 33134, United States.</p>
+
+                <h3>12.6 Force Majeure</h3>
+                <p>Neither party shall be liable for any delay or failure to perform its obligations under these Terms to the extent such delay or failure is caused by circumstances beyond that party's reasonable control, including but not limited to acts of God, natural disasters, war, terrorism, labor disputes, governmental actions, pandemics, or internet outages ("Force Majeure Event"). The affected party shall notify the other party promptly of the Force Majeure Event. If a Force Majeure Event continues for more than thirty (30) days, either party may terminate this Agreement upon written notice without penalty.</p>
+
+                <h3>12.7 Independent Contractors</h3>
+                <p>The parties are independent contractors. Nothing in these Terms shall be construed to create a partnership, joint venture, agency, employment, or fiduciary relationship between the parties.</p>
+
+                <h3>12.8 Counterparts and Electronic Signatures</h3>
+                <p>These Terms may be accepted electronically (e.g., by clicking "I Agree" or by making a purchase). Electronic acceptance shall be deemed equivalent to a written signature and shall be fully binding.</p>
+            </div>
+
+            <!-- Section 13 -->
+            <div class="legal-section" id="s13">
+                <h2>13. Prohibited Activities</h2>
+                <p>You may not access or use the Service for any purpose other than its intended use. As a Client, you agree not to:</p>
+                <ol>
+                    <li>Reverse engineer, decompile, disassemble, or otherwise attempt to derive BERIAS's proprietary methodologies, frameworks, or processes.</li>
+                    <li>Use any information, insights, or materials obtained through the Service to develop a competing consulting product or service.</li>
+                    <li>Misrepresent your identity, authority, or affiliation during the engagement.</li>
+                    <li>Provide false, misleading, or fraudulent information to BERIAS for the purpose of obtaining the Service.</li>
+                    <li>Attempt to circumvent or manipulate the Success Guarantee by withholding information or failing to cooperate in good faith.</li>
+                    <li>Use the Service for any unlawful purpose or in violation of any applicable local, national, or international law or regulation.</li>
+                    <li>Engage in any conduct that is harmful, abusive, or threatening toward BERIAS personnel.</li>
+                </ol>
+            </div>
+
+            <!-- Section 14 -->
+            <div class="legal-section" id="s14">
+                <h2>14. Modifications to Terms</h2>
+                <p>BERIAS reserves the right to modify these Terms at any time at its sole discretion. We will notify existing Clients of any material changes by email and by posting the revised Terms on our website with an updated "Last Updated" date. For new purchases, the Terms in effect at the time of purchase shall apply. Your continued use of the Service after receiving notice of a material change constitutes your acceptance of the revised Terms. If you do not agree to the revised Terms, you must discontinue use of the Service.</p>
+            </div>
+
+            <!-- Section 15: EU/German Provisions -->
+            <div class="legal-section-eu" id="s15">
+                <span class="eu-badge">EU and Germany Specific</span>
+                <h2>15. Provisions for EU and German Clients</h2>
+                <p>This Section applies exclusively to Clients who are residents of or have their principal place of business in the European Union, including Germany. In the event of any conflict between this Section and the other provisions of these Terms, this Section shall take precedence for EU and German Clients.</p>
+
+                <h3>15.1 Right of Withdrawal for Consumers (Widerrufsrecht)</h3>
+                <p>If you are a "consumer" as defined under German law (Section 13 BGB), you have the right to withdraw from this contract within fourteen (14) days without giving any reason (the "Withdrawal Period"). The Withdrawal Period begins on the day the contract is concluded. To exercise your right of withdrawal, you must notify us by means of a clear statement (e.g., by email to hello@berias.com) of your decision to withdraw from this contract.</p>
+                <p><strong>Expiry of Withdrawal Right:</strong> You expressly agree and acknowledge that if you request that the Service commence before the end of the Withdrawal Period, your right of withdrawal shall expire once the Service has been fully performed. If the Service has been partially performed, you shall be obligated to pay a proportionate amount for the services rendered up to the point of withdrawal.</p>
+
+                <h3>15.2 Classification of Service under German Law</h3>
+                <p>The 30-Day Clarity Sprint is classified as a service contract (*Dienstvertrag*) under German law (Section 611 et seq. BGB). BERIAS is obligated to provide professional services and effort (*Dienste*), but does not owe a specific legally defined "success" (*Erfolg*) beyond the Success Guarantee explicitly set out in Section 4 of these Terms.</p>
+
+                <h3>15.3 Limitation of Liability for German Clients (Haftungsbeschraenkung)</h3>
+                <p>For German Clients, the limitation of liability in Section 9 is modified as follows: BERIAS's liability is unlimited for damages caused by willful misconduct (*Vorsatz*) or gross negligence (*grobe Fahrlassigkeit*) by BERIAS or its legal representatives or vicarious agents. For simple negligence (*einfache Fahrlassigkeit*), BERIAS shall only be liable for the breach of essential contractual obligations (*wesentliche Vertragspflichten* or *Kardinalpflichten*), and in such cases, liability is limited to the typically foreseeable damage at the time of contract conclusion. Liability for injury to life, body, or health remains unaffected and unlimited.</p>
+
+                <h3>15.4 AGB Compliance (German General Terms and Conditions Act)</h3>
+                <p>These Terms have been drafted to comply with the requirements of the German Act on General Terms and Conditions (*AGB-Gesetz*, now integrated into the BGB at Sections 305-310). Clauses that would be deemed unreasonably disadvantageous to the Client under Section 307 BGB shall be replaced by the applicable statutory provisions. The invalidity of any individual clause shall not affect the validity of the remaining Terms.</p>
+
+                <h3>15.5 Choice of Law for EU Clients</h3>
+                <p>For B2B Clients in the EU, the choice of Florida law as the governing law is valid pursuant to Article 3 of the Rome I Regulation (EC No 593/2008). However, for Clients who qualify as consumers under their local law, the mandatory consumer protection provisions of the Client's country of residence shall apply in addition to Florida law, to the extent they provide greater protection.</p>
+
+                <h3>15.6 Jurisdiction for EU Clients</h3>
+                <p>For B2B Clients in the EU, the exclusive jurisdiction of Miami-Dade County, Florida, is agreed upon. However, for Clients who qualify as consumers under their local law, the mandatory jurisdiction rules of the Client's country of residence shall apply, and such Clients may also bring proceedings in the courts of their country of residence.</p>
+
+                <h3>15.7 Online Dispute Resolution (ODR)</h3>
+                <p>The European Commission provides an online dispute resolution platform for consumers, accessible at <a href="http://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">http://ec.europa.eu/consumers/odr/</a>. BERIAS is not obligated or willing to participate in dispute resolution proceedings before a consumer arbitration board, but we are committed to resolving any disputes directly and in good faith.</p>
+
+                <h3>15.8 Statutory Warranty Rights</h3>
+                <p>Statutory warranty rights (*gesetzliche Gewaehrleistungsrechte*) under German law remain unaffected by these Terms to the extent they cannot be contractually excluded or limited.</p>
+            </div>
+
+            <!-- Closing Acknowledgment -->
+            <div class="legal-closing">
+                <p><strong>BY PURCHASING OR USING THE SERVICE, YOU ACKNOWLEDGE THAT YOU HAVE READ THESE TERMS OF SERVICE IN THEIR ENTIRETY, UNDERSTAND THEM, AND AGREE TO BE BOUND BY ALL OF THEIR TERMS AND CONDITIONS.</strong></p>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="legal-contact">
+                <h3>Contact Information</h3>
+                <p>
+                    <strong>BERIAS LLC</strong><br>
+                    255 Giralda Ave, 5th Floor<br>
+                    Coral Gables, FL 33134, United States<br><br>
+                    Email: <a href="mailto:hello@berias.com">hello@berias.com</a><br>
+                    Phone (US): +1 (786) 966-1795<br>
+                    Phone (Germany): +49 (0)176 3808 1336<br>
+                    Website: <a href="https://www.berias.com">www.berias.com</a>
+                </p>
+            </div>
+
+            <a href="index.html" class="btn-primary back-link">Back to Home</a>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/LogoBERIASohneHintergrund.png" alt="BERIAS Logo">
+                    <p>Transforming freight operations from chaos to clarity.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="impressum.html">Impressum</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BERIAS LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
