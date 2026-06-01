@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // Your HubSpot Private App API Key - KEEP THIS SECRET
-$HUBSPOT_API_KEY = '***REMOVED***';
+$HUBSPOT_API_KEY = 'YOUR_HUBSPOT_API_KEY_HERE';
 
 // Read request body
 $input = json_decode(file_get_contents('php://input'), true);
