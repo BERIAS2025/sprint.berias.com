@@ -1,9 +1,0 @@
-# Ensure PHP processing
-AddHandler application/x-httpd-php .php
-
-# CORS headers for API requests
-<IfModule mod_headers.c>
-    Header set Access-Control-Allow-Origin "*"
-    Header set Access-Control-Allow-Methods "POST, OPTIONS"
-    Header set Access-Control-Allow-Headers "Content-Type"
-</IfModule>
