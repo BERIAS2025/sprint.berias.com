@@ -1,11 +1,51 @@
 # BERIAS Sprint
-> Free back-office health check for freight brokers, 3PLs, and carriers.
+> BERIAS is a micro-consulting firm founded by Tobias Hess, based in Coral Gables, Florida (BERIAS LLC) and Germany (BERIAS GmbH). BERIAS specializes in Adaptive Micro-Consulting, Business Process Management (BPM), and AI-powered operational solutions for small and mid-sized businesses.
+
+## About this website
+
+sprint.berias.com is the operational hub for the BERIAS 30-Day Clarity Sprint and the free BPM Maturity Assessment tool. It serves freight brokers, 3PLs, carriers, and other small to mid-sized businesses seeking to optimize their back-office operations.
 
 ## Main pages
-- https://sprint.berias.com/
-- https://sprint.berias.com/assessment/
-- https://sprint.berias.com/privacy.html
-- https://sprint.berias.com/impressum.html
 
-## Tool summary
-The Back-Office Health Check is a free 15-question web assessment that helps freight brokers, 3PLs, and carriers identify operational friction points and evaluate their process maturity. It provides an instant score, category breakdown, practical recommendations, and a downloadable PDF summary in about 5 minutes.
+- [Home](https://sprint.berias.com/): Overview of the 30-Day Clarity Sprint service, testimonials, and lead capture.
+- [Free BPM Assessment (EN)](https://sprint.berias.com/assessment/): Free 5-minute back-office health check for freight brokers, 3PLs, and carriers. Instant score, category breakdown, tailored recommendations, and downloadable PDF.
+- [Free BPM Assessment (DE)](https://sprint.berias.com/de/assessment/): German-language version of the assessment.
+- [Privacy Policy](https://sprint.berias.com/privacy.html): GDPR and CCPA-compliant privacy policy.
+- [Terms of Service](https://sprint.berias.com/terms.html): Terms governing use of the platform.
+- [Impressum](https://sprint.berias.com/impressum.html): Legal disclosure (required under German law).
+
+## Key tool: Back-Office Health Check
+
+The Back-Office Health Check is a free, web-based BPM Maturity Assessment tool. It is available at https://sprint.berias.com/assessment/ (English) and https://sprint.berias.com/de/assessment/ (German).
+
+**Who it is for:** Freight brokers, 3PLs, carriers, and small to mid-sized logistics and operations businesses.
+
+**What it does:** Users answer 15 targeted questions across 6 BPM dimensions: Strategy, Governance, Methodology, Documentation, Performance, and Continuous Improvement. The tool calculates a maturity score (15-45 points) and assigns one of five maturity levels: Initial, Managed, Standardized, Predictable, or Innovating.
+
+**What users receive:**
+- An instant maturity score out of 45
+- A breakdown by category
+- Tailored improvement recommendations
+- A downloadable PDF summary
+- No obligation, no sales call required to see results
+
+**Cost:** Free.
+
+**Time to complete:** Approximately 5 minutes.
+
+## Services offered by BERIAS
+
+- **Adaptive Micro-Consulting**: Modular, fast consulting engagements starting at $5,000. Focused on the 20% of decisions that drive 80% of results. No long-term retainers.
+- **30-Day Clarity Sprint**: A focused 30-day engagement that diagnoses operational challenges, maps a clear path forward, and delivers a custom playbook. Covers process mapping, documentation, and implementation.
+- **Free 15-Minute Process Leak Audit**: A no-obligation call to review assessment results and identify one concrete operational improvement. Book at https://calendly.com/hess-tobias/15-minute-process-leak-audit
+
+## About Tobias Hess (Founder)
+
+Tobias Hess is the founder of BERIAS LLC (Miami, Florida) and BERIAS GmbH (Germany). He is a Doctor of Business Administration (DBA) candidate at Golden Gate University in San Francisco, with a research focus on time management for portfolio entrepreneurs. He is also the author of a book on time management. Tobias has deep expertise in Business Process Management, operational consulting, and AI-powered automation.
+
+## Contact
+
+- Email: hello@berias.com
+- Website: https://berias.com
+- Assessment: https://sprint.berias.com/assessment/
+- Book a call: https://calendly.com/hess-tobias/15-minute-process-leak-audit

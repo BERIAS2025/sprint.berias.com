@@ -1,33 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ===== English pages ===== -->
   <url>
     <loc>https://sprint.berias.com/</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sprint.berias.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sprint.berias.com/de/"/>
   </url>
+
   <url>
     <loc>https://sprint.berias.com/assessment/</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sprint.berias.com/assessment/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sprint.berias.com/de/assessment/"/>
   </url>
+
+  <url>
+    <loc>https://sprint.berias.com/assessment-direct/</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://sprint.berias.com/privacy.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
-  <url>
-    <loc>https://sprint.berias.com/impressum.html</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
+
   <url>
     <loc>https://sprint.berias.com/terms.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
+
+  <url>
+    <loc>https://sprint.berias.com/impressum.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- ===== German pages ===== -->
+  <url>
+    <loc>https://sprint.berias.com/de/</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sprint.berias.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sprint.berias.com/"/>
+  </url>
+
+  <url>
+    <loc>https://sprint.berias.com/de/assessment/</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sprint.berias.com/de/assessment/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sprint.berias.com/assessment/"/>
+  </url>
+
+  <url>
+    <loc>https://sprint.berias.com/de/bewertung-direkt/</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://sprint.berias.com/de/datenschutz.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://sprint.berias.com/de/agb.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://sprint.berias.com/de/impressum.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>
