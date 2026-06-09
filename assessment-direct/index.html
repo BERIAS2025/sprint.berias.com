@@ -333,7 +333,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="welcome">Answer 15 quick questions to find out where your brokerage loses time to manual back-office work<span id="welcome-name-inline"></span>, and get instant recommendations to fix it.</p>
       </div>
       <div class="hero-btns fade-in delay-4">
-        <a href="#assessment" class="btn-hero-primary" onclick="scrollToAssessment(event)">Start the Check &rarr;</a>
+        <a href="#assessment" class="btn-hero-primary" onclick="scrollToAssessment(event)">Find My Leaks &rarr;</a>
         <a href="https://d2xsxph8kpxj0f.cloudfront.net/310419663030437683/XiaTKX2C7AtY3GCmxwT62P/BERIAS_BPM_Maturity_Assessment_6dab7e79.pdf" target="_blank" class="btn-hero-secondary">Download PDF &darr;</a>
       </div>
     </div>
@@ -613,13 +613,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 // ===== DATA =====
 const questions = [
-  { id: 1,  text: "When we take on a new project or client, our team focuses on fixing the actual business problem, not just adding a new tool or software.", category: "Strategy" },
-  { id: 2,  text: "The people involved in improving our back-office processes include different roles, experience levels, and departments, not just one person or team.", category: "Strategy" },
+    { id: 1, text: "When something keeps going wrong, we fix the root cause instead of just buying another tool.", category: "Strategy" },
+  { id: 2, text: "When we improve how we work, more than one person has a say, not just the owner or a single manager.", category: "Strategy" },
   { id: 3,  text: "There is at least one person in our company whose job it is to oversee how our processes are run and improved.", category: "Governance" },
   { id: 4,  text: "When we change how something is done, we can set realistic expectations with management and stick to them.", category: "Governance" },
   { id: 5,  text: "Everyone on the team knows exactly who is responsible for each key task, and that ownership is actually followed.", category: "Governance" },
   { id: 6,  text: "When two employees do the same task, they do it the same way.", category: "Methodology" },
-  { id: 7,  text: "We have a consistent way to make sure the information flowing through our processes is accurate and complete.", category: "Methodology" },
+    { id: 7, text: "We rarely discover missing or wrong information after an order has already moved forward.", category: "Methodology" },
   { id: 8,  text: "If a key person left tomorrow, someone else could follow written steps to do their job.", category: "Documentation" },
   { id: 9,  text: "Our process documentation looks and works the same way across all departments, not different formats for every team.", category: "Documentation" },
   { id: 10, text: "We have a clear picture of all the rules and steps that drive our core operations, and that picture is written down.", category: "Documentation" },
@@ -665,9 +665,9 @@ function buildQuestions() {
         '<div class="q-content">' +
           '<p class="q-text">' + q.text + '</p>' +
           '<div class="q-options">' +
-            '<button class="q-btn q-btn-no" onclick="answer(' + q.id + ',1,this)">No</button>' +
-            '<button class="q-btn q-btn-sometimes" onclick="answer(' + q.id + ',2,this)">Sometimes</button>' +
-            '<button class="q-btn q-btn-yes" onclick="answer(' + q.id + ',3,this)">Yes</button>' +
+            '<button class="q-btn q-btn-no" onclick="answer(' + q.id + ',1,this)">Not yet</button>' +
+            '<button class="q-btn q-btn-sometimes" onclick="answer(' + q.id + ',2,this)">In progress</button>' +
+            '<button class="q-btn q-btn-yes" onclick="answer(' + q.id + ',3,this)">We\'ve got this</button>' +
           '</div>' +
         '</div>' +
       '</div>' +
@@ -779,9 +779,10 @@ function showResults() {
     if ((pts / maxPts) * 100 < 67) weakCats.push({ name: cat.name, pts: pts, maxPts: maxPts });
   });
   if (weakCats.length > 0) {
-    weakHtml += '<h3 style="font-family:var(--font-heading);font-size:1.125rem;font-weight:600;color:var(--navy);margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem;">&#9888; Where Your Time Is Leaking</h3>';
+    weakHtml += '<h3 style="font-family:var(--font-heading);font-size:1.125rem;font-weight:600;color:var(--navy);margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem;">&#9888; Your Biggest Time-Gain Opportunities</h3>';
+    weakHtml += '<p style="font-size:0.9375rem;color:#6b7280;margin-bottom:1.25rem;line-height:1.6;">These are not weaknesses. They are the areas where a small fix returns the most hours. The lower the score, the bigger the gain.</p>';
     weakCats.forEach(function(c) {
-      weakHtml += '<div class="weak-item"><span class="weak-score">' + c.pts + '/' + c.maxPts + '</span><div><p class="weak-name">' + c.name + '</p><p class="weak-note">Scoring below 67% here means this area is likely costing your team hours every week.</p></div></div>';
+      weakHtml += '<div class="weak-item"><span class="weak-score">' + c.pts + '/' + c.maxPts + '</span><div><p class="weak-name">' + c.name + '</p><p class="weak-note">Improving this area is likely your fastest path to winning back time this quarter.</p></div></div>';
     });
   }
   document.getElementById('weak-areas').innerHTML = weakHtml;
