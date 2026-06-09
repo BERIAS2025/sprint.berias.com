@@ -687,10 +687,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="section-grid">
             <div><span class="section-num">01</span></div>
             <div>
-              <h2>Why Assess Your BPM Maturity?</h2>
+              <h2>Where Does Your Time Actually Go?</h2>
               <div style="color:#6b7280;font-size:1.0625rem;line-height:1.7;">
-                <p style="margin-bottom:1rem;">In the contemporary landscape of organizational management, the maturity of business processes serves as a critical determinant of operational efficiency and strategic agility. Business Process Management (BPM) is not merely a technological implementation but a holistic management philosophy that aligns an organization's processes with its strategic goals.</p>
-                <p>This assessment provides you with a clear snapshot of your current BPM maturity level. By evaluating key dimensions such as process ownership, standardization, documentation, and performance measurement, you can identify specific areas for improvement and transition from reactive operations to a state of continuous innovation.</p>
+                <p style="margin-bottom:1rem;">Most freight brokers, 3PLs, and warehouse operators lose hundreds of hours a year to manual back-office work: re-keying data between systems, chasing status updates by phone, and fixing the same errors over and over again. The problem is, you cannot fix what you cannot see.</p>
+                <p>This 5-minute check shows you exactly where your time leaks, how you compare to the best-run operations in your space, and the first concrete step to win those hours back.</p>
               </div>
               <div style="margin-top:2rem;padding:1.5rem;background:#f9fafb;border-radius:0.75rem;border:1px solid #f3f4f6;">
                 <h3 style="font-family:var(--font-heading);font-size:1.125rem;font-weight:600;color:var(--navy);margin-bottom:1rem;">How It Works</h3>
@@ -720,7 +720,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div><span class="section-num">02</span></div>
             <div>
               <div class="section-header">
-                <h2 style="margin-bottom:0;">Fundamentals of BPM</h2>
+                <h2 style="margin-bottom:0;">Your 15-Question Check</h2>
                 <button class="reset-btn hidden" id="reset-btn" onclick="resetAssessment()">↺ Reset All</button>
               </div>
               <div class="progress-bar-wrap">
@@ -754,7 +754,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="section-grid">
               <div><span class="section-num">03</span></div>
               <div>
-                <h2>Your BPM Maturity Score</h2>
+                <h2>Your Back-Office Score</h2>
                 <div class="score-display">
                   <span class="score-big" id="score-value">0</span><span class="score-max">/45</span>
                   <p class="score-level" id="score-level"></p>
@@ -782,7 +782,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="section-grid">
               <div><span class="section-num">04</span></div>
               <div>
-                <h2>Category Breakdown</h2>
+                <h2>Where Your Time Goes</h2>
+            <p style="color:#6b7280;margin-bottom:1.5rem;font-size:0.9375rem;">Each category below shows how well your operation handles that area. Red means time is leaking there right now.</p>
                 <div id="cat-breakdown"></div>
               </div>
             </div>
@@ -797,8 +798,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="section-grid">
               <div><span class="section-num">05</span></div>
               <div>
-                <h2>Recommendations</h2>
-                <p style="color:#6b7280;margin-bottom:2rem;line-height:1.7;">Based on your score of <strong style="color:var(--navy)" id="rec-score"></strong>, here is what we recommend to advance your BPM maturity.</p>
+            <h2>What to Do Next</h2>
+            <p style="color:#6b7280;margin-bottom:2rem;line-height:1.7;">Based on your score of <strong style="color:var(--navy)" id="rec-score"></strong>, here is the most impactful place to start.</p>
                 <div class="rec-card" id="rec-card">
                   <h3 id="rec-title">Primary Recommendation</h3>
                   <p id="rec-text"></p>
@@ -966,21 +967,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 // ===== DATA =====
 const questions = [
-  { id: 1, text: "Focus is on business projects, not simply technology projects.", category: "Strategy" },
-  { id: 2, text: "Management Team of processes in question is diverse (skillset, experience, seniority, departments).", category: "Strategy" },
-  { id: 3, text: "We have a BPM Centre of Excellence (COE).", category: "Governance" },
-  { id: 4, text: "We can effectively control management expectations regarding process changes.", category: "Governance" },
-  { id: 5, text: "Roles and responsibilities in processes are clearly defined and adhered to.", category: "Governance" },
-  { id: 6, text: "A formal BPM methodology is being or has been used to aid delivery.", category: "Methodology" },
-  { id: 7, text: "Our approach ensures the quality of primary and supporting information in processes.", category: "Methodology" },
-  { id: 8, text: "We have a suite of current state process maps, fully documented.", category: "Documentation" },
-  { id: 9, text: "Process maps are standardized across all departments (symbols, icons, approach).", category: "Documentation" },
-  { id: 10, text: "We are identifying, capturing, and defining all business capabilities and rules.", category: "Documentation" },
-  { id: 11, text: "Performance measurements with clearly defined KPIs are added to workflow models.", category: "Performance" },
-  { id: 12, text: "Consistent training is provided to team members (including standardized SOPs).", category: "Performance" },
-  { id: 13, text: "The voice of the customer is gathered and used to build out process requirements.", category: "Continuous Improvement" },
-  { id: 14, text: "All key processes have clearly assigned owners.", category: "Continuous Improvement" },
-  { id: 15, text: "Business models and supporting information are kept up to date post-completion.", category: "Continuous Improvement" }
+  { id: 1, text: "When we take on a new project or client, our team focuses on fixing the actual business problem, not just adding a new tool or software.", category: "Strategy" },
+  { id: 2, text: "The people involved in improving our back-office processes include different roles, experience levels, and departments, not just one person or team.", category: "Strategy" },
+  { id: 3, text: "There is at least one person in our company whose job it is to oversee how our processes are run and improved.", category: "Governance" },
+  { id: 4, text: "When we change how something is done, we can set realistic expectations with management and stick to them.", category: "Governance" },
+  { id: 5, text: "Everyone on the team knows exactly who is responsible for each key task, and that ownership is actually followed.", category: "Governance" },
+  { id: 6, text: "When two employees do the same task, they do it the same way.", category: "Methodology" },
+  { id: 7, text: "We have a consistent way to make sure the information flowing through our processes is accurate and complete.", category: "Methodology" },
+  { id: 8, text: "If a key person left tomorrow, someone else could follow written steps to do their job.", category: "Documentation" },
+  { id: 9, text: "Our process documentation looks and works the same way across all departments, not different formats for every team.", category: "Documentation" },
+  { id: 10, text: "We have a clear picture of all the rules and steps that drive our core operations, and that picture is written down.", category: "Documentation" },
+  { id: 11, text: "We track how long our key tasks actually take, and we use that data to spot problems.", category: "Performance" },
+  { id: 12, text: "New team members are trained using the same documented steps, not just by watching someone else.", category: "Performance" },
+  { id: 13, text: "We regularly ask our customers or carriers what is slowing them down, and we use that feedback to improve how we work.", category: "Continuous Improvement" },
+  { id: 14, text: "Every critical back-office process has a named owner who is responsible for keeping it running and up to date.", category: "Continuous Improvement" },
+  { id: 15, text: "When we finish a project or fix a process, we update our documentation so the improvement actually sticks.", category: "Continuous Improvement" }
 ];
 
 const categories = [
@@ -996,11 +997,11 @@ const answers = {};
 let leadData = null;
 
 function getMaturityLevel(score) {
-  if (score <= 20) return { level: "Initial", cssClass: "level-initial", barClass: "bar-red", color: "#b91c1c", description: "Processes are largely ad-hoc and reactive. Success depends on individual heroics rather than institutionalized systems. There is little to no formal process documentation, and outcomes are unpredictable.", recommendation: "Start by documenting your most critical \"as-is\" processes. Assign clear ownership for each key process and establish a common vocabulary for how your organization talks about its workflows. Even simple flowcharts can create alignment and reduce confusion." };
-  if (score <= 25) return { level: "Managed", cssClass: "level-managed", barClass: "bar-orange", color: "#c2410c", description: "Some processes are documented and managed at the departmental level, but consistency across the organization is limited. Improvements happen in pockets rather than systematically.", recommendation: "Focus on connecting the dots between departments. Establish a shared BPM methodology and begin standardizing your process mapping approach. Consider forming a small BPM working group to coordinate efforts and share best practices across teams." };
-  if (score <= 30) return { level: "Standardized", cssClass: "level-standardized", barClass: "bar-amber", color: "#b45309", description: "You have established a solid foundation. Processes are documented and standardized across the organization, but they may lack dynamic optimization and real-time performance tracking.", recommendation: "This is your \"Improvement Zone.\" Integrate KPIs and performance measurements into your workflow models. Start leveraging your BPM data to drive proactive decision-making rather than just documenting history. A BPM Centre of Excellence can accelerate this transition." };
-  if (score <= 38) return { level: "Predictable", cssClass: "level-predictable", barClass: "bar-blue", color: "#1d4ed8", description: "Processes are managed quantitatively with clear KPIs. You can predict outcomes and identify bottlenecks before they become critical. BPM is recognized as a strategic capability.", recommendation: "Refine your performance measurement system and begin incorporating the voice of the customer more systematically. Explore automation opportunities for repetitive process steps and ensure your process documentation stays current through regular review cycles." };
-  return { level: "Innovating", cssClass: "level-innovating", barClass: "bar-green", color: "#15803d", description: "Your processes are mature, continuously improving, and strategically aligned. BPM is embedded in your organizational culture, and you actively innovate through data-driven insights and advanced automation.", recommendation: "Focus on advanced automation and AI integration. Use your mature process data to predict bottlenecks before they occur and foster a culture of relentless innovation. Consider sharing your BPM expertise as a competitive differentiator in your market." };
+  if (score <= 20) return { level: "Initial", cssClass: "level-initial", barClass: "bar-red", color: "#b91c1c", description: "Your back office runs on individual effort and tribal knowledge. When a key person is out, things slow down or break. There is little written documentation, and the same problems keep coming back because nothing is systematized.", recommendation: "Start by writing down the three most critical tasks in your operation, step by step. Assign a named owner to each one. Even a simple checklist can cut re-work and reduce the time you spend fixing the same errors." };
+  if (score <= 25) return { level: "Managed", cssClass: "level-managed", barClass: "bar-orange", color: "#c2410c", description: "Some parts of your operation are documented and run consistently, but it depends on the department or the person. What works in one team does not always translate to another, and improvements tend to stay local.", recommendation: "Focus on connecting the dots between teams. Pick one cross-department handoff that causes the most friction, map it out together, and agree on a single way to do it. That one fix often saves more time than a dozen internal improvements." };
+  if (score <= 30) return { level: "Standardized", cssClass: "level-standardized", barClass: "bar-amber", color: "#b45309", description: "You have built a solid foundation. Processes are documented and consistent across the operation, but you are not yet using data to drive decisions. You know what you do, but not always how well or how fast.", recommendation: "Start measuring the things that matter. Pick two or three key tasks and track how long they actually take each week. Once you have that data, you will quickly see where the real time is going and can make targeted improvements." };
+  if (score <= 38) return { level: "Predictable", cssClass: "level-predictable", barClass: "bar-blue", color: "#1d4ed8", description: "Your operation runs on data. You can predict outcomes, catch problems early, and make decisions based on what is actually happening, not gut feel. Back-office work is a competitive advantage, not just overhead.", recommendation: "Automate the repetitive parts. With your level of documentation and measurement, you are in a strong position to hand off rule-based tasks to software. Even one automated workflow can free up hours per week across your team." };
+  return { level: "Innovating", cssClass: "level-innovating", barClass: "bar-green", color: "#15803d", description: "Your back office is a machine. Processes are documented, measured, continuously improved, and increasingly automated. Your team spends time on decisions and relationships, not on fixing the same problems twice.", recommendation: "Use your operational maturity as a differentiator. Clients and partners notice when things run smoothly. Consider documenting your approach as a case study or service offering, and look for AI-driven tools that can take your efficiency to the next level." };
 }
 
 // ===== LEAD GATE =====
@@ -1221,9 +1222,9 @@ function showResults() {
     if (catPct < 67) weakCats.push({ name: cat.name, pts: pts, maxPts: maxPts });
   });
   if (weakCats.length > 0) {
-    weakHtml += '<h3 style="font-family:var(--font-heading);font-size:1.125rem;font-weight:600;color:var(--navy);margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem;">⚠ Areas Requiring Attention</h3>';
+    weakHtml += '<h3 style="font-family:var(--font-heading);font-size:1.125rem;font-weight:600;color:var(--navy);margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem;">&#9888; Where Your Time Is Leaking</h3>';
     weakCats.forEach(function(c) {
-      weakHtml += '<div class="weak-item"><span class="weak-score">' + c.pts + '/' + c.maxPts + '</span><div><p class="weak-name">' + c.name + '</p><p class="weak-note">Scoring below 67% in this category indicates room for significant improvement.</p></div></div>';
+      weakHtml += '<div class="weak-item"><span class="weak-score">' + c.pts + '/' + c.maxPts + '</span><div><p class="weak-name">' + c.name + '</p><p class="weak-note">Scoring below 67% here means this area is likely costing your team hours every week.</p></div></div>';
     });
   }
   document.getElementById('weak-areas').innerHTML = weakHtml;

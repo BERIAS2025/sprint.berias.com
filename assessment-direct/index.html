@@ -55,6 +55,9 @@
     fbq('init','1303422577734498');fbq('track','PageView');
   </script>
 
+  <!-- Calendly widget CSS -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -273,31 +276,36 @@
     .cta-card-primary { border-color: var(--green); background: rgba(162,198,20,0.05); }
     .cta-inner { display: flex; align-items: flex-start; gap: 1.25rem; }
     .cta-icon { width: 3rem; height: 3rem; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .cta-icon-green { background: var(--green); }
-    .cta-icon-navy { background: var(--navy); }
-    .cta-icon-purple { background: var(--purple); }
-    .cta-icon svg { width: 1.5rem; height: 1.5rem; color: #fff; }
-    .cta-content { flex: 1; }
-    .cta-content h3 { font-family: var(--font-heading); font-size: 1.125rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
-    @media (min-width: 768px) { .cta-content h3 { font-size: 1.25rem; } }
-    .cta-content p { color: #6b7280; line-height: 1.7; font-size: 0.9375rem; }
-    .cta-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.75rem; font-size: 0.875rem; font-weight: 600; }
-    .cta-link-green { color: var(--green); }
+    .cta-icon svg { width: 1.5rem; height: 1.5rem; }
+    .cta-icon-green { background: rgba(162,198,20,0.15); color: var(--navy); }
+    .cta-icon-navy { background: rgba(15,48,76,0.1); color: var(--navy); }
+    .cta-content h3 { font-family: var(--font-heading); font-size: 1.125rem; font-weight: 700; color: var(--navy); margin-bottom: 0.375rem; }
+    .cta-content p { font-size: 0.9375rem; color: #6b7280; line-height: 1.6; margin-bottom: 0.5rem; }
+    .cta-link { font-size: 0.875rem; font-weight: 600; }
+    .cta-link-green { color: #5a7a00; }
     .cta-link-navy { color: var(--navy); }
-    .cta-link-purple { color: var(--purple); }
+
+    /* ===== CALENDLY EMBED ===== */
+    .calendly-section { background: #f8f9fa; }
+    .calendly-embed-wrapper {
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(15,48,76,0.08);
+      border: 1px solid #e5e7eb;
+      background: #fff;
+    }
 
     /* ===== FOOTER ===== */
-    .footer { background: var(--navy); padding: 2.5rem 0; }
+    .footer { background: var(--navy); color: rgba(255,255,255,0.7); padding: 3rem 0 2rem; }
     .footer-grid { display: grid; gap: 2rem; margin-bottom: 2rem; }
     @media (min-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr 1fr; } }
-    .footer p, .footer a { color: rgba(255,255,255,0.6); font-size: 0.875rem; line-height: 1.6; }
-    .footer a { text-decoration: none; transition: color 0.2s; }
-    .footer a:hover { color: #fff; }
-    .footer h4 { color: #fff; font-family: var(--font-heading); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.75rem; }
+    .footer h4 { font-family: var(--font-heading); font-size: 0.875rem; font-weight: 600; color: #fff; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; }
     .footer ul { list-style: none; }
-    .footer li { margin-bottom: 0.5rem; }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
-    .footer-bottom p { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+    .footer ul li { margin-bottom: 0.5rem; }
+    .footer ul li a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9375rem; transition: color 0.2s; }
+    .footer ul li a:hover { color: var(--green); }
+    .footer p { font-size: 0.9375rem; line-height: 1.7; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: space-between; font-size: 0.875rem; }
     .footer-logo { height: 2.5rem; margin-bottom: 1rem; }
   </style>
 </head>
@@ -308,7 +316,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- LinkedIn Source Banner -->
 <div class="li-banner">
-  You are just <strong>one step away</strong> from your free Back-Office Health Check. No sign-up needed &mdash; start immediately below.
+  You clicked the ad for a reason. <strong>5 minutes</strong> is all it takes to find your back-office leaks.
 </div>
 
 <!-- Hero -->
@@ -320,12 +328,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030437683/XiaTKX2C7AtY3GCmxwT62P/berias-logo-white_d4de117b.webp" alt="BERIAS" style="height:3.5rem;object-fit:contain;margin-bottom:1.5rem;" />
       </div>
       <div class="fade-in delay-2">
-        <p class="tag">Free Assessment Tool</p>
+        <p class="tag">Free Back-Office Health Check</p>
         <h1>Find Your<br><span>Back-Office Leaks</span></h1>
-        <p class="welcome">Answer 15 quick questions to discover your organization's process maturity level and get instant, personalized recommendations.</p>
+        <p class="welcome">Answer 15 quick questions to find out where your brokerage loses time to manual back-office work<span id="welcome-name-inline"></span>, and get instant recommendations to fix it.</p>
       </div>
       <div class="hero-btns fade-in delay-4">
-        <a href="#assessment" class="btn-hero-primary" onclick="scrollToAssessment(event)">Start Assessment &rarr;</a>
+        <a href="#assessment" class="btn-hero-primary" onclick="scrollToAssessment(event)">Start the Check &rarr;</a>
         <a href="https://d2xsxph8kpxj0f.cloudfront.net/310419663030437683/XiaTKX2C7AtY3GCmxwT62P/BERIAS_BPM_Maturity_Assessment_6dab7e79.pdf" target="_blank" class="btn-hero-secondary">Download PDF &darr;</a>
       </div>
     </div>
@@ -339,19 +347,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="section-grid">
         <div><span class="section-num">01</span></div>
         <div>
-          <h2>Why Assess Your BPM Maturity?</h2>
+          <h2>Where Does Your Time Actually Go?</h2>
           <div style="color:#6b7280;font-size:1.0625rem;line-height:1.7;">
-            <p style="margin-bottom:1rem;">In the contemporary landscape of organizational management, the maturity of business processes serves as a critical determinant of operational efficiency and strategic agility. Business Process Management (BPM) is not merely a technological implementation but a holistic management philosophy that aligns an organization's processes with its strategic goals.</p>
-            <p>This assessment provides you with a clear snapshot of your current BPM maturity level. By evaluating key dimensions such as process ownership, standardization, documentation, and performance measurement, you can identify specific areas for improvement and transition from reactive operations to a state of continuous innovation.</p>
+            <p style="margin-bottom:1rem;">Most freight brokers, 3PLs, and warehouse operators lose hundreds of hours a year to manual back-office work: re-keying data between systems, chasing status updates by phone, and fixing the same errors over and over again. The problem is, you cannot fix what you cannot see.</p>
+            <p>This 5-minute check shows you exactly where your time leaks, how you compare to the best-run operations in your space, and the first concrete step to win those hours back.</p>
           </div>
           <div style="margin-top:2rem;padding:1.5rem;background:#f9fafb;border-radius:0.75rem;border:1px solid #f3f4f6;">
             <h3 style="font-family:var(--font-heading);font-size:1.125rem;font-weight:600;color:var(--navy);margin-bottom:1rem;">How It Works</h3>
+            <div style="background: #fff; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1.25rem; border-left: 4px solid var(--green);">
+              <p style="font-size: 0.875rem; color: #4b5563; margin: 0;">15 questions. Each one describes a real situation in your back office. Answer honestly, and your score will tell you exactly where the friction is.</p>
+            </div>
             <div class="scoring-grid">
               <div class="score-card score-no"><div class="num">1</div><div class="lbl">No</div></div>
               <div class="score-card score-sometimes"><div class="num">2</div><div class="lbl">Sometimes</div></div>
               <div class="score-card score-yes"><div class="num">3</div><div class="lbl">Yes</div></div>
             </div>
-            <p class="scoring-note">Maximum Score: 45 points | Minimum Score: 15 points</p>
+            <p class="scoring-note">Maximum Score: 45 points &nbsp;|&nbsp; Minimum Score: 15 points</p>
           </div>
         </div>
       </div>
@@ -367,7 +378,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div><span class="section-num">02</span></div>
         <div>
           <div class="section-header">
-            <h2 style="margin-bottom:0;">Fundamentals of BPM</h2>
+            <h2 style="margin-bottom:0;">Your 15-Question Check</h2>
             <button class="reset-btn hidden" id="reset-btn" onclick="resetAssessment()">&#8635; Reset All</button>
           </div>
           <div class="progress-bar-wrap">
@@ -401,7 +412,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="section-grid">
           <div><span class="section-num">03</span></div>
           <div>
-            <h2>Your BPM Maturity Score</h2>
+            <h2>Your Back-Office Score</h2>
             <div class="score-display">
               <span class="score-big" id="score-value">0</span><span class="score-max">/45</span>
               <p class="score-level" id="score-level"></p>
@@ -429,7 +440,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="section-grid">
           <div><span class="section-num">04</span></div>
           <div>
-            <h2>Category Breakdown</h2>
+            <h2>Where Your Time Goes</h2>
+            <p style="color:#6b7280;margin-bottom:1.5rem;font-size:0.9375rem;">Each category below shows how well your operation handles that area. Red means time is leaking there right now.</p>
             <div id="cat-breakdown"></div>
           </div>
         </div>
@@ -444,8 +456,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="section-grid">
           <div><span class="section-num">05</span></div>
           <div>
-            <h2>Recommendations</h2>
-            <p style="color:#6b7280;margin-bottom:2rem;line-height:1.7;">Based on your score of <strong style="color:var(--navy)" id="rec-score"></strong>, here is what we recommend to advance your BPM maturity.</p>
+            <h2>Your First Move</h2>
+            <p style="color:#6b7280;margin-bottom:2rem;line-height:1.7;">Based on your score of <strong style="color:var(--navy)" id="rec-score"></strong>, here is the most impactful place to start.</p>
             <div class="rec-card" id="rec-card">
               <h3 id="rec-title" style="">Primary Recommendation</h3>
               <p id="rec-text"></p>
@@ -458,13 +470,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- CTAs -->
-  <section class="section section-alt">
+  <section class="section section-alt section-border">
     <div class="container">
       <div class="section-inner">
         <div class="section-grid">
           <div><span class="section-num">06</span></div>
           <div>
-            <h2>Your Next Steps</h2>
+            <h2>What to Do Next</h2>
             <a href="https://sprint.berias.com" target="_blank" class="cta-card cta-card-primary">
               <div class="cta-inner">
                 <div class="cta-icon cta-icon-green">
@@ -472,7 +484,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="cta-content">
                   <h3>Start the 30-Day Clarity Sprint</h3>
-                  <p>Transform your assessment results into a concrete action plan. In 30 days, we map, fix, and systematize your most critical back-office processes.</p>
+                  <p>Turn your score into a concrete action plan. In 30 days, we map, fix, and systematize your most critical back-office processes so your team stops losing time to the same problems.</p>
                   <span class="cta-link cta-link-green">Learn more &rarr;</span>
                 </div>
               </div>
@@ -484,23 +496,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="cta-content">
                   <h3>Book a Free 15-Minute Process Leak Audit</h3>
-                  <p>Talk directly with Tobias Hess about your results and get specific, actionable advice for your logistics operation. No pitch, no obligation.</p>
+                  <p>Talk directly with Tobias Hess about your results and get one specific, actionable fix for your operation. No pitch, no obligation.</p>
                   <span class="cta-link cta-link-navy">Book your call &rarr;</span>
                 </div>
               </div>
             </a>
-            <a href="https://sprint.berias.com" target="_blank" class="cta-card">
-              <div class="cta-inner">
-                <div class="cta-icon cta-icon-purple">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                </div>
-                <div class="cta-content">
-                  <h3>Ask the BERIAS AI Assistant</h3>
-                  <p>Have a specific question about your results or your logistics processes? Our AI assistant can provide instant, tailored answers.</p>
-                  <span class="cta-link cta-link-purple">Open AI Chat &rarr;</span>
-                </div>
-              </div>
-            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calendly Inline Embed -->
+  <section class="section calendly-section">
+    <div class="container">
+      <div class="section-inner">
+        <div style="text-align:center;margin-bottom:2rem;">
+          <h2 style="font-family:var(--font-heading);font-size:1.875rem;font-weight:700;color:var(--navy);margin-bottom:0.75rem;">Book Your Free 15-Minute Call</h2>
+          <p style="color:#6b7280;font-size:1.0625rem;max-width:36rem;margin:0 auto;">Pick a time that works for you. Tobias will review your score before the call so you walk away with at least one concrete fix.</p>
+        </div>
+        <div class="calendly-embed-wrapper">
+          <div
+            class="calendly-inline-widget"
+            data-url="https://calendly.com/hess-tobias/15-minute-process-leak-audit?hide_gdpr_banner=1&primary_color=a2c614"
+            style="min-width:320px;height:700px;">
           </div>
         </div>
       </div>
@@ -516,7 +535,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="footer-grid">
         <div>
           <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030437683/XiaTKX2C7AtY3GCmxwT62P/berias-logo-white_d4de117b.webp" alt="BERIAS" class="footer-logo" />
-          <p>Micro-Consulting, Project Management &amp; AI Automation for fast, actionable business solutions.</p>
+          <p>Micro-Consulting, Process Management &amp; AI Automation for freight brokers, 3PLs, and carriers.</p>
         </div>
         <div>
           <h4>Services</h4>
@@ -546,8 +565,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 // ===== READ URL PARAMS FROM LINKEDIN LEAD GEN FORM =====
-// LinkedIn passes lead data as URL parameters when redirecting from a Lead Gen Form.
-// Format: ?firstname=John&lastname=Smith&email=john@example.com&company=Acme+Logistics
 (function() {
   var params = new URLSearchParams(window.location.search);
   var firstname = params.get('firstname') || '';
@@ -556,7 +573,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var company   = params.get('company')   || '';
   var fullname  = (firstname + ' ' + lastname).trim();
 
-  // Store globally so showResults() can send to HubSpot
   window._leadData = {
     name:      fullname  || 'LinkedIn Visitor',
     firstname: firstname || 'LinkedIn',
@@ -565,13 +581,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     company:   company   || ''
   };
 
-  // If we have a name from LinkedIn, show a personalized welcome
   if (firstname) {
     var welcomeEl = document.getElementById('welcome-name-inline');
     if (welcomeEl) welcomeEl.textContent = ', ' + firstname;
   }
 
-  // Fire HubSpot contact creation immediately (lead data already captured by LinkedIn)
   if (email) {
     fetch('/api/hubspot-lead.php', {
       method: 'POST',
@@ -585,7 +599,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       })
     }).catch(function(err) { console.error('HubSpot lead error:', err); });
 
-    // Fire Google Ads conversion
     try {
       if (window.gtag) {
         gtag('event', 'conversion', {
@@ -600,21 +613,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 // ===== DATA =====
 const questions = [
-  { id: 1,  text: "Focus is on business projects, not simply technology projects.", category: "Strategy" },
-  { id: 2,  text: "Management Team of processes in question is diverse (skillset, experience, seniority, departments).", category: "Strategy" },
-  { id: 3,  text: "We have a BPM Centre of Excellence (COE).", category: "Governance" },
-  { id: 4,  text: "We can effectively control management expectations regarding process changes.", category: "Governance" },
-  { id: 5,  text: "Roles and responsibilities in processes are clearly defined and adhered to.", category: "Governance" },
-  { id: 6,  text: "A formal BPM methodology is being or has been used to aid delivery.", category: "Methodology" },
-  { id: 7,  text: "Our approach ensures the quality of primary and supporting information in processes.", category: "Methodology" },
-  { id: 8,  text: "We have a suite of current state process maps, fully documented.", category: "Documentation" },
-  { id: 9,  text: "Process maps are standardized across all departments (symbols, icons, approach).", category: "Documentation" },
-  { id: 10, text: "We are identifying, capturing, and defining all business capabilities and rules.", category: "Documentation" },
-  { id: 11, text: "Performance measurements with clearly defined KPIs are added to workflow models.", category: "Performance" },
-  { id: 12, text: "Consistent training is provided to team members (including standardized SOPs).", category: "Performance" },
-  { id: 13, text: "The voice of the customer is gathered and used to build out process requirements.", category: "Continuous Improvement" },
-  { id: 14, text: "All key processes have clearly assigned owners.", category: "Continuous Improvement" },
-  { id: 15, text: "Business models and supporting information are kept up to date post-completion.", category: "Continuous Improvement" }
+  { id: 1,  text: "When we take on a new project or client, our team focuses on fixing the actual business problem, not just adding a new tool or software.", category: "Strategy" },
+  { id: 2,  text: "The people involved in improving our back-office processes include different roles, experience levels, and departments, not just one person or team.", category: "Strategy" },
+  { id: 3,  text: "There is at least one person in our company whose job it is to oversee how our processes are run and improved.", category: "Governance" },
+  { id: 4,  text: "When we change how something is done, we can set realistic expectations with management and stick to them.", category: "Governance" },
+  { id: 5,  text: "Everyone on the team knows exactly who is responsible for each key task, and that ownership is actually followed.", category: "Governance" },
+  { id: 6,  text: "When two employees do the same task, they do it the same way.", category: "Methodology" },
+  { id: 7,  text: "We have a consistent way to make sure the information flowing through our processes is accurate and complete.", category: "Methodology" },
+  { id: 8,  text: "If a key person left tomorrow, someone else could follow written steps to do their job.", category: "Documentation" },
+  { id: 9,  text: "Our process documentation looks and works the same way across all departments, not different formats for every team.", category: "Documentation" },
+  { id: 10, text: "We have a clear picture of all the rules and steps that drive our core operations, and that picture is written down.", category: "Documentation" },
+  { id: 11, text: "We track how long our key tasks actually take, and we use that data to spot problems.", category: "Performance" },
+  { id: 12, text: "New team members are trained using the same documented steps, not just by watching someone else.", category: "Performance" },
+  { id: 13, text: "We regularly ask our customers or carriers what is slowing them down, and we use that feedback to improve how we work.", category: "Continuous Improvement" },
+  { id: 14, text: "Every critical back-office process has a named owner who is responsible for keeping it running and up to date.", category: "Continuous Improvement" },
+  { id: 15, text: "When we finish a project or fix a process, we update our documentation so the improvement actually sticks.", category: "Continuous Improvement" }
 ];
 
 const categories = [
@@ -629,11 +642,11 @@ const categories = [
 const answers = {};
 
 function getMaturityLevel(score) {
-  if (score <= 20) return { level: "Initial", cssClass: "level-initial", barClass: "bar-red", color: "#b91c1c", description: "Processes are largely ad-hoc and reactive. Success depends on individual heroics rather than institutionalized systems. There is little to no formal process documentation, and outcomes are unpredictable.", recommendation: "Start by documenting your most critical 'as-is' processes. Assign clear ownership for each key process and establish a common vocabulary for how your organization talks about its workflows. Even simple flowcharts can create alignment and reduce confusion." };
-  if (score <= 25) return { level: "Managed", cssClass: "level-managed", barClass: "bar-orange", color: "#c2410c", description: "Some processes are documented and managed at the departmental level, but consistency across the organization is limited. Improvements happen in pockets rather than systematically.", recommendation: "Focus on connecting the dots between departments. Establish a shared BPM methodology and begin standardizing your process mapping approach. Consider forming a small BPM working group to coordinate efforts and share best practices across teams." };
-  if (score <= 30) return { level: "Standardized", cssClass: "level-standardized", barClass: "bar-amber", color: "#b45309", description: "You have established a solid foundation. Processes are documented and standardized across the organization, but they may lack dynamic optimization and real-time performance tracking.", recommendation: "This is your 'Improvement Zone.' Integrate KPIs and performance measurements into your workflow models. Start leveraging your BPM data to drive proactive decision-making rather than just documenting history. A BPM Centre of Excellence can accelerate this transition." };
-  if (score <= 38) return { level: "Predictable", cssClass: "level-predictable", barClass: "bar-blue", color: "#1d4ed8", description: "Processes are managed quantitatively with clear KPIs. You can predict outcomes and identify bottlenecks before they become critical. BPM is recognized as a strategic capability.", recommendation: "Refine your performance measurement system and begin incorporating the voice of the customer more systematically. Explore automation opportunities for repetitive process steps and ensure your process documentation stays current through regular review cycles." };
-  return { level: "Innovating", cssClass: "level-innovating", barClass: "bar-green", color: "#15803d", description: "Your processes are mature, continuously improving, and strategically aligned. BPM is embedded in your organizational culture, and you actively innovate through data-driven insights and advanced automation.", recommendation: "Focus on advanced automation and AI integration. Use your mature process data to predict bottlenecks before they occur and foster a culture of relentless innovation. Consider sharing your BPM expertise as a competitive differentiator in your market." };
+  if (score <= 20) return { level: "Initial", cssClass: "level-initial", barClass: "bar-red", color: "#b91c1c", description: "Your back office runs on individual effort and tribal knowledge. When a key person is out, things slow down or break. There is little written documentation, and the same problems keep coming back because nothing is systematized.", recommendation: "Start by writing down the three most critical tasks in your operation, step by step. Assign a named owner to each one. Even a simple checklist can cut re-work and reduce the time you spend fixing the same errors." };
+  if (score <= 25) return { level: "Managed", cssClass: "level-managed", barClass: "bar-orange", color: "#c2410c", description: "Some parts of your operation are documented and run consistently, but it depends on the department or the person. What works in one team does not always translate to another, and improvements tend to stay local.", recommendation: "Focus on connecting the dots between teams. Pick one cross-department handoff that causes the most friction, map it out together, and agree on a single way to do it. That one fix often saves more time than a dozen internal improvements." };
+  if (score <= 30) return { level: "Standardized", cssClass: "level-standardized", barClass: "bar-amber", color: "#b45309", description: "You have built a solid foundation. Processes are documented and consistent across the operation, but you are not yet using data to drive decisions. You know what you do, but not always how well or how fast.", recommendation: "Start measuring the things that matter. Pick two or three key tasks and track how long they actually take each week. Once you have that data, you will quickly see where the real time is going and can make targeted improvements." };
+  if (score <= 38) return { level: "Predictable", cssClass: "level-predictable", barClass: "bar-blue", color: "#1d4ed8", description: "Your operation runs on data. You can predict outcomes, catch problems early, and make decisions based on what is actually happening, not gut feel. Back-office work is a competitive advantage, not just overhead.", recommendation: "Automate the repetitive parts. With your level of documentation and measurement, you are in a strong position to hand off rule-based tasks to software. Even one automated workflow can free up hours per week across your team." };
+  return { level: "Innovating", cssClass: "level-innovating", barClass: "bar-green", color: "#15803d", description: "Your back office is a machine. Processes are documented, measured, continuously improved, and increasingly automated. Your team spends time on decisions and relationships, not on fixing the same problems twice.", recommendation: "Use your operational maturity as a differentiator. Clients and partners notice when things run smoothly. Consider documenting your approach as a case study or service offering, and look for AI-driven tools that can take your efficiency to the next level." };
 }
 
 // ===== QUESTIONS =====
@@ -714,7 +727,6 @@ function showResults() {
   var maturity = getMaturityLevel(score);
   var pct = ((score - 15) / 30) * 100;
 
-  // Send score to HubSpot
   var ld = window._leadData || {};
   if (ld.email) {
     fetch('/api/hubspot-score.php', {
@@ -728,7 +740,6 @@ function showResults() {
     }).catch(function(err) { console.error('HubSpot score error:', err); });
   }
 
-  // Animate score
   animateCounter(document.getElementById('score-value'), score, 1200);
   document.getElementById('score-level').textContent = maturity.level;
   document.getElementById('score-level').style.color = maturity.color;
@@ -742,7 +753,6 @@ function showResults() {
   document.getElementById('level-title').textContent = 'Level: ' + maturity.level;
   document.getElementById('level-desc').textContent = maturity.description;
 
-  // Category breakdown
   var catHtml = '';
   categories.forEach(function(cat) {
     var maxPts = cat.ids.length * 3;
@@ -754,14 +764,12 @@ function showResults() {
   });
   document.getElementById('cat-breakdown').innerHTML = catHtml;
 
-  // Recommendations
   document.getElementById('rec-score').textContent = score + '/45';
   var recCard = document.getElementById('rec-card');
   recCard.className = 'rec-card ' + maturity.cssClass;
   document.getElementById('rec-title').style.color = maturity.color;
   document.getElementById('rec-text').textContent = maturity.recommendation;
 
-  // Weak areas
   var weakHtml = '';
   var weakCats = [];
   categories.forEach(function(cat) {
@@ -771,9 +779,9 @@ function showResults() {
     if ((pts / maxPts) * 100 < 67) weakCats.push({ name: cat.name, pts: pts, maxPts: maxPts });
   });
   if (weakCats.length > 0) {
-    weakHtml += '<h3 style="font-family:var(--font-heading);font-size:1.125rem;font-weight:600;color:var(--navy);margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem;">&#9888; Areas Requiring Attention</h3>';
+    weakHtml += '<h3 style="font-family:var(--font-heading);font-size:1.125rem;font-weight:600;color:var(--navy);margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem;">&#9888; Where Your Time Is Leaking</h3>';
     weakCats.forEach(function(c) {
-      weakHtml += '<div class="weak-item"><span class="weak-score">' + c.pts + '/' + c.maxPts + '</span><div><p class="weak-name">' + c.name + '</p><p class="weak-note">Scoring below 67% in this category indicates room for significant improvement.</p></div></div>';
+      weakHtml += '<div class="weak-item"><span class="weak-score">' + c.pts + '/' + c.maxPts + '</span><div><p class="weak-name">' + c.name + '</p><p class="weak-note">Scoring below 67% here means this area is likely costing your team hours every week.</p></div></div>';
     });
   }
   document.getElementById('weak-areas').innerHTML = weakHtml;
@@ -801,6 +809,9 @@ document.addEventListener('DOMContentLoaded', function() {
   buildQuestions();
 });
 </script>
+
+<!-- Calendly widget JS -->
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
 <!-- BERIAS Instant Support Widget -->
 <script>
