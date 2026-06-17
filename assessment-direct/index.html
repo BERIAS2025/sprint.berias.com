@@ -26,7 +26,15 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-WP20X6DZPQ');
+    gtag('config', 'G-WP20X6DZPQ', {
+      'engagement_time_msec': 1,
+      'send_page_view': true
+    });
+    // Fire explicit page_view so GA4 registers the session as engaged
+    gtag('event', 'page_view', {
+      'page_title': 'Assessment Direct - LinkedIn',
+      'page_location': window.location.href
+    });
   </script>
   <!-- Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17546137265"></script>
@@ -791,6 +799,19 @@ function showResults() {
   setTimeout(function() {
     document.getElementById('results-anchor').scrollIntoView({ behavior: 'smooth' });
   }, 100);
+  // GA4: assessment completed
+  var score = 0;
+  for (var k in answers) { score += answers[k]; }
+  var maturity = getMaturityLevel(score);
+  if (window.gtag) {
+    gtag('event', 'assessment_complete', {
+      'event_category': 'engagement',
+      'bpm_score': score,
+      'bpm_level': maturity.level,
+      'engagement_time_msec': 30000
+    });
+  }
+  if (window.fbq) fbq('track', 'Lead');
 }
 
 function animateCounter(el, target, duration) {
@@ -808,6 +829,42 @@ function animateCounter(el, target, duration) {
 // ===== INIT =====
 document.addEventListener('DOMContentLoaded', function() {
   buildQuestions();
+
+  // ── GA4: track scroll depth to prove engagement ──────────────────────────
+  var scrollMilestones = { 25: false, 50: false, 75: false, 90: false };
+  window.addEventListener('scroll', function() {
+    var pct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+    Object.keys(scrollMilestones).forEach(function(m) {
+      if (!scrollMilestones[m] && pct >= parseInt(m)) {
+        scrollMilestones[m] = true;
+        gtag('event', 'scroll_depth', { 'percent_scrolled': parseInt(m), 'engagement_time_msec': 1 });
+      }
+    });
+  }, { passive: true });
+
+  // ── GA4: Calendly booking event ──────────────────────────────────────────
+  window.addEventListener('message', function(e) {
+    if (e.data && e.data.event) {
+      if (e.data.event === 'calendly.event_scheduled') {
+        gtag('event', 'calendly_booked', {
+          'event_category': 'conversion',
+          'event_label': 'Assessment Direct - LinkedIn',
+          'engagement_time_msec': 1
+        });
+        // Also fire Google Ads conversion
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17546137265/wxsICITDyYwcELGd065B',
+          'value': 1.0,
+          'currency': 'USD'
+        });
+        // Meta Pixel
+        if (window.fbq) fbq('track', 'Schedule');
+      }
+      if (e.data.event === 'calendly.date_and_time_selected') {
+        gtag('event', 'calendly_time_selected', { 'engagement_time_msec': 1 });
+      }
+    }
+  });
 });
 </script>
 
